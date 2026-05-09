@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        </></title>
+    <link rel="stylesheet" href="/src/css/riddler.css">
+    <link rel="icon" href="/src/favicon/logo-riddler.png">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+
+
+    <div class="hero-background"></div>
+
+    <div class="nav-bg">
+        <nav class="navbar">
+            <a class="logo" href="index.html">
+                <div class="logo-link">
+                    <div class="logo-img">
+                        <img src="src/media/icons/riddle-mark.png" alt="Logo Aprende aí, IA!">
+                    </div>
+                </div>
+
+                <div class="logo-title">
+                    <h1>Aprende aí, IA!</h1>
+                </div>
+            </a>
+            <div class="navbar-links">
+                <a class="nav-link" href="index.html#sobre">
+                    <img src="src/media/icons/info.png" alt="ícone de informação">
+                    <div class="nav-link-text">Sobre</div>
+                </a>
+                <a class="nav-link" href="index.html#missoes">
+                    <img src="src/media/icons/mission.png" alt="ícone de foguete">
+                    <div class="nav-link-text">Missões</div>
+                </a>
+                <a class="nav-link" href="tratado.html">
+                    <img src="src/media/icons/scroll.png" alt="ícone de pergaminho">
+                    <div class="nav-link-text">Tratado</div>
+                </a>
+
+            </div>
+            <div class="navbar-menu">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    <div class="menu-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="site">
+
+        <div class="site-home">
+            
+
+
+            <div class="enigma-box">
+
+
+                <div class="terminal-header d-flex justify-content-between p-2" style="background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(0,255,65,0.3);">
+                        <div class="terminal-buttons">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                            <p class="mb-0 text-secondary" style="font-family: monospace; font-size: 12px;">
+                                ENIGMA-BOX_V1.0.exe
+                            </p>
+                </div>
+
+
+                <div class="terminal-body p-4">
+
+
+                    <h2 class="texto-verde-glitch mb-4 text-center">_INTERCEPTAÇÃO_</h2>
+                    
+                        <!-- A CHARADA E O CÓDIGO -->
+                        <p class="texto-terminal text-center mb-4">
+                            <br>
+                            <strong>"Não sou um robô de metal, sou o cérebro escondido nos seus aplicativos. O que eu sou?"</strong>
+                            <br>
+                            <br>
+                        </p>
+
+                                    <!-- O GABINETE DA MÁQUINA ENIGMA -->
+                        <div class="maquina-enigma-container mt-4 mb-4">
+                            
+                            
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+                <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+                <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+               <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+               <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+               <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+               <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+                <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+                <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+<div class="cryptex-wrapper">
+    <div class="coluna-enigma">
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, -1)">▲</button>
+        <div class="cryptex-wrapper-single">
+            <div class="lente-leitura-single"></div>
+            <div class="engrenagem" onscroll="lerSenha()">
+                <div class="simbolo spacer"></div>
+                <div class="simbolo"><img src="/src/simbols/chip.png" alt="chip"></div>
+                <div class="simbolo"><img src="/src/simbols/Y.png" alt="Y"></div>
+                <div class="simbolo"><img src="/src/simbols/$.png" alt="$"></div>
+                <div class="simbolo"><img src="/src/simbols/hash.png" alt="hash"></div>
+                <div class="simbolo"><img src="/src/simbols/porc.png" alt="porc"></div>
+                <div class="simbolo"><img src="/src/simbols/code.png" alt="code"></div>
+                <div class="simbolo"><img src="/src/simbols/qr-code.png" alt="qr-code"></div>
+                <div class="simbolo"><img src="/src/simbols/question.png" alt="question"></div>
+                <div class="simbolo"><img src="/src/simbols/&.png" alt="&"></div>
+                <div class="simbolo spacer"></div>
+            </div>
+        </div>
+        <button type="button" class="btn-seta" onclick="moverEngrenagem(this, 1)">▼</button>
+    </div>
+</div>
+                        
+                </div>
+
+                    <p class="text-secondary text-center mb-4" style="font-size: 12px;">
+                            DICA DO SISTEMA: A chave de tradução foi fragmentada nos arquivos de hoje (Slides).
+                    </p>
+
+           
+            <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST" class="mt-4">
+                
+                <!-- Redirecionamento após enviar -->
+                <input type="hidden" name="_subject" value="NOVA TENTATIVA DE ENIGMA!">
+                <input type="hidden" name="_captcha" value="false">
+
+                 <input type="hidden" id="senhaOculta" name="Senha_Decodificada" value="">
+
+                <!-- Dados do Aluno -->
+                <div class="row mb-3">
+                    <div class="d-flex flex-column col-md-6" mt-3>
+                        <span class="texto-terminal">> ALUNO(A)_</span>
+                        <input type="text" name="Nome do Aluno" class="input-hacker" placeholder="Seu nome"style="background: #000; color: #00ff41; required">
+                    </div>
+                    <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
+                        <span class="texto-terminal">> CLÃ_</span>
+                        <select name="Clã" class="input-hacker" required style="background: #000; color: #00ff41;">
+                            <option value="">ㅤ</option>
+                            <option value="Tropa Pixel">Tropa Pixel</option>
+                            <option value="Comando Cyber">Comando Cyber</option>
+                            <option value="Mestres Matrix">Mestres Matrix</option>
+                            <option value="Bonde Glitch">Bonde Glitch</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+
+                <button type="submit" class="btn-hackear" style="background: #000; color: #00ff41;">
+                    [ TRANSMITIR PARA O MESTRE DO JOGO ]
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+            
+           
+                    </div> 
+
+                
+
+                    
+                </div>
+
+                <script>
+                    function lerSenha() {
+                        const engrenagens = document.querySelectorAll('.engrenagem');
+                        const inputOculto = document.getElementById('senhaOculta');
+                        let senhaAtual = "";
+
+                        engrenagens.forEach(engrenagem => {
+                            let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
+                            let simbolos = engrenagem.querySelectorAll('.simbolo');
+
+                            // Pega a DIV do meio
+                            let divDoMeio = simbolos[indexSelecionado + 1];
+
+                            // Procura se tem uma imagem dentro dessa div
+                            let imagem = divDoMeio.querySelector('img');
+
+                            // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
+                            if (imagem) {
+                                // Adiciona o nome do símbolo na senha, separado por um tracinho
+                                senhaAtual += imagem.alt + " - ";
+                            }
+                        });
+
+                        // Tira o último tracinho que sobra no final
+                        senhaAtual = senhaAtual.replace(/ - $/, "");
+
+                        // Grava a senha final no input invisível
+                        inputOculto.value = senhaAtual;
+                        console.log("Senha lida: " + senhaAtual); // Pra vc testar no F12
+                    }
+
+                    window.onload = lerSenha;
+
+                    function moverEngrenagem(botao, direcao) {
+                        let coluna = botao.parentElement.querySelector('.engrenagem');
+                        let scrollAtual = coluna.scrollTop;
+
+                        coluna.scrollTo({
+                            top: scrollAtual + (50 * direcao),
+                            behavior: 'smooth'
+                        });
+
+                        setTimeout(lerSenha, 300);
+                    }
+                </script>
+
+
+        
+
+
+
+
+
+
+        <div class="footer-bg">
+            <footer>
+                <div class="footer-top">
+                    <div class="footer-iai">
+                        <div class="footer-name">
+                            <h2>Aprende aí, IA!</h2>
+                        </div>
+
+                        <div class="footer-description">
+                            <p>"O projeto <b><i>Aprende aí, IA!</i></b> nasceu para transformar jovens de usuários
+                                passivos
+                                em
+                                verdadeiros mestres da tecnologia, dominando a Inteligência Artificial, ensinando ética,
+                                pensamento crítico e o uso responsável
+                                das ferramentas do futuro. Um projeto de extensão IFTM."</p>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div>
+                            <div>
+                                <h4>Principal</h4>
+                            </div>
+                            <div class="footer-a-list">
+                                <a href="index.html#sobre">Sobre</a>
+                                <a href="index.html#missoes">Missões</a>
+                                <a href="index.html#kit">Kit IA</a>
+                                <a href="tratado.html">Tratado</a>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h4>Interativas</h4>
+                            </div>
+                            <div class="footer-a-list">
+                                <a href="charada.html">Decodificador</a>
+                                <a href="museu.html">"Real ou IA?"</a>
+                                <a href="ia-codex.html">IA-Codex</a>
+                            </div>
+                        </div>
+                        <div>
+
+                            <div>
+                                <h4>Outros</h4>
+                            </div>
+                            <div class="footer-a-list">
+                                <a href="ranking.html">Ranking</a>
+                                <a href="index.html#terminal">Terminal</a>
+                                <a href="faq.html">Contato</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="footer-bottom">
+
+
+                    <div class="footer-text">
+                        <p>© 2026 Aprende aí, IA! Todos os direitos reservados.</p>
+                    </div>
+
+                   <div class="footer-social">
+                    <a href="https://www.instagram.com/aprendi.ia/" target="_blank">
+                        <img src="src/media/icons/instagram.png" alt="ícone do Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@aprendeai.ia" target="_blank">
+                        <img src="src/media/icons/tik-tok.png" alt="ícone do Tik Tok">
+                    </a>
+                    <a href="mailto:aprende.ai.ia@gmail.com" target="_blank">
+                        <img src="src/media/icons/email.png" alt="ícone do Email">
+                    </a>
+                </div>
+
+                </div>
+
+
+            </footer>
+        </div>
+
+
+
+
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <a class="logo" href="index.html">
+                    <div class="logo-link">
+                        <div class="logo-img">
+                            <img src="src/media/icons/riddle-mark.png" alt="Logo Aprende aí, IA!">
+                        </div>
+                    </div>
+
+                    <div class="logo-title">
+                        <h1>Aprende aí, IA!</h1>
+                    </div>
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+            <div class="offcanvas-body">
+                <div class="off-menu">
+                    <div class="navbar-nav">
+
+                        <a class="nav-link" href="index.html#sobre">
+                            <img src="src/media/icons/info.png" alt="ícone de informação">
+                            <div class="nav-link-text">Sobre</div>
+                        </a>
+                        <a class="nav-link" href="index.html#missoes">
+                            <img src="src/media/icons/mission.png" alt="ícone de foguete">
+                            <div class="nav-link-text">Missões</div>
+                        </a>
+                        <a class="nav-link" href="index.html#kit">
+                            <img src="src/media/icons/kit.png" alt="ícone de kit de primeiros socorros">
+                            <div class="nav-link-text">Kit do Aluno</div>
+                        </a>
+                        <a class="nav-link" href="tratado.html">
+                            <img src="src/media/icons/scroll.png" alt="ícone de pergaminho">
+                            <div class="nav-link-text">Tratado</div>
+                        </a>
+
+
+                        <hr>
+
+
+                        <a class="nav-link" href="museu.html">
+                            <img src="src/media/icons/museum.png" alt="ícone de Museu">
+                            <div class="nav-link-text">"Real ou Fake?"</div>
+                        </a>
+                        <a class="nav-link" href="ia-codex.html">
+                            <img src="src/media/icons/ia-codex.png" alt="ícone de Pokebola">
+                            <div class="nav-link-text">IA-Codex</div>
+                        </a>
+                        <a class="nav-link" href="charada.html">
+                            <img src="src/media/icons/riddle.png" alt="ícone de quebra-cabeça">
+                            <div class="nav-link-text">Decodificador</div>
+                        </a>
+
+                        <hr>
+
+                        <a class="nav-link" href="ranking.html">
+                            <img src="src/media/icons/ranking.png" alt="ícone de pódio">
+                            <div class="nav-link-text">Ranking</div>
+                        </a>
+                        <a class="nav-link" href="index.html#terminal">
+                            <img src="src/media/icons/terminal.png" alt="ícone de terminal - Programador">
+                            <div class="nav-link-text">Terminal Anônimo</div>
+                        </a>
+                        <a class="nav-link" href="faq.html">
+                            <img src="src/media/icons/chat.png" alt="ícone de conversa - balões de diálogo">
+                            <div class="nav-link-text">Trocar ideia</div>
+                        </a>
+
+                        <hr>
+
+
+                        <a class="nav-link" href="index.html#social">
+                            <img src="src/media/icons/social.png" alt="ícone de mundo - Redes Sociais">
+                            <div class="nav-link-text">Redes Sociais</div>
+                        </a>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div id="click-canvas-container"></div>
+
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="/src/media/gif/ruido.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <!-- Overlay de cor para o vídeo não ficar muito claro -->
+        <div class="video-overlay"></div>
+    </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous">
+            </script>
+
+
+
+
+<!-- /* Script para deixar o site brabíssimo /* -->
+
+    <script>
+        document.addEventListener('click', (e) => {
+            const effect = document.createElement('div');
+            effect.className = 'click-effect';
+
+            // Fica exatamente no lugarzin do mouse
+
+            effect.style.left = `${e.pageX}px`;
+            effect.style.top = `${e.pageY}px`;
+
+            // Faz aparecer no site
+            document.body.appendChild(effect);
+
+            // Remove o elemento após a animação
+            setTimeout(() => effect.remove(), 700);
+
+            // Tocar o som aqui 
+            playRiddleSound();
+
+            // Shake da tela
+            document.body.classList.add('glitch-shake');
+            setTimeout(() => {
+                document.body.classList.remove('glitch-shake');
+            }, 200);
+
+
+        });
+
+
+        const riddleSound = new Audio('src/audio/click.wav');
+
+        function playRiddleSound() {
+            riddleSound.currentTime = 0;
+            riddleSound.volume = 0.3;
+            riddleSound.play();
+        }
+
+    </script>
+
+
+    <audio id="bg-ambience" loop>
+        <source src="./src/audio/background.wav" type="audio/wav">
+    </audio>
+
+
+<!-- Script do Áudio de fundo -->
+
+    <script>
+        const ambience = document.getElementById('bg-ambience');
+        let started = false;
+
+        document.addEventListener('click', () => {
+            if (!started) {
+                ambience.volume = 0.15; // Deixa o fundo bem baixinho pra não cansar
+                ambience.play();
+                started = true;
+            }
+            playClickSound(); // Chama o som do clique que você achou
+        });
+    </script>
+
+
+</body>
+
+</html>
