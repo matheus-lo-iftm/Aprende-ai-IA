@@ -15,7 +15,7 @@ html {
 
 body {
 
-     cursor: url('src/cursor/normal.cur'), default;
+      cursor: url('../cursor/normal.cur'), default;
     scroll-behavior: smooth;
     margin: 0;
     background-color: #161616 !important;
@@ -124,7 +124,7 @@ label[for],
 select,
 .btn,
 .btn-primary {
-    cursor: url('src/cursor/link.cur'), pointer;
+     cursor: url('../cursor/link.cur'), pointer;
 
 }
 
@@ -140,7 +140,7 @@ h3,
 h4,
 h5,
 h6 {
-    cursor: url('src/cursor/text.cur'), text;
+     cursor: url('../cursor/text.cur'), text;
 }
 
 
@@ -247,7 +247,7 @@ nav a {
 .logo-img:hover {
     -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.9s both;
-    cursor: url('src/cursor/link.cur'), pointer;
+     cursor: url('../cursor/link.cur'), pointer;
 }
 
 .logo img {
@@ -3761,7 +3761,7 @@ flex-direction: column; }
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    cursor: url('src/cursor/link.cur'), pointer;
+     cursor: url('../cursor/link.cur'), pointer;
     transition: all 0.2s ease;
     user-select: none;
 }
@@ -3817,7 +3817,7 @@ flex-direction: column; }
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
-    cursor: url('src/cursor/link.cur'), pointer;
+     cursor: url('../cursor/link.cur'), pointer;
     transition: all 0.3s ease;
 }
 
