@@ -120,27 +120,130 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="range"],
+input[type="color"],
 label[for],
 select,
+summary,
+[role="button"],
+[data-bs-toggle],
+[data-bs-dismiss],
+[onclick],
+ 
+/* Navbar & Logo */
+.logo,
+.logo-img,
+.nav-link,
+.navbar-menu,
+.navbar-links a,
+.btn-close,
+ 
+/* Botões gerais Bootstrap / custom */
 .btn,
-.btn-primary {
-     cursor: url('../cursor/link.cur'), pointer !important;
-
+.btn-primary,
+.btn-danger,
+ 
+/* Missões (index) */
+.mission-button,
+.nav-btn,
+.nav-btn.prev,
+.nav-btn.next,
+.btn-missao,
+.btn-missao-quiz,
+ 
+/* Cryptex / Enigma (tratado) */
+.btn-seta,
+.btn-hackear,
+.simbolo,
+.engrenagem,
+ 
+/* Kit IA — carrossel de ferramentas */
+.ferramenta-card,
+.ferramenta-section .nav-btn,
+ 
+/* Ranking — pódio e pilares */
+.pilar-card,
+.pilar-card.primeiro-lugar,
+.pilar-card.segundo-lugar,
+.pilar-card.terceiro-lugar,
+.pilar-card.quarto-lugar,
+.degrau,
+ 
+/* Tratado — botões e inputs de categoria */
+.assinar-button,
+.assinar-tratado-button,
+.assinar-tratado-categorias input,
+.assinar-tratado-regra,
+.checkbox-real,
+.circulo-check,
+ 
+/* FAQ / Trocar Ideia */
+.ti-cla-btn,
+.ti-btn-enviar,
+.ti-radio + label,
+ 
+/* Social */
+.instagram-box,
+.tik-tok-box,
+.tik-tok-button,
+.social-section a,
+ 
+/* Offcanvas */
+.offcanvas-start .nav-link,
+ 
+/* Modal */
+.modal-footer button,
+.modal-header .btn-close,
+ 
+/* Terminal */
+.terminal-box,
+.rec-dot,
+.rec-status,
+ 
+/* Cards com hover (sobre / kit) */
+.site-sobre-outdoor .card,
+.ferramenta-tip,
+.mmision-box,
+.mmsion-next-class-box {
+    cursor: url('../cursor/link.cur'), pointer !important;
 }
 
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
 textarea,
+.input-hacker,
+ 
 p,
+span,
+li,
+blockquote,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-     cursor: url('../cursor/text.cur'), text;
+h6,
+.texto-terminal,
+.texto-obj,
+.nav-link-text,
+.descricao-regra,
+.tik-tok-description,
+.tik-tok-name,
+.tik-tok-arroba,
+.assinar-tratado-info,
+.assinar-tratado-info-name,
+.assinar-tratado-h1,
+.cla-nome,
+.modal-title {
+    cursor: url('../cursor/text.cur'), text !important;
 }
 
 
