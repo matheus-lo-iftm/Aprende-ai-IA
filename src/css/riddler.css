@@ -15,7 +15,7 @@ html {
 
 body {
 
-    cursor: url('../src/cursor/hacker-normal.cur'), default !important;
+    cursor: url('../cursor/hacker-normal.cur'), default !important;
 
     scroll-behavior: smooth;
     margin: 0;
@@ -129,7 +129,7 @@ select,
 .btn-primary,
 .logo,
 [role="button"] {
-    cursor: url('../src/cursor/hacker-select.cur'), pointer !important;
+    cursor: url('../cursor/hacker-select.cur'), pointer !important;
 }
 
 input[type="text"],
@@ -144,7 +144,7 @@ h3,
 h4,
 h5,
 h6 {
-    cursor: url('../src/cursor/hacker-text.cur'), text !important;
+    cursor: url('../cursor/hacker-text.cur'), text !important;
 }
 
 
@@ -232,7 +232,7 @@ nav a {
 .logo-img:hover {
     -webkit-animation: flicker-in-2 0.9s both;
     animation: flicker-in-2 0.9s both;
-    cursor: url('src/cursor/link.cur'), pointer;
+    cursor: pointer;
 }
 
 .logo img {
