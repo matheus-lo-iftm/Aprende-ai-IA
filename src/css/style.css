@@ -3595,8 +3595,108 @@ input[id="seguranca"]:checked + label {
 flex-direction: column; }
 
 
+.ranking-classes-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-direction: row; /* Garante que fiquem na mesma linha */
+    gap: 20px;
+    flex-wrap: nowrap; /* Impede que o segundo botão pule para baixo */
+    margin: 30px auto 0 auto; /* O auto nas laterais ajuda a centralizar o container na tela */
+    width: 80vw; /* Aumentei um pouco para dar respiro, mas pode manter 50vw se preferir */
+}
+
+.btn-ranking-classes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: borderGlow 1s infinite alternate;
+    gap: 10px;
+    
+    /* AQUI ESTÁ O SEGREDO: */
+    width: 70%; /* Defina um tamanho fixo ou uma porcentagem como 45% */
+    max-width: 100%; 
+    overflow: hidden; /* Garante que a imagem não saia do border-radius */
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7%;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(118, 82, 247, 0.4);
+}
+
+.btn-ranking-classes img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
+.btn-ranking-classes:hover {
+    transform: translateY(-10px) scale(1.02);
+    cursor: pointer;
+   
+    box-shadow: 0 15px 40px rgba(118, 82, 247, 0.6); 
+}
+
+
+.modal-body .pilar-podio{
+    justify-self: center;
+    align-self: center;
+    margin-top: 200px;
+        margin-bottom: 50px;
+}
+
+.modal-body:has(.pilar-podio) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pilar-podio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;            
+    width: 100%;
+    min-height: 85vh;   
+    padding-top: 80px;   
+    padding-bottom: 40px; 
+
+}
+
+
+.pilar-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;      
+}
+
+/* O card escuro com a foto e o XP */
+.pilar-card {
+    position: relative;  
+    width: 320px;         
+    min-height: 400px;    
+    height: auto;         
+    text-align: center;
+    
+    background-color: #0b0e14;
+    border-radius: 12px;
+}
+
+
+.img-medalha {
+    position: absolute;
+    top: -45px;           
+    left: 36.5%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
 /* ===== Em desenvolvimento ===== */
 
 .em-desenvolvimento {
