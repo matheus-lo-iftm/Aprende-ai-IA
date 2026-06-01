@@ -1,0 +1,1070 @@
+/* ----------------------------- Resets Iniciais ----------------------------- */
+
+/* Fontes em estilo Pokemon */
+
+@font-face {
+    font-family: 'PokemonTitulo';
+    src: url('../fonts/Ketchum.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'PokemonParagrafo';
+    src: url('../fonts/Pokemon-Classic.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PokemonParagrafo';
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+
+      cursor: url('../cursor/Cartoon-Hand-Normal.cur'), default;
+    scroll-behavior: smooth;
+    margin: 0;
+    background-color: #161616 !important;
+
+    color: white;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Cabeçalho, Conteúdo, Rodapé */
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ----------------------------- Background ----------------------------- */
+
+.hero-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px);
+    background-size: 40px 40px;
+
+    mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}
+
+.hero-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-size: 120px 120px;
+    background-repeat: repeat;
+    mask-image: radial-gradient(square, white 40px, transparent 40px);
+    opacity: 0.4;
+    filter: blur(1px);
+}
+
+
+
+/* ----------------------------- Paleta de Cor ----------------------------- */
+
+:root {
+    --color1: #800000;       /* Vermelho vinho profundo */
+    --color2: #A30000;       /* Vermelho escuro de transição */
+    --color3: #CC0000;       /* Vermelho Pokédex (sombra/detalhes) */
+    --color4: #E60000;       /* Vermelho vivo intermediário */
+    --color5: #FF1A1A;       /* Vermelho claro para brilhos */
+    --purple-main: #FF0000;     /* Vermelho oficial Pokémon */
+    --purple-dark: #3A0000;     /* Fundo escuro contrastante */
+    --glass-bg: rgba(255, 255, 255, 0.07);
+    --border-glass: rgba(255, 0, 0, 0.3);
+    --text-muted: #8E8E93;   /* Cinza neutro para leitura */
+    --grid-line: rgba(255, 255, 255, 0.08);
+    --highlight: rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PokemonTitulo';
+
+}
+
+p {
+    font-family: 'PokemonParagrafo';
+}
+
+/* Barra de rolagem estilizada */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: linear-gradient(80deg, var(--color1) 0%, var(--color2) 35%, var(--color5) 100%);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color1);
+}
+
+/* Mouse estilizado para links e textos */
+
+a,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="range"],
+input[type="color"],
+label[for],
+select,
+summary,
+[role="button"],
+[data-bs-toggle],
+[data-bs-dismiss],
+[onclick],
+ 
+/* Navbar & Logo */
+.logo,
+.logo-img,
+.nav-link,
+.navbar-menu,
+.navbar-links a,
+.btn-close,
+.logo-title:hover,
+.logo-img:hover,
+.logo-link:hover,
+.logo:hover,
+ 
+/* Botões gerais Bootstrap / custom */
+.btn,
+.btn-primary,
+.btn-danger,
+ 
+/* Missões (index) */
+.mission-button,
+.nav-btn,
+.nav-btn.prev,
+.nav-btn.next,
+.btn-missao,
+.btn-missao-quiz,
+ 
+/* Cryptex / Enigma (tratado) */
+.btn-seta,
+.btn-hackear,
+.simbolo,
+.engrenagem,
+ 
+/* Kit IA — carrossel de ferramentas */
+.ferramenta-card,
+.ferramenta-section .nav-btn,
+ 
+/* Ranking — pódio e pilares */
+.pilar-card,
+.pilar-card.primeiro-lugar,
+.pilar-card.segundo-lugar,
+.pilar-card.terceiro-lugar,
+.pilar-card.quarto-lugar,
+.degrau,
+ 
+/* Tratado — botões e inputs de categoria */
+.assinar-button,
+.assinar-tratado-button,
+.assinar-tratado-categorias input,
+.assinar-tratado-regra,
+.checkbox-real,
+.circulo-check,
+ 
+/* FAQ / Trocar Ideia */
+.ti-cla-btn,
+.ti-btn-enviar,
+.ti-radio + label,
+ 
+/* Social */
+.instagram-box,
+.tik-tok-box,
+.tik-tok-button,
+.social-section a,
+ 
+/* Offcanvas */
+.offcanvas-start .nav-link,
+ 
+/* Modal */
+.modal-footer button,
+.modal-header .btn-close,
+ 
+/* Terminal */
+.terminal-box,
+.rec-dot,
+.rec-status,
+ 
+/* Cards com hover (sobre / kit) */
+.site-sobre-outdoor .card,
+.ferramenta-tip,
+.mmision-box,
+.mmsion-next-class-box {
+    cursor: url('../cursor/Cartoon-Hand-Link.cur'), pointer !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+.input-hacker,
+ 
+p,
+span,
+li,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.texto-terminal,
+.texto-obj,
+.nav-link-text,
+.descricao-regra,
+.tik-tok-description,
+.tik-tok-name,
+.tik-tok-arroba,
+.assinar-tratado-info,
+.assinar-tratado-info-name,
+.assinar-tratado-h1,
+.cla-nome,
+.modal-title {
+    cursor: url('../cursor/Cartoon-Hand-Text.cur'), text !important;
+}
+
+
+
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: #a2ff00; /* Verde do Charada */
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: blink 0.8s infinite;
+    box-shadow: 0 0 8px #a2ff00; /* Glow opcional para combinar com o site */
+}
+
+
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* -------------------------------------------------------- Menu de Navegação -------------------------------------------------------- */
+
+/* Background do Nav */
+
+.nav-bg {
+
+    background: var(--color1);
+    background: linear-gradient(80deg, var(--color1) 0%, var(--color2) 35%, var(--color5) 100%);
+
+    color: white;
+    width: 100%;
+    box-shadow: 0px 4px 15px var(--color1);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+
+}
+
+/* Estilo do Nav */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 0 auto;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    flex-direction: row;
+    width: 85vw;
+    gap: 50px;
+}
+
+.navbar-links a {
+    font-size: 12.5px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 25px;
+    flex-direction: row !important;
+    gap: 30px !important;
+}
+
+
+.logo-img {
+    display: flex;
+
+}
+
+
+nav img {
+    width: 35px;
+
+}
+
+.logo-img img {
+    height: 80px !important;
+    width: 80px !important;
+}
+
+nav a {
+    color: white !important;
+}
+
+
+
+
+.logo {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    display: inline-block;
+    transition: all 0.1s ease;
+    transform-style: preserve-3d;
+
+
+}
+
+.logo-img:hover {
+    -webkit-animation: wobble-hor-bottom 0.8s ease-in-out infinite alternate-reverse both;
+	        animation: wobble-hor-bottom 0.8s ease-in-out infinite alternate-reverse both;
+     cursor: url('../cursor/Cartoon-Hand-Link.cur'), pointer !important;
+}
+
+.logo img {
+    transition: all 0.7s ease;
+     filter: brightness(0) invert(100%);}
+
+.logo * :hover {
+    cursor: pointer !important;
+
+}
+
+.logo:hover img {
+    transform: rotate(180deg) scale(1.1);
+    filter: brightness(1) invert(0%) drop-shadow(0 0 10px white);
+
+}
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2026-6-1 14:45:15
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+
+
+
+
+
+
+
+.logo-title {
+
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+
+
+.navbar-menu:hover .menu-icon {
+
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+
+
+}
+
+
+.navbar-menu {
+    transition: all 0.3s ease;
+}
+
+
+
+.navbar-menu .btn-primary {
+    background-color: transparent;
+
+    border: none;
+    padding: 15px 15px;
+    border-radius: 5px;
+    cursor: pointer !important;
+
+    transition: all 0.3s ease;
+}
+
+
+.navbar-menu .btn-primary:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0.1px 0.1px 5px 0px var(--color1);
+    border-radius: 10px;
+    cursor: pointer !important;
+    transition: background-color 0.3s, color 0.3s;
+    transform: scale(1.08);
+
+
+
+}
+
+.navbar-menu .btn-primary:hover .menu-icon div {
+    background-color: #FF1A1A
+}
+
+/* Menu Offcanvas */
+
+.offcanvas-start {
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    justify-content: center;
+    background: #3A0000;
+    background: linear-gradient(180deg, #800000 0%, #CC0000 35%, #FF1A1A 100%);
+    border-radius: 0 60px 60px 0;
+    height: 95vh;
+
+
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-bottom: 2px solid white;
+
+
+}
+
+.offcanvas .logo {
+    color: white;
+}
+
+.offcanvas .logo img {
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.offcanvas-body .navbar-nav {
+
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+
+
+}
+
+.offcanvas-start .nav-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    justify-content: center;
+    backdrop-filter: blur(10);
+    background-color: transparent;
+    font-weight: 600;
+    background: var(--color4);
+
+
+
+
+
+}
+
+
+
+
+
+.offcanvas-start hr {
+    border: 1px solid white !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn-close {
+    filter: invert(100) !important;
+
+}
+
+.offcanvas-start .nav-link:hover {
+    filter: drop-shadow(0 0 10px white);
+    background-color: white !important;
+    border-radius: 10px;
+}
+
+.offcanvas-start .nav-link:hover img {
+    filter: invert(13%) sepia(100%) saturate(7471%) hue-rotate(360deg) brightness(101%) contrast(105%);
+
+}
+
+.offcanvas-start .nav-link:hover .nav-link-text {
+    color: #CC0000;
+}
+
+.offcanvas-header {
+    display: flex;
+    gap: 20px;
+    border-bottom: 2px solid white;
+
+}
+
+.offcanvas-start img {
+    width: 50px;
+    height: 50px;
+
+}
+
+
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: color 0.3s, transform 0.3s;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.nav-link img {
+    width: 35px;
+    height: 35px;
+    filter: invert(100);
+}
+
+.off-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex !important;
+    width: 100%;
+
+}
+
+nav .nav-link:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    background: var(--color1);
+    background: linear-gradient(80deg, var(--color3) 0%, var(--color4) 35%, var(--color5) 100%);
+    transition: color 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.nav-link-text {
+    color: white;
+
+}
+
+.navbar .navbar-nav .nav-link.active {
+    background-color: white;
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px #A30000;
+
+}
+
+
+.navbar .navbar-nav .nav-link:active .nav-link-text {
+    color: black;
+    font-weight: 700;
+}
+
+
+.navbar .navbar-nav .nav-link:active img {
+    filter: brightness(0);
+}
+
+
+
+
+
+/* Background do Nav */
+
+.footer-bg {
+
+    background:white;
+    background: linear-gradient(80deg, rgb(204, 204, 204) 0%, rgb(230, 230, 230) 35%, white 100%);
+
+    color: var(--purple-main);
+    width: 100%;
+    box-shadow: 0px 4px 15px var(--color1);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+
+
+}
+
+/* ================== Footer ================== */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin: auto;
+    color: var(--purple-main);
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    width: 85vw;
+    gap: 50px;
+    bottom: 0;
+}
+
+.footer-top,
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-top,
+.footer-bottom {
+    gap: 100px;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    overflow: none;
+    color: var(--purple-main);
+}
+
+footer img {
+filter: brightness(0) saturate(100%) invert(26%) sepia(99%) saturate(7386%) hue-rotate(0deg) brightness(101%) contrast(106%);
+    width: 35px;
+    height: auto;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    transition: all 0.3s ease;
+
+}
+
+.footer-social a {
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-radius: 15px
+}
+
+.footer-social a:hover {
+
+    background-color: var(--purple-main);
+    padding: 10px;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 10px var(--purple-main));
+}
+
+.footer-social a:hover img {
+    filter: invert(100%)
+
+}
+
+.footer-iai {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-name {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.footer-a-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-a-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-text p {
+
+    font-size: small;
+}
+
+.footer-bg p{
+    font-size: 12.5px;
+}
+
+.footer-a-list a {
+    font-size: 12.5px;
+}
+
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ==================== Site ==================== */
+
+.site {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.site-home,
+.site-sobre,
+.site-missoes,
+.site-kit,
+.site-terminal,
+.site-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+
+    /* justify-content: center; */
+
+    width: 100%;
+    
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.site-home:after,
+.site-sobre:after,
+.site-encontros:after,
+.site-missoes:after,
+.site-kit:after,
+.site-terminal:after,
+.site-social:after {
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+
+    /* Gradiente do border-bottom */
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+}
+
+
+.site-home-outdoor-title h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+
+
+.site-home-outdoor-title b {
+    color: #f16565;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+
+/* ==================== Hero Section (Outdoor) ==================== */
+
+.site-home-outdoor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50vh;
+    margin: 40px auto;
+}
+
+.site-home-outdoor-title {
+    z-index: 5;
+    text-align: center;
+}
+
+.site-home-outdoor-title h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 1.1;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+
+
+.site-home-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.site-home-info .home-status {
+    width: 12vw;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.site-home-info .home-status img {
+    width: 20px;
+    height: auto;
+}
+
+.site-home-info b {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 2.5px;
+    text-align: center;
+    line-height: 1.1;
+    color: #7c5be6;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Portal Sona */
+
+.pilares-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 100px;
+    flex-wrap: wrap; 
+}
+
+.ranking-classes-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin: 30px auto 0 auto; 
+    width: 80vw;
+}
+
+.btn-ranking-classes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: borderGlow 1s infinite alternate;
+    gap: 10px;
+    
+   
+    width: 70%; 
+    max-width: 100%; 
+    overflow: hidden; 
+
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 7%;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px var(--color1);
+}
+
+.btn-ranking-classes img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.btn-ranking-classes:hover {
+    transform: translateY(-10px) scale(1.02);
+    cursor: pointer;
+   
+    box-shadow: 0 15px 40px rgba(118, 82, 247, 0.6); 
+}
+
+
+marquee{
+    background-color: yellow !important;
+    color: black !important;
+    padding: 5px;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
