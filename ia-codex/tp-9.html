@@ -755,7 +755,61 @@ Max 4 lines.
         </div>
     </div>
 
+<script>
+            // Controle dos Slots (Começam vazios)
+    let slots = [false];
+    let deckFinal = [""]; // Guarda os nomes pro formulário
 
+    // Função que é ativada quando clica na carta do inventário
+    function equiparCartaInteira(elementoClicado, nomeIA) {
+
+        let slotLivre = slots.indexOf(false);
+
+        if (slotLivre === -1) {
+            alert("⚠️ SEU DECK JÁ ESTÁ CHEIO! A Batalha permite apenas essas IAs.");
+            return;
+        }
+
+        // Pega o Slot vazio lá de cima
+        let slotElement = document.getElementById('slot-' + slotLivre);
+
+        // Limpa o estilo do "Slot Vazio" (tira as bordas tracejadas e o padding)
+        slotElement.style.border = "none";
+        slotElement.style.background = "transparent";
+        slotElement.style.padding = "0";
+        slotElement.style.boxShadow = "none";
+        slotElement.innerHTML = ""; // Limpa o "+" e o "Vazio"
+
+        // A MÁGICA: Tira um xerox da carta inteira com todas as classes CSS
+        let cartaClonada = elementoClicado.cloneNode(true);
+
+        // Tira a função de clique da carta clonada pra não dar erro
+        cartaClonada.removeAttribute("onclick");
+
+        // Ajusta o CSS da carta clonada pra caber no Slot
+        cartaClonada.style.transform = "scale(0.8)"; // Reduz o tamanho em 20% pra caber no slot
+        cartaClonada.style.margin = "-20px auto 0 auto"; // Centraliza a carta
+        cartaClonada.style.cursor = "default"; // Tira a mãozinha de clique
+        cartaClonada.style.pointerEvents = "none"; // Desativa o efeito de holograma na carta equipada
+
+        // Cola a carta perfeita dentro do Slot
+        slotElement.appendChild(cartaClonada);
+
+        // Adiciona o selo de EQUIPADO embaixo
+        slotElement.innerHTML += `<p style="color: #00ff41; font-family: monospace; font-size: 14px; text-shadow: 0 0 10px #00ff41; margin-top: 10px;">[ EQUIPADO ]</p>`;
+
+        // Marca como usado pro sistema
+        slots[slotLivre] = true;
+        deckFinal[slotLivre] = nomeIA;
+
+        // Atualiza o input invisível do formulário pra você saber o que usaram!
+        document.getElementById('deck-oculto').value = deckFinal.join(", ");
+
+        // Efeito visual no inventário: Escurece a carta pra mostrar que ela já foi pega
+        elementoClicado.style.opacity = "0.3";
+        elementoClicado.style.pointerEvents = "none";
+    }
+        </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
