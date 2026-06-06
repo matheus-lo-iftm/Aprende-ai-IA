@@ -1668,11 +1668,16 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    background: rgba(25, 5, 5, 0.8);
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
     justify-content: center;
 }
 
 .ia-codex-invetory {
-    width: 35%;
+    width: 40%;
     background: rgba(10, 5, 25, 0.8);
     border: 1px solid var(--color2);
     border-radius: 15px;
@@ -1680,11 +1685,83 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
+.ia-codex-invetory-body{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ia-codex-inventory-stats {
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ia-codex-items-img{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+#deck-dos-prompts{
+    background-color: rgba(0, 255, 64, 0.5);
+
+}
+
+.ia-codex-inventory-stats-box {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+
+    gap: 5px;
+    align-items: center;
+    background-color: rgb(26, 26, 46,0.5);
+    flex-direction: column;
+    font-size: clamp(0.5rem, 0.7vw, 0.7rem);
+    padding: 3%;
+
+
+
+}
+
+
+
+#num h1 {
+    color: #ffbd2e;
+    font-weight: 700;
+
+    text-shadow: 0 0 10px #ffbd2e;
+}
+
+#tool h1 {
+    color: #6045cd;
+    font-weight: 700;
+
+    text-shadow: 0 0 10px #6045cd;
+}
+
+#prom h1 {
+    color: #09ff16;
+    font-weight: 700;
+
+    text-shadow: 0 0 10px #09ff16;
+}
+
+.mmision-total-progress p,
+.mmision-total-xp p {
+    margin: 0;
+}
 
 .card {
     position: relative;
-    width: 280px;
-    height: 720px;
+    width: 40%;
+    height: 1020px;
     border-radius: 15px;
     overflow: hidden;
     color: white;
@@ -1825,13 +1902,32 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     display: flex;
     flex-direction: row;
     justify-content: start;
+    position: relative;
     align-items: center;
     gap: 12.5%;
     color: white;
 }
 
+
+.ia-codex-invetory-title:after, .ia-codex-inventory-stats:after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+
+    /* Gradiente do border-bottom */
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgb(255, 0, 0) 50%,
+            rgba(255, 255, 255, 0) 100%);
+}
+
 .ia-codex-inventory-stats{
     display: flex;
+    position: relative;
     flex-direction: row;
     gap: 5%;
 
@@ -1842,4 +1938,46 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     flex-direction: column;
     gap: 1%;
     background-color: rgba(68, 68, 68, 0.5);
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.ia-codex-items{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(26, 26, 46, 0.75);
+    border: 1px solid white;
+    border-radius: 5%;
+}
+
+.ia-codex-items-header img{
+    width: 30%;
+    height: auto;
+
+
+}
+
+.ia-codex-items-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 2%;
+    padding: 5%;
+}
+
+.ia-codex-items-body img{
+    width: 4%;
+    height: 4%;
+}
+
+.ia-codex-items-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    
+    padding: 5%;
 }
