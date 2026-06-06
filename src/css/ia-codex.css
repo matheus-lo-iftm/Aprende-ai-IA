@@ -1743,8 +1743,9 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 
 .card {
     position: relative;
-    width: 40%;
-    height: 1020px;
+    width: 280px;
+    min-height: 400px; /* Mudamos de height fixo para min-height (ela cresce se precisar) */
+    height: auto;
     border-radius: 15px;
     overflow: hidden;
     color: white;
@@ -1753,6 +1754,10 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     background: #1a1a2e;
     border: 3px solid #444;
+    
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    padding-bottom: 50px; /* CRUCIAL: Deixa um buraco de 50px no fundo pro Rodapé não esmagar o texto */
 }
 
 
@@ -1766,6 +1771,10 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 
     background: linear-gradient(135deg, #2a0d3b 0%, #5010a3 100%);
     animation: borderGlow 5s infinite alternate;
+}
+
+.psquico-theme .card-weak p{
+    color: white;
 }
 
 @keyframes borderGlow {
@@ -1882,6 +1891,7 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     position: absolute;
     bottom: 0; left: 0; width: 100%;
     display: flex;
+    gap: 15%;
     justify-content: space-between;
     padding: 10px 15px;
     background: rgba(0,0,0,0.5);
@@ -1891,7 +1901,18 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 .card-weak p { margin: 0; }
 .card-weak span { color: #ff1a1a; font-weight: bold; }
 
-.card-touch { display: flex; align-items: center; gap: 5px; color: #00ff41; font-weight: bold; }
+.card-touch {  display: flex; align-items: center; gap: 5px; color: #00ff41; font-weight: bold; gap: 10px;}
+
+.card-touch p{
+    margin: 0;
+}
+
+.card-touch img{
+    width: 15%;
+    height: auto;
+     filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(3020%) hue-rotate(95deg) brightness(101%) contrast(106%);
+
+}
 
 /* Celular */
 @media (max-width: 768px) {

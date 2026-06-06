@@ -127,7 +127,7 @@
             <div class="arena-split-layout">
 
                 <div class="card-banco">
-                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'ChatGPT')">
+                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Bing')">
 
 
                         <div class="holo-glare"></div>
@@ -169,16 +169,16 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
-                                <p><span>FRAQUEZA</span> BLOQUEIO ÉTICO</p>
+                                <p><span>FRAQUEZA</span> ÉTICA</p>
 
                             </div>
                             <div class="card-touch">
-                                <img src="" alt="">
+                                <img src="../src/media/icons/plus.png" alt="">
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'ChatGPT')">
+                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Gemini')">
 
 
                         <div class="holo-glare"></div>
@@ -201,17 +201,17 @@
 
                         <div class="card-body">
                             <div class="card-description">
-                                <p>Um assistente de IA versátil e poderoso</p>
+                                <p>A mente conectada do Google. Incrível para criar cenários épicos.</p>
                             </div>
                             <div class="attack-deck">
                                 <div class="attack">
                                     <img src="" alt="">
-                                    <h4>Cenário Sci-Fi</h4>
+                                    <h4>Vibe Sci-Fi</h4>
                                     <p>1.000 TK</p>
                                 </div>
                                 <div class="attack">
                                     <img src="" alt="">
-                                    <h4>Ilustração 3D Pixar</h4>
+                                    <h4>Estilo 3D Pixar</h4>
                                     <p>1.000 TK</p>
                                 </div>
                                 
@@ -220,16 +220,16 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
-                                <p><span>FRAQUEZA</span> - ALUCINAÇÃO</p>
+                                <p><span>FRAQUEZA</span> ANATOMIA</p>
 
                             </div>
                             <div class="card-touch">
-                                <img src="" alt="">
+                                <img src="../src/media/icons/plus.png" alt="">
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'ChatGPT')">
+                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Dreamina')">
 
 
                         <div class="holo-glare"></div>
@@ -257,12 +257,12 @@
                             <div class="attack-deck">
                                 <div class="attack">
                                     <img src="" alt="">
-                                    <h4>Estilo Anime/Mangá</h4>
+                                    <h4>Vibe Anime</h4>
                                     <p>1.000 TK</p>
                                 </div>
                                 <div class="attack">
                                     <img src="" alt="">
-                                    <h4>Renderização Unreal Engine</h4>
+                                    <h4>Renderização Unreal</h4>
                                     <p>1.000 TK</p>
                                 </div>
                                
@@ -271,16 +271,16 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
-                                <p><span>FRAQUEZA</span> - TEXTOS LONGOS</p>
+                                <p><span>FRAQUEZA</span> TEXTO</p>
 
                             </div>
                             <div class="card-touch">
-                                <img src="" alt="">
+                                <img src="../src/media/icons/plus.png" alt="">
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'ChatGPT')">
+                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Pippit AI')">
 
 
                         <div class="holo-glare"></div>
@@ -313,7 +313,7 @@
                                 </div>
                                 <div class="attack">
                                     <img src="" alt="">
-                                    <h4>Pintura a Óleo Clássica</h4>
+                                    <h4>Pintura a Óleo</h4>
                                     <p> TK</p>
                                 </div>
     
@@ -322,7 +322,7 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
-                                <p><span>FRAQUEZA</span> - TEXTO NA IMAGEM</p>
+                                <p><span>FRAQUEZA</span> TEXTO</p>
 
                             </div>
                             <div class="card-touch">
@@ -534,6 +534,13 @@ Max 4 lines.
                             </div>
                             <textarea name="Resposta da IA" required id="answer"
                                 placeholder="Cole a resposta da IA aqui..."></textarea>
+                        </div>
+
+                        <div class="quest-submission-inputs-item">
+                            <div class="quest-submission-inputs-item-label">
+                                <label for="answer">Imagem/Vídeo</label>
+                            </div>
+                            <input type="file" id="fileInput" accept="image/*">
                         </div>
                     </div>
 
@@ -750,51 +757,58 @@ Max 4 lines.
 
         <script>
             // Controle dos Slots (Começam vazios)
-            let slots = [false, false, false];
-            let deckFinal = ["", "", ""]; // Guarda os nomes pro formulário
+    let slots = [false];
+    let deckFinal = [""]; // Guarda os nomes pro formulário
 
-            // Função que é ativada quando clica na carta do inventário
-            function equiparCartaInteira(elementoClicado, nomeIA) {
+    // Função que é ativada quando clica na carta do inventário
+    function equiparCartaInteira(elementoClicado, nomeIA) {
 
-                let slotLivre = slots.indexOf(false);
+        let slotLivre = slots.indexOf(false);
 
-                if (slotLivre === -1) {
-                    alert("⚠️ SEU DECK JÁ ESTÁ CHEIO! A Batalha permite apenas 3 IAs.");
-                    return;
-                }
+        if (slotLivre === -1) {
+            alert("⚠️ SEU DECK JÁ ESTÁ CHEIO! A Batalha permite apenas essas IAs.");
+            return;
+        }
 
-                // Pega o Slot vazio lá de cima
-                let slotElement = document.getElementById('slot-' + slotLivre);
+        // Pega o Slot vazio lá de cima
+        let slotElement = document.getElementById('slot-' + slotLivre);
 
-                // Pega o código HTML inteirinho da carta que o aluno clicou
-                let codigoDaCarta = elementoClicado.innerHTML;
+        // Limpa o estilo do "Slot Vazio" (tira as bordas tracejadas e o padding)
+        slotElement.style.border = "none";
+        slotElement.style.background = "transparent";
+        slotElement.style.padding = "0";
+        slotElement.style.boxShadow = "none";
+        slotElement.innerHTML = ""; // Limpa o "+" e o "Vazio"
 
-                // Limpa o estilo de "Slot Vazio" (tira as bordas tracejadas)
-                slotElement.style.border = "none";
-                slotElement.style.background = "transparent";
-                slotElement.style.padding = "0";
-                slotElement.style.boxShadow = "none";
+        // A MÁGICA: Tira um xerox da carta inteira com todas as classes CSS
+        let cartaClonada = elementoClicado.cloneNode(true);
 
-                // COLA A CARTA INTEIRA LÁ EM CIMA (Mantendo as animações do CSS)
-                // Adiciono uma div por volta pra garantir que a carta mantenha a proporção original do Pokemon-card
-                slotElement.innerHTML = `
-            <div class="pokemon-card-equipped" style="transform: scale(0.9);">
-                ${codigoDaCarta}
-            </div>
-            <p style="color: #ff1a1a; margin-top: 10px; font-family: monospace;">[ EQUIPADO ]</p>
-        `;
+        // Tira a função de clique da carta clonada pra não dar erro
+        cartaClonada.removeAttribute("onclick");
 
-                // Marca como usado pro sistema
-                slots[slotLivre] = true;
-                deckFinal[slotLivre] = nomeIA;
+        // Ajusta o CSS da carta clonada pra caber no Slot
+        cartaClonada.style.transform = "scale(0.8)"; // Reduz o tamanho em 20% pra caber no slot
+        cartaClonada.style.margin = "-20px auto 0 auto"; // Centraliza a carta
+        cartaClonada.style.cursor = "default"; // Tira a mãozinha de clique
+        cartaClonada.style.pointerEvents = "none"; // Desativa o efeito de holograma na carta equipada
 
-                // Atualiza o input invisível do formulário pra você saber o que usaram!
-                document.getElementById('deck-oculto').value = deckFinal.join(", ");
+        // Cola a carta perfeita dentro do Slot
+        slotElement.appendChild(cartaClonada);
 
-                // Efeito visual no inventário pra mostrar que a carta já foi pega (opcional)
-                elementoClicado.style.opacity = "0.3";
-                elementoClicado.style.pointerEvents = "none";
-            }
+        // Adiciona o selo de EQUIPADO embaixo
+        slotElement.innerHTML += `<p style="color: #00ff41; font-family: monospace; font-size: 14px; text-shadow: 0 0 10px #00ff41; margin-top: 10px;">[ EQUIPADO ]</p>`;
+
+        // Marca como usado pro sistema
+        slots[slotLivre] = true;
+        deckFinal[slotLivre] = nomeIA;
+
+        // Atualiza o input invisível do formulário pra você saber o que usaram!
+        document.getElementById('deck-oculto').value = deckFinal.join(", ");
+
+        // Efeito visual no inventário: Escurece a carta pra mostrar que ela já foi pega
+        elementoClicado.style.opacity = "0.3";
+        elementoClicado.style.pointerEvents = "none";
+    }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
