@@ -1400,7 +1400,10 @@ margin-top: 100px}
     gap: 20px;
     align-items: center;
     justify-content: center;
-    margin: 25px;
+    justify-self: center;
+    justify-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
     width: 100%;
 }
 
@@ -1417,6 +1420,10 @@ margin-top: 100px}
     font-size: clamp(0.5rem, 0.8vw, 2rem);
     margin: 0;
     color: white;
+}
+
+.quest-submission-inputs-item-label label{
+    color: #ff0000;
 }
 
 .quest-board-body pre {
@@ -1476,6 +1483,11 @@ margin-top: 100px}
     width: 80%;
     height: 1px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+}
+
+#quest-board-header-1:after{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 0, 0) 50%, rgba(255, 255, 255, 0) 100%);
+
 }
 
 .quest-board-header img{
@@ -1550,25 +1562,284 @@ margin-top: 100px}
 
 .quest-submission-footer{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    width: 80vw;
+    justify-self: center;
+    width: 75%;
+    transition: all 0.3s ease;
     margin: 20px auto;
-    background: transparent;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.1);
     font-family: 'PokemonTitulo', sans-serif;
+    font-size: clamp(1rem, 2vw, 3rem);
 }
 
 .quest-submission-footer button{
-    background: transparent;
+
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 7%;
-    color: white;
-    width: fit-content;
+    color: black;
+    width: 75% !important;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     padding: 10px;
     width: fit-content;
+    background: #ffffff;
+background: linear-gradient(92deg, rgba(255, 255, 255, 1) 0%, rgba(255, 204, 204, 1) 50%, rgba(255, 0, 0, 1) 100%);
+}
+
+.quest-submission-footer button:hover{
+   background: rgb(255, 0, 0);
+background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1) 50%,rgba(255, 255, 255, 1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* CSS das Cards */
+
+
+
+
+.ano-ia-outdoor-central{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+}
+
+.ano-ia-banco-cards-header{
+    display: flex;
+    position: relative;
+    margin: 5%;
+    color: white;
+    justify-self: center;
+    transition:all 0.3s ease;
+    align-items: center;
+    
+
+}
+
+.ano-ia-banco-cards-header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    transition:all 0.3s ease;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 0, 0) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: pulse 4s linear infinite;
+    
+}
+
+@keyframes pulse {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+.arena-split-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.card-banco {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ia-codex-invetory {
+    width: 35%;
+    background: rgba(10, 5, 25, 0.8);
+    border: 1px solid var(--color2);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+.card {
+    position: relative;
+    width: 280px;
+    height: 720px;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    cursor: url('../cursor/Cartoon-Hand-Link.cur'), pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    background: #1a1a2e;
+    border: 3px solid #444;
+}
+
+/* Levanta e brilha no Hover */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255,255,255,0.2);
+}
+
+/* TEMAS DAS CARTAS (Cores específicas) */
+.chatgpt-theme {
+    background: linear-gradient(135deg, #0d3b2e 0%, #10a37f 100%);
+    border-color: #10a37f;
+}
+.chatgpt-theme:hover { box-shadow: 0 15px 35px rgba(16, 163, 127, 0.6); }
+
+/* --- EFEITO HOLOGRÁFICO --- */
+.holo-glare {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,0.4) 25%, rgba(255,255,255,0.5) 50%, transparent 55%);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: opacity 0.3s, transform 0.6s ease-in-out;
+}
+.card:hover .holo-glare {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+/* --- INTERIOR DA CARTA --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.card-name h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
+}
+
+.card-type {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+}
+
+.card-type img { width: 15px; height: 15px; }
+
+.card-image-box {
+    width: 90%;
+    height: 140px;
+    margin: 10px auto;
+    border: 2px solid silver;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px black;
+}
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body { padding: 0 15px; }
+
+.card-description p {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.attack-deck {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.attack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 5px;
+}
+.attack h4 { font-size: 0.9rem; margin: 0; color: white; }
+.attack p { font-size: 0.8rem; margin: 0; color: #ffbd2e; font-weight: bold; } /* XP ou Dano */
+
+.card-footer {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.5);
+    font-size: 0.7rem;
+}
+
+.card-weak p { margin: 0; }
+.card-weak span { color: #ff1a1a; font-weight: bold; }
+
+.card-touch { display: flex; align-items: center; gap: 5px; color: #00ff41; font-weight: bold; }
+
+/* Celular */
+@media (max-width: 768px) {
+    .arena-split-layout { flex-direction: column; }
+    .card-banco, .ia-codex-invetory { width: 100%; }
+}
+
+
+.ia-codex-invetory-title img{
+    width: 15%;
+    height: 15%;
+}
+
+.ia-codex-invetory-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 12.5%;
+    color: white;
+}
+
+.ia-codex-inventory-stats{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+
+}
+
+.ia-codex-inventory-stats-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    background-color: rgba(68, 68, 68, 0.5);
 }
