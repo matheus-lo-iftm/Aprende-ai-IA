@@ -1676,7 +1676,7 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     justify-content: center;
 }
 
-.ia-codex-invetory {
+.ia-codex-inventory {
     width: 40%;
     background: rgba(10, 5, 25, 0.8);
     border: 1px solid var(--color2);
@@ -1685,11 +1685,6 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-.ia-codex-invetory-body{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
 .ia-codex-inventory-stats {
     display: flex;
@@ -1700,18 +1695,9 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     justify-content: center;
 }
 
-.ia-codex-items-img{
-display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    padding: 1px;
-}
 
-#deck-dos-prompts{
-    background-color: rgba(0, 255, 64, 0.5);
 
-}
+
 
 .ia-codex-inventory-stats-box {
     display: flex;
@@ -1753,10 +1739,7 @@ display: flex;
     text-shadow: 0 0 10px #09ff16;
 }
 
-.mmision-total-progress p,
-.mmision-total-xp p {
-    margin: 0;
-}
+
 
 .card {
     position: relative;
@@ -1772,18 +1755,42 @@ display: flex;
     border: 3px solid #444;
 }
 
-/* Levanta e brilha no Hover */
+
 .card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 15px 35px rgba(255,255,255,0.2);
 }
 
-/* TEMAS DAS CARTAS (Cores específicas) */
-.chatgpt-theme {
-    background: linear-gradient(135deg, #0d3b2e 0%, #10a37f 100%);
-    border-color: #10a37f;
+
+.psquico-theme {
+
+    background: linear-gradient(135deg, #2a0d3b 0%, #5010a3 100%);
+    animation: borderGlow 5s infinite alternate;
 }
-.chatgpt-theme:hover { box-shadow: 0 15px 35px rgba(16, 163, 127, 0.6); }
+
+@keyframes borderGlow {
+    0% {
+        box-shadow: 0 0 15px rgb(60, 0, 128);
+        border: 1px solid rgb(60, 0, 128);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(79, 0, 170);
+        border: 1px solid rgb(79, 0, 170);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(104, 0, 223);
+        border: 1px solid rgb(104, 0, 223);
+    }
+}
+.psquico-theme:hover { box-shadow: 0 15px 35px rgba(55, 16, 163, 0.6); }
+
+
+.psquico-theme .card-type, .psquico-theme .card-name{
+    color: white;
+}
+
 
 /* --- EFEITO HOLOGRÁFICO --- */
 .holo-glare {
@@ -1801,7 +1808,7 @@ display: flex;
     transform: translateX(100%);
 }
 
-/* --- INTERIOR DA CARTA --- */
+
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -1889,16 +1896,16 @@ display: flex;
 /* Celular */
 @media (max-width: 768px) {
     .arena-split-layout { flex-direction: column; }
-    .card-banco, .ia-codex-invetory { width: 100%; }
+    .card-banco, .ia-codex-inventory { width: 100%; }
 }
 
 
-.ia-codex-invetory-title img{
+.ia-codex-inventory-title img{
     width: 15%;
     height: 15%;
 }
 
-.ia-codex-invetory-title{
+.ia-codex-inventory-title{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -1909,7 +1916,7 @@ display: flex;
 }
 
 
-.ia-codex-invetory-title:after, .ia-codex-inventory-stats:after {
+.ia-codex-inventory-title:after, .ia-codex-inventory-stats:after {
     content: "";
     position: absolute;
     bottom: -20%;
@@ -1945,39 +1952,168 @@ display: flex;
     flex-direction: row;
 }
 
-.ia-codex-items{
+
+
+
+
+
+.ia-codex-inventory-body {
     display: flex;
     flex-direction: column;
-    background-color:rgba(26, 26, 46, 0.75);
-    border: 1px solid white;
-    border-radius: 5%;
+    gap: 15px;
+    padding-top: 15px;
 }
 
-.ia-codex-items-header img{
-    width: 30%;
-    height: auto;
 
-
-}
-
-.ia-codex-items-header{
+.ia-codex-items {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    gap: 2%;
-    padding: 5%;
+    flex-direction: column;
+    background: rgba(15, 15, 25, 0.8); 
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease;
 }
 
-.ia-codex-items-body img{
-    width: 4%;
-    height: 4%;
+
+.ia-codex-items:hover {
+
+    transform: translateX(5px); 
 }
 
-.ia-codex-items-body{
+#deck-dos-prompts{
+        border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+}
+
+#codex-etica{
+        border-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 255, 0, 0.1);
+}
+
+#ferramentas-detec{
+        border-color: rgba(55, 0, 255, 0.5);
+    box-shadow: 0 5px 20px rgba(55, 0, 255, 0.1);
+}
+
+#kit-ia{
+        border-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 5px 20px rgba(255, 0, 0, 0.1);
+}
+
+
+
+
+#kit-ia .ia-codex-items-img{
+    background: rgba(255, 0, 0, 0.5);
+}
+
+#ferramentas-detec .ia-codex-items-img{
+    background: rgba(55, 0, 255, 0.5);
+}
+
+#codex-etica .ia-codex-items-img{
+    background:  rgba(0, 255, 0, 0.5);
+}
+
+#deck-dos-prompts .ia-codex-items-img{
+    background: rgba(0, 255, 255, 0.5);
+}
+
+.ia-codex-items-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5%;
-    
-    padding: 5%;
+    gap: 15px;
+    margin-bottom: 12px; 
+}
+
+
+.ia-codex-items-img {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+.ia-codex-items-img img {
+    width: 100%;
+    height: auto;
+    filter: invert(1); 
+}
+
+
+.ia-codex-items-title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ia-codex-items-title h3 {
+    margin: 0;
+    font-size: clamp(1.25rem, 1vw, 2rem);
+    color: white;
+    font-family: 'PokemonTitulo', 'Exo 2', sans-serif;
+    letter-spacing: 1px;
+}
+
+.ia-codex-items-title p {
+    margin: 0;
+    font-size: clamp(0.25rem, 0.75vw, 1rem);
+    color: #8E8E93; /* Cinza hacker */
+    font-family: 'PokemonParagrafo', monospace;
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   O BOTÃO "BAIXAR" (Transformando a div em botão)
+================================================== */
+.ia-codex-items-body {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 15px;
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid #ffffff; /* Borda Ciano Neon */
+    border-radius: 20px; /* Formato de Pílula */
+    width: fit-content;
+    align-self: flex-start; /* Joga o botão pra esquerda */
+    margin-left: 60px; /* Alinha o botão com o texto, ignorando o ícone */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ia-codex-items-body p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.ia-codex-items-body img {
+    width: 12px;
+    height: auto;
+
+    filter: invert(56%) sepia(85%) saturate(2329%) hue-rotate(152deg) brightness(101%) contrast(104%); 
+}
+
+.ia-codex-items-body:hover {
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.ia-codex-items-body:hover p {
+    color: #050505; /* Fica preto quando o fundo fica ciano */
+}
+
+.ia-codex-items-body:hover img {
+    filter: brightness(0); /* Deixa o ícone preto */
 }
