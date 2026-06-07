@@ -2599,6 +2599,21 @@ footer img {
     cursor: pointer !important;
 }
 
+
+#ia-codex-m3-button{
+    text-decoration: none;
+}
+
+
+#ia-codex-m3-button img{
+    filter: invert(1) brightness(100);
+}
+
+#ia-codex-m3-button:hover img{
+    filter: invert(0);
+}
+
+
 .mmision-box-header {
 
     display: flex;
