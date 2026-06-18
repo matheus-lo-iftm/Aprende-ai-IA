@@ -1642,6 +1642,7 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     
 }
 
+
 @keyframes pulse {
     0% {
         filter: hue-rotate(0deg);

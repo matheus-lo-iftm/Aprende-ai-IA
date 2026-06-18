@@ -1672,9 +1672,10 @@ footer img {
 }
 
 .btn-hackear {
-    display: flex;
+    display: block;
     align-self: center;
     justify-self: center;
+    text-align: center !important;
     transition: all 0.3s ease;
 }
 

@@ -292,7 +292,7 @@
                     </p>
 
            
-            <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST" class="mt-4">
+            <!-- <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST" class="mt-4"> -->
                 
                 <!-- Redirecionamento após enviar -->
                 <input type="hidden" name="_subject" value="NOVA TENTATIVA DE ENIGMA!">
@@ -302,11 +302,11 @@
 
                 <!-- Dados do Aluno -->
                 <div class="row mb-3">
-                    <div class="d-flex flex-column col-md-6" mt-3>
+                    <!-- <div class="d-flex flex-column col-md-6" mt-3>
                         <span class="texto-terminal">> ALUNO(A)_</span>
                         <input type="text" name="Nome do Aluno" class="input-hacker" placeholder="Seu nome"style="background: #000; color: #00ff41; required">
-                    </div>
-                    <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
+                    </div> -->
+                    <!-- <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
                         <span class="texto-terminal">> CLÃ_</span>
                         <select name="Clã" class="input-hacker" required style="background: #000; color: #00ff41;">
                             <option value="">ㅤ</option>
@@ -316,14 +316,20 @@
                             <option value="Bonde Glitch">Bonde Glitch</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
 
-                
+                <!-- MENSAGENS DE SUCESSO/ERRO (Escondidas) -->
+        <div id="msgSucessoIFEX" style="display: none; justify-content: center; background: rgba(0, 255, 65, 0.2); border: 2px solid #00ff41; padding: 20px; border-radius: 10px; text-align: center; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 0 20px #00ff41;">
+            <h1 style="color: #00ff41; font-size: 2rem;">✅ SISTEMA HACKEADO!</h1>
+            
+        </div>
 
-                <button type="submit" class="btn-hackear" style="background: #000; color: #00ff41;">
-                    [ TRANSMITIR PARA O MESTRE DO JOGO ]
-                </button>
-            </form>
+        <div id="msgErroIFEX" style="display: none; justify-content: center; background: rgba(255, 0, 0, 0.2); border: 2px solid #ff2a2a; padding: 15px; border-radius: 10px; text-align: center; margin-top: 40px; margin-bottom: 40px; box-shadow: 0 0 20px #ff2a2a;">
+            <h3 style="color: #ff2a2a; margin:0; font-size: 2rem;">❌ ACESSO NEGADO</h3>
+        </div>
+
+                <button type="submit" onclick="tentarHackearIFEX()" class="btn-hackear" style="background: #000; color: #00ff41; text-align: center !important;">[ DECODIFICAR ]</button>
+            <!-- </form> -->
 
         </div>
     </div>
@@ -337,7 +343,7 @@
                     
                 </div>
 
-                <script>
+                <!-- <script>
                     function lerSenha() {
                         const engrenagens = document.querySelectorAll('.engrenagem');
                         const inputOculto = document.getElementById('senhaOculta');
@@ -381,7 +387,70 @@
 
                         setTimeout(lerSenha, 300);
                     }
-                </script>
+                </script> -->
+
+                <script>
+    // Função que move a engrenagem com a setinha
+    function moverEngrenagem(botao, direcao) {
+        let coluna = botao.parentElement.querySelector('.engrenagem');
+        let scrollAtual = coluna.scrollTop;
+
+        coluna.scrollTo({
+            top: scrollAtual + (50 * direcao),
+            behavior: 'smooth'
+        });
+    }
+
+    // Função que checa a senha quando aperta o botão
+    function tentarHackearIFEX() {
+        const engrenagens = document.querySelectorAll('.engrenagem');
+        let tentativa = "";
+
+        // Pega as imagens do visor da máquina
+        engrenagens.forEach(engrenagem => {
+            let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
+            let simbolos = engrenagem.querySelectorAll('.simbolo');
+            
+            // Pega a DIV do meio
+            let divDoMeio = simbolos[indexSelecionado + 1];
+
+            // Procura se tem uma imagem dentro dessa div
+            if (divDoMeio) {
+                let imagem = divDoMeio.querySelector('img');
+                
+                // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
+                if (imagem) {
+                    // Adiciona o nome do símbolo na tentativa, separado por um tracinho
+                    tentativa += imagem.alt + " - ";
+                }
+            }
+        });
+
+        // Tira o último tracinho que sobra no final
+        tentativa = tentativa.replace(/ - $/, "");
+        console.log("O aluno tentou: " + tentativa); // Pra vc olhar no F12 se quiser
+
+        // ==========================================
+        // A SENHA SECRETA!
+        
+// A palavra é: D - E - T - A - L - H - E - S
+let senhaSecreta = "chip - Y - & - code - porc - hash - Y - $";
+        // ==========================================
+
+        if (tentativa === senhaSecreta) {
+            document.getElementById('msgSucessoIFEX').style.display = 'block';
+            document.getElementById('msgErroIFEX').style.display = 'none';
+        } else {
+            document.getElementById('msgErroIFEX').style.display = 'block';
+            document.getElementById('msgSucessoIFEX').style.display = 'none';
+            
+            // Esconde o erro depois de 3 segundos pra ele tentar de novo
+            setTimeout(() => {
+                document.getElementById('msgErroIFEX').style.display = 'none';
+            }, 3000);
+        }
+    }
+</script>
 
 
         

@@ -1333,6 +1333,27 @@ footer img {
     display: none;
 }
 
+#mission-card-bonus-event{
+    background: rgba(0, 0, 0, 0.801);
+    border: 1px solid rgba(118, 82, 247, 0.3);
+    animation: pulse 4s linear infinite;
+    
+}
+
+@keyframes pulse {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+#pulse-secret{
+    animation: pulse 4s linear infinite;
+
+}
+
 /* Estilo do Card */
 .mission-card {
     min-width: 300px;
