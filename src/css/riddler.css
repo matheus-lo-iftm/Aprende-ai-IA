@@ -2011,3 +2011,56 @@ footer img {
         font-size: 1.3rem;
     }
 }
+
+
+
+.enigma-alphabet{
+     display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    background-color: #1a2b1a;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 5px;
+    width: 70vw;
+    gap: 15px;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    color: #00ff41;
+    animation: borderGlow 5s infinite alternate;
+}
+
+.enigma-symbol{display: flex;
+    background: #0a120a;
+    border: 2px solid #00ff41;
+    border-radius: 8px;
+    position: relative;
+
+    gap: 15%;
+    width: 50%;  
+    overflow: hidden;
+
+
+
+    
+
+    width: 100%; 
+    height: auto;
+    padding: 10px;
+    
+
+
+
+
+    justify-self: center;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.9);}
+
+    .enigma-symbol img{
+           filter: invert(27%) sepia(21%) saturate(1312%) hue-rotate(74deg) brightness(94%) contrast(89%);   
+           width: 50px;
+    height: auto;
+
+    }
