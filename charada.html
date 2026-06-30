@@ -296,7 +296,7 @@
                     </p>
 
 
-                    <!-- <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST" class="mt-4"> -->
+                    <form id="formEnigma" action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST" class="mt-4">
 
                     <!-- Redirecionamento após enviar -->
                     <input type="hidden" name="_subject" value="NOVA TENTATIVA DE ENIGMA!">
@@ -306,11 +306,11 @@
 
                     <!-- Dados do Aluno -->
                     <div class="row mb-3">
-                        <!-- <div class="d-flex flex-column col-md-6" mt-3>
+                        <div class="d-flex flex-column col-md-6" mt-3>
                         <span class="texto-terminal">> ALUNO(A)_</span>
                         <input type="text" name="Nome do Aluno" class="input-hacker" placeholder="Seu nome"style="background: #000; color: #00ff41; required">
-                    </div> -->
-                        <!-- <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
+                    </div> 
+                        <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
                         <span class="texto-terminal">> CLÃ_</span>
                         <select name="Clã" class="input-hacker" required style="background: #000; color: #00ff41;">
                             <option value="">ㅤ</option>
@@ -320,7 +320,7 @@
                             <option value="Bonde Glitch">Bonde Glitch</option>
                         </select>
                     </div>
-                </div> -->
+                </div>
 
                         <!-- MENSAGENS DE SUCESSO/ERRO (Escondidas) -->
                         <div id="msgSucessoIFEX"
@@ -334,9 +334,7 @@
                             <h3 style="color: #ff2a2a; margin:0; font-size: 2rem;">❌ ACESSO NEGADO</h3>
                         </div>
 
-                        <button type="submit" onclick="tentarHackearIFEX()" class="btn-hackear"
-                            style="background: #000; color: #00ff41; text-align: center !important;">[ DECODIFICAR
-                            ]</button>
+                        <button type="submit" onclick="tentarHackearIFEX(event)" class="btn-hackear" style="background: #000; color: #00ff41; text-align: center !important;">[ DECODIFICAR ]</button>
                         <!-- </form> -->
 
                     </div>
@@ -350,41 +348,41 @@
                 <div class="enigma-symbol">
                     <img src="src/simbols/chip.png" alt="">
                     <h1>=</h1>
-                    <h1>D</h1>
+                    <h1>C</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/Y.png" alt="">
                     
                     <h1>=</h1>
-                    <h1>E</h1>
+                    <h1>A</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/$.png" alt="">
                     
                     
-                    <h1>=</h1><h1>S</h1>
+                    <h1>=</h1><h1>I</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/hash.png" alt="">
                     
-                    <h1>=</h1><h1>H</h1>
+                    <h1>=</h1><h1>R</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/porc.png" alt="">
                     
-                    <h1>=</h1><h1>L</h1>
+                    <h1>=</h1><h1>N</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/code.png" alt="">
                     
-                    <h1>=</h1><h1>A</h1>
+                    <h1>=</h1><h1>L</h1>
                 </div>
                 <div class="enigma-symbol">
                     <img src="src/simbols/qr-code.png" alt="">
                     
-                    <h1>=</h1><h1>C</h1>
+                    <h1>=</h1><h1>U</h1>
                 </div>
-                <div class="enigma-symbol">
+                <!-- <div class="enigma-symbol">
                     <img src="src/simbols/question.png" alt="">
                     
                     <h1>=</h1><h1>R</h1>
@@ -393,7 +391,7 @@
                     <img src="src/simbols/&.png" alt="">
                     
                     <h1>=</h1><h1>T</h1>
-                </div>
+                </div> -->
 
             </div>
 
@@ -402,114 +400,84 @@
 
         </div>
 
-        <!-- <script>
-                    function lerSenha() {
-                        const engrenagens = document.querySelectorAll('.engrenagem');
-                        const inputOculto = document.getElementById('senhaOculta');
-                        let senhaAtual = "";
-
-                        engrenagens.forEach(engrenagem => {
-                            let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
-                            let simbolos = engrenagem.querySelectorAll('.simbolo');
-
-                            // Pega a DIV do meio
-                            let divDoMeio = simbolos[indexSelecionado + 1];
-
-                            // Procura se tem uma imagem dentro dessa div
-                            let imagem = divDoMeio.querySelector('img');
-
-                            // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
-                            if (imagem) {
-                                // Adiciona o nome do símbolo na senha, separado por um tracinho
-                                senhaAtual += imagem.alt + " - ";
-                            }
-                        });
-
-                        // Tira o último tracinho que sobra no final
-                        senhaAtual = senhaAtual.replace(/ - $/, "");
-
-                        // Grava a senha final no input invisível
-                        inputOculto.value = senhaAtual;
-                        console.log("Senha lida: " + senhaAtual); // Pra vc testar no F12
-                    }
-
-                    window.onload = lerSenha;
-
-                    function moverEngrenagem(botao, direcao) {
-                        let coluna = botao.parentElement.querySelector('.engrenagem');
-                        let scrollAtual = coluna.scrollTop;
-
-                        coluna.scrollTo({
-                            top: scrollAtual + (50 * direcao),
-                            behavior: 'smooth'
-                        });
-
-                        setTimeout(lerSenha, 300);
-                    }
-                </script> -->
-
         <script>
-            // Função que move a engrenagem com a setinha
-            function moverEngrenagem(botao, direcao) {
-                let coluna = botao.parentElement.querySelector('.engrenagem');
-                let scrollAtual = coluna.scrollTop;
+    // Função que move a engrenagem com a setinha
+    function moverEngrenagem(botao, direcao) {
+        let coluna = botao.parentElement.querySelector('.engrenagem');
+        let scrollAtual = coluna.scrollTop;
 
-                coluna.scrollTo({
-                    top: scrollAtual + (50 * direcao),
-                    behavior: 'smooth'
-                });
-            }
+        coluna.scrollTo({
+            top: scrollAtual + (50 * direcao),
+            behavior: 'smooth'
+        });
+    }
 
-            // Função que checa a senha quando aperta o botão
-            function tentarHackearIFEX() {
-                const engrenagens = document.querySelectorAll('.engrenagem');
-                let tentativa = "";
+    // Função que checa a senha e controla o envio do FormSubmit
+    function tentarHackearIFEX(event) {
+        // Impede o envio imediato do formulário para podermos validar antes
+        event.preventDefault(); 
 
-                // Pega as imagens do visor da máquina
-                engrenagens.forEach(engrenagem => {
-                    let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
-                    let simbolos = engrenagem.querySelectorAll('.simbolo');
+        const engrenagens = document.querySelectorAll('.engrenagem');
+        let tentativa = "";
 
-                    // Pega a DIV do meio
-                    let divDoMeio = simbolos[indexSelecionado + 1];
+        // Pega as imagens do visor da máquina
+        engrenagens.forEach(engrenagem => {
+            let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
+            let simbolos = engrenagem.querySelectorAll('.simbolo');
 
-                    // Procura se tem uma imagem dentro dessa div
-                    if (divDoMeio) {
-                        let imagem = divDoMeio.querySelector('img');
+            // Pega a DIV do meio
+            let divDoMeio = simbolos[indexSelecionado + 1];
 
-                        // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
-                        if (imagem) {
-                            // Adiciona o nome do símbolo na tentativa, separado por um tracinho
-                            tentativa += imagem.alt + " - ";
-                        }
-                    }
-                });
+            // Procura se tem uma imagem dentro dessa div
+            if (divDoMeio) {
+                let imagem = divDoMeio.querySelector('img');
 
-                // Tira o último tracinho que sobra no final
-                tentativa = tentativa.replace(/ - $/, "");
-                console.log("O aluno tentou: " + tentativa); // Pra vc olhar no F12 se quiser
-
-                // ==========================================
-                // A SENHA SECRETA!
-
-                // A palavra é: D - E - T - A - L - H - E - S
-                let senhaSecreta = "chip - Y - & - code - porc - hash - Y - $";
-                // ==========================================
-
-                if (tentativa === senhaSecreta) {
-                    document.getElementById('msgSucessoIFEX').style.display = 'block';
-                    document.getElementById('msgErroIFEX').style.display = 'none';
-                } else {
-                    document.getElementById('msgErroIFEX').style.display = 'block';
-                    document.getElementById('msgSucessoIFEX').style.display = 'none';
-
-                    // Esconde o erro depois de 3 segundos pra ele tentar de novo
-                    setTimeout(() => {
-                        document.getElementById('msgErroIFEX').style.display = 'none';
-                    }, 3000);
+                // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
+                if (imagem) {
+                    // Adiciona o nome do símbolo na tentativa, separado por um tracinho
+                    tentativa += imagem.alt + " - ";
                 }
             }
-        </script>
+        });
+
+        // Tira o último tracinho que sobra no final e padroniza para minúsculo
+        tentativa = tentativa.replace(/ - $/, "").toLowerCase().trim();
+        console.log("O aluno tentou: " + tentativa); // Para debugar no F12 se precisar
+
+        // ==========================================
+        // A SENHA SECRETA (Padronizada em minúsculas)
+        // Palavra correspondente: A - L - U - C - I - N - A - R
+        let senhaSecreta = "y - code - qr-code - chip - $ - porc - y - hash";
+        // ==========================================
+
+        const msgSucesso = document.getElementById('msgSucessoIFEX');
+        const msgErro = document.getElementById('msgErroIFEX');
+
+        if (tentativa === senhaSecreta) {
+            // Se acertar: mostra sucesso e limpa erro
+            msgSucesso.style.display = 'block';
+            msgErro.style.display = 'none';
+
+            // Salva a resposta final decodificada no input invisível para ir no e-mail
+            document.getElementById('senhaOculta').value = "A-L-U-C-I-N-A-R (" + tentativa + ")";
+
+            // Aguarda 1.5 segundos para o aluno ver o aviso de sucesso antes de enviar
+            setTimeout(() => {
+                document.getElementById('formEnigma').submit();
+            }, 1500);
+
+        } else {
+            // Se errar: mostra erro e esconde sucesso
+            msgErro.style.display = 'block';
+            msgSucesso.style.display = 'none';
+
+            // Esconde o aviso de erro depois de 3 segundos para ele tentar de novo
+            setTimeout(() => {
+                msgErro.style.display = 'none';
+            }, 3000);
+        }
+    }
+</script>
 
 
 
