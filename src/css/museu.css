@@ -19,7 +19,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     background: linear-gradient(45deg, #09090e 70%, #1a0033 90%, #001a33 100%);
-    animation: glitch-fundo 2s infinite !important;
+
     color: white;
 
     display: grid;
@@ -37,7 +37,6 @@ body {
 }
 
 /* ----------------------------- Background ----------------------------- */
-
 .hero-background {
     position: fixed;
     top: 0;
@@ -46,10 +45,10 @@ body {
     height: 100%;
     z-index: -1;
 
-    background-image:
-        linear-gradient(var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px);
-    background-size: 40px 40px;
+  
+    background-image: radial-gradient(circle, var(--grid-line) 2px, transparent 2px);
+
+    background-size: 14px 14px; 
 
     mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
     -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
@@ -59,12 +58,18 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(var(--highlight), var(--highlight));
-    background-size: 120px 120px;
-    background-repeat: repeat;
-    mask-image: radial-gradient(square, white 40px, transparent 40px);
-    opacity: 0.4;
-    filter: blur(1px);
+
+    background-image: radial-gradient(circle, var(--highlight) 2px, transparent 2px);
+    background-size: 14px 14px;
+    
+
+    transform: translate(2px, 2px); 
+    
+    opacity: 1;
+    filter: blur(0.5px); 
+    
+
+    mix-blend-mode: screen; 
 }
 
 
@@ -943,4 +948,41 @@ footer img {
 
 .site-home-outdoor-title i {
     color: #9276ee;
+}
+
+
+/* Background Aranhaverso */
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999999999999999999999999999999999999999999999999;
+    /* Fica atrás de tudo */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Preenche a tela mantendo a proporção */
+    object-position: center; /* Centraliza o foco do vídeo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(0.1) contrast(1.5) brightness(0.6);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 13, 2, 0.7);
+    /* Filtro verde escuro de Arkham */
+    z-index: -1;
 }
