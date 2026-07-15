@@ -29,12 +29,22 @@ body {
     overflow-x: hidden;
 }
 
-@keyframes glitch-fundo {
-  0%, 95%, 100% { filter: hue-rotate(0deg) saturate(1); }
-  96% { filter: hue-rotate(90deg) saturate(1.5) blur(1px); }
-  97% { filter: hue-rotate(-90deg) skewX(2deg); }
-  98% { filter: hue-rotate(180deg) blur(0px); }
+@font-face {
+    font-family: 'Betty-Noir';
+    src: url('../fonts/bettynoir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Blambot';
+    src: url('../fonts/Blambot.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 /* ----------------------------- Background ----------------------------- */
 .hero-background {
@@ -77,19 +87,29 @@ body {
 /* ----------------------------- Paleta de Cor ----------------------------- */
 
 :root {
+    /* Cores Base do Glitch */
+    --color1: #00f2fe;        /* Azul Cyber / Ciano Puro */
+    --color2: #00a8ff;        /* Azul Neon Secundário */
+    --color3: #ff0055;        /* Vermelho Laser / Magenta Tik Tok */
+    --color4: #ff00c8;        /* Rosa Choque / Anomalia */
+    --color5: #110022;        /* Roxo Profundo Quase Preto (Fundo das seções) */
+    
+    /* Variáveis Principais Atualizadas */
+    --purple-main: #ff0055;   /* Vermelho/Magenta Laser */
+    --purple-dark: #05010d;   /* Fundo do site super escuro */
+    
+    /* Efeitos de Vidro e Bordas Neon */
+    --glass-bg: rgba(5, 1, 13, 0.6); /* Fundo escuro translúcido */
+    --border-glass: rgba(0, 244, 255, 0.4); /* Borda brilhando em Azul Cyber */
+    --text-muted: #8a8894;    /* Texto apagado cinza-azulado tecnológico */
+    
+    /* Grades e Linhas de Varredura da Tela */
+    --grid-line: rgba(0, 242, 254, 0.1); 
+    --highlight: rgba(255, 0, 85, 0.15); /* Vermelho Laser */
 
-    --color1: #27199b;
-    --color2: #432fb4;
-    --color3: #6045cd;
-    --color4: #7c5be6;
-    --color5: #9871ff;
-    --purple-main: #7652f7;
-    --purple-dark: #130444;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --border-glass: rgba(118, 82, 247, 0.3);
-    --text-muted: #727272;
-    --grid-line: rgba(255, 255, 255, 0.08);
-    --highlight: rgba(255, 255, 255, 0.03);
+    /* BÔNUS: Sombras de Brilho Neon (Glow Effects) */
+    --glow-cyber: 0 0 10px rgba(0, 242, 254, 0.6), 0 0 20px rgba(0, 242, 254, 0.2);
+    --glow-laser: 0 0 10px rgba(255, 0, 85, 0.6), 0 0 20px rgba(255, 0, 85, 0.2);
 }
 
 
@@ -260,24 +280,6 @@ h6,
 
 
 
-.terminal-cursor {
-    display: inline-block;
-    width: 10px;
-    height: 1.2em;
-    background-color: #a2ff00; /* Verde do Charada */
-    margin-left: 5px;
-    vertical-align: middle;
-    animation: blink 0.8s infinite;
-    box-shadow: 0 0 8px #a2ff00; /* Glow opcional para combinar com o site */
-}
-
-
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
 /* -------------------------------------------------------- Menu de Navegação -------------------------------------------------------- */
 
 /* Background do Nav */
@@ -371,6 +373,9 @@ nav a {
 
 .logo * :hover {
     cursor: pointer !important;
+     animation: multiverso-glitch 0.6s steps(1) infinite;
+    transform: scale(1.05) skewX(-3deg);
+       background: transparent; 
 
 }
 
@@ -471,7 +476,89 @@ nav a {
 
 
 
-
+@keyframes multiverso-glitch {
+    /* 1. UNIVERSO HQ (Blambot) */
+    0%, 100% {
+        font-family: 'Blambot', sans-serif;
+        color: #ffffff;
+        text-shadow: -3px -2px 0 var(--color1), 3px 2px 0 var(--color3);
+        /* Fundo amarelo chapado de gibi com borda preta grossa */
+        background: #ffea00;
+        color: #000000;
+        border: 3px solid #000000;
+        text-shadow: none;
+        transform: rotate(-1deg) scale(1.03);
+    }
+    
+    /* 2. UNIVERSO 2099 / CYBERPUNK (Orbitron) */
+    14% {
+        font-family: 'Orbitron', sans-serif;
+        color: var(--color1);
+        text-shadow: 0 0 12px var(--color1);
+        /* Caixa preta translúcida com borda neon */
+        background: rgba(209, 31, 200, 0.85);
+        border-radius: 35px;
+        padding: 10px 20px;
+        border: 1px solid var(--color1);
+        transform: scale(1.05) skewX(-4deg);
+    }
+    
+    /* 3. UNIVERSO NOIR (Betty Noir) */
+    28% {
+        font-family: 'Betty Noir', serif;
+        color: #ffffff;
+        /* Tarja preta total, estilo censura de documento antigo */
+        background: #000000;
+        border-radius: 0;
+        padding: 0;
+        border: none;
+        filter: grayscale(100%) contrast(140%);
+        transform: scale(1.01) rotate(1deg);
+    }
+    
+    /* 4. UNIVERSO ANOMALIA / ERRO (Special Elite) */
+    42% {
+        font-family: 'Special Elite', monospace;
+        color: #ff0055;
+        filter: none;
+        text-shadow: -3px 0px 0px var(--color1);
+        /* Fundo cinza de papel velho com textura de erro */
+        background-color: #0bff0b;
+        border-left: 5px solid #ff0055;
+        border-right: 5px solid var(--color1);
+        transform: translate(3px, -2px);
+    }
+    
+    /* 5. UNIVERSO SPIDER-PUNK (Rubik Glitch) */
+    56% {
+        font-family: 'Rubik Glitch', system-ui;
+        color: #000000;
+        /* Fundo rosa choque parecendo papel rasgado ou fita colada */
+        background: #ff00c8;
+        border: none;
+        transform: rotate(-4deg) scale(1.08);
+    }
+    
+    /* 6. UNIVERSO ANIME (Rock Salt) */
+    70% {
+        font-family: 'Rock Salt', cursive;
+        color: #ffffff;
+        /* Fundo vermelho laser bem agressivo */
+        background: var(--color3);
+        box-shadow: 5px 5px 0px #000000;
+        transform: skewX(-8deg) scale(1.04);
+    }
+    
+    /* 7. UNIVERSO MEDIEVAL (MedievalSharp) */
+    84% {
+        font-family: 'MedievalSharp', cursive;
+        color: #e5c158;
+        /* Fundo pergaminho escuro */
+        background: #1a1105;
+        border: 2px dashed #e5c158;
+        transform: scale(1.02);
+    }
+}
 
 
 
@@ -973,7 +1060,7 @@ footer img {
     position: absolute;
     top: 0;
     left: 0;
-    filter: grayscale(0.1) contrast(1.5) brightness(0.6);
+    filter: grayscale(0.1) contrast(1.5) brightness(0.6) blur(1.5px);
 }
 
 .video-overlay {
