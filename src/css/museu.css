@@ -1152,3 +1152,305 @@ footer img {
         filter: none;
     }
 }
+
+/* ----------------- Outdoor do Museu ----------------- */
+
+.museum-outdoor-border{
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding:0.2%;
+    animation: BorderGlow 5s linear infinite;
+    height: 70%;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff0000 0%,  #003cff 100%);
+}
+
+.museum-outdoor {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    animation: BorderGlow 5s linear infinite;
+    background: linear-gradient(45deg, #050407 70%, #1a0033 90%, #001a33 100%);
+    height: 100%;
+
+}
+
+@keyframes BorderGlow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+@keyframes flutuarLateral {
+    0% {
+        transform: translateY(-10%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-20%) rotate(5deg);
+    }
+}
+
+/* ---- Coluna Esquerda ---- */
+
+.museum-outdoor-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.scanner-image-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgba(190, 120, 120, 0.705); /* Placeholder de Fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 0, 170, 0.2);
+}
+
+.scanner-image-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+     animation: flutuarLateral 4s ease-in-out infinite alternate;
+}
+
+.biometria-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.biometria-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.biometria-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ---- Coluna Central ---- */
+.museum-outdoor-central {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badge-scanner span {
+    background-color: rgba(255, 0, 170, 0.1);
+    color: rgb(247, 110, 133);
+    border: 1px solid rgba(255, 0, 170, 0.4);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.museum-outdoor-central-title h1 {
+    margin: 10px 0 0 0;
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(to right, #ffcc00, #ff00aa, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+.museum-outdoor-central-title h2 {
+    margin: 5px 0 15px 0;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
+    font-weight: 600;
+}
+
+.description {
+    color: var(--text-muted);
+    line-height: 1.5;
+    font-size: 0.95rem;
+    max-width: 90%;
+    margin: 0;
+}
+
+
+.text-green{
+    color: #00ff99;
+    animation: none;
+}
+
+.text-red{
+    color: #ff0055;
+}
+/* Barra de Progresso */
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 0%; /* Altere isso via JavaScript para animar */
+    height: 100%;
+    background: linear-gradient(to right, #8a2be2, #ff00aa);
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+/* ---- Coluna Direita (Protocolo) ---- */
+.museum-outdoor-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.protocol-title {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.protocol-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.protocol-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.protocol-list .icon {
+    font-size: 1.1rem;
+    margin-top: -2px;
+}
+
+.protocol-list p {
+    margin: 0;
+}
+
+/* ================== CARDS DE ESTATÍSTICAS ================== */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    min-height: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adicionando um leve brilho no topo dos cards para imitar a imagem */
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 100%);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.stat-header.center {
+    justify-content: center;
+}
+
+.stat-max {
+    color: rgba(255,255,255,0.2);
+    font-size: 0.8rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 15px 0 5px 0;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rank-card {
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsividade Básica */
+@media (max-width: 1024px) {
+    .museum-outdoor {
+        grid-template-columns: 1fr; /* Empilha tudo em telas menores */
+        gap: 40px;
+    }
+    .museum-outdoor-left {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .stats-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
