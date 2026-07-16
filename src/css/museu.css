@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
+    font-family: 'Share Tech';
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 
 body {
 
-      cursor: url('../cursor/normal.cur'), default;
+    cursor: url('../cursor/normal.cur'), default;
     scroll-behavior: smooth;
     margin: 0;
     background: linear-gradient(45deg, #09090e 70%, #1a0033 90%, #001a33 100%);
@@ -39,7 +39,7 @@ body {
 
 @font-face {
     font-family: 'Blambot';
-    src: url('../fonts/Blambot.ttf') format('truetype'); 
+    src: url('../fonts/Blambot.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -55,10 +55,10 @@ body {
     height: 100%;
     z-index: -1;
 
-  
+
     background-image: radial-gradient(circle, var(--grid-line) 2px, transparent 2px);
 
-    background-size: 14px 14px; 
+    background-size: 14px 14px;
 
     mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
     -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
@@ -71,15 +71,15 @@ body {
 
     background-image: radial-gradient(circle, var(--highlight) 2px, transparent 2px);
     background-size: 14px 14px;
-    
 
-    transform: translate(2px, 2px); 
-    
+
+    transform: translate(2px, 2px);
+
     opacity: 1;
-    filter: blur(0.5px); 
-    
+    filter: blur(0.5px);
 
-    mix-blend-mode: screen; 
+
+    mix-blend-mode: screen;
 }
 
 
@@ -88,24 +88,35 @@ body {
 
 :root {
     /* Cores Base do Glitch */
-    --color1: #00f2fe;        /* Azul Cyber / Ciano Puro */
-    --color2: #00a8ff;        /* Azul Neon Secundário */
-    --color3: #ff0055;        /* Vermelho Laser / Magenta Tik Tok */
-    --color4: #ff00c8;        /* Rosa Choque / Anomalia */
-    --color5: #110022;        /* Roxo Profundo Quase Preto (Fundo das seções) */
-    
+    --color1: #00f2fe;
+    /* Azul Cyber / Ciano Puro */
+    --color2: #00a8ff;
+    /* Azul Neon Secundário */
+    --color3: #ff0055;
+    /* Vermelho Laser / Magenta Tik Tok */
+    --color4: #ff00c8;
+    /* Rosa Choque / Anomalia */
+    --color5: #110022;
+    /* Roxo Profundo Quase Preto (Fundo das seções) */
+
     /* Variáveis Principais Atualizadas */
-    --purple-main: #ff0055;   /* Vermelho/Magenta Laser */
-    --purple-dark: #05010d;   /* Fundo do site super escuro */
-    
+    --purple-main: #ff0055;
+    /* Vermelho/Magenta Laser */
+    --purple-dark: #05010d;
+    /* Fundo do site super escuro */
+
     /* Efeitos de Vidro e Bordas Neon */
-    --glass-bg: rgba(5, 1, 13, 0.6); /* Fundo escuro translúcido */
-    --border-glass: rgba(0, 244, 255, 0.4); /* Borda brilhando em Azul Cyber */
-    --text-muted: #8a8894;    /* Texto apagado cinza-azulado tecnológico */
-    
+    --glass-bg: rgba(5, 1, 13, 0.6);
+    /* Fundo escuro translúcido */
+    --border-glass: rgba(0, 244, 255, 0.4);
+    /* Borda brilhando em Azul Cyber */
+    --text-muted: #8a8894;
+    /* Texto apagado cinza-azulado tecnológico */
+
     /* Grades e Linhas de Varredura da Tela */
-    --grid-line: rgba(0, 242, 254, 0.1); 
-    --highlight: rgba(255, 0, 85, 0.15); /* Vermelho Laser */
+    --grid-line: rgba(0, 242, 254, 0.1);
+    --highlight: rgba(255, 0, 85, 0.15);
+    /* Vermelho Laser */
 
     /* BÔNUS: Sombras de Brilho Neon (Glow Effects) */
     --glow-cyber: 0 0 10px rgba(0, 242, 254, 0.6), 0 0 20px rgba(0, 242, 254, 0.2);
@@ -121,12 +132,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Exo 2';
+    font-family: 'Orbitron';
 
 }
 
 p {
-    font-family: 'Poppins';
+    font-family: 'Share Tech';
 }
 
 /* Barra de rolagem estilizada */
@@ -164,7 +175,7 @@ summary,
 [data-bs-toggle],
 [data-bs-dismiss],
 [onclick],
- 
+
 /* Navbar & Logo */
 .logo,
 .logo-img,
@@ -172,12 +183,12 @@ summary,
 .navbar-menu,
 .navbar-links a,
 .btn-close,
- 
+
 /* Botões gerais Bootstrap / custom */
 .btn,
 .btn-primary,
 .btn-danger,
- 
+
 /* Missões (index) */
 .mission-button,
 .nav-btn,
@@ -185,17 +196,17 @@ summary,
 .nav-btn.next,
 .btn-missao,
 .btn-missao-quiz,
- 
+
 /* Cryptex / Enigma (tratado) */
 .btn-seta,
 .btn-hackear,
 .simbolo,
 .engrenagem,
- 
+
 /* Kit IA — carrossel de ferramentas */
 .ferramenta-card,
 .ferramenta-section .nav-btn,
- 
+
 /* Ranking — pódio e pilares */
 .pilar-card,
 .pilar-card.primeiro-lugar,
@@ -203,7 +214,7 @@ summary,
 .pilar-card.terceiro-lugar,
 .pilar-card.quarto-lugar,
 .degrau,
- 
+
 /* Tratado — botões e inputs de categoria */
 .assinar-button,
 .assinar-tratado-button,
@@ -211,30 +222,30 @@ summary,
 .assinar-tratado-regra,
 .checkbox-real,
 .circulo-check,
- 
+
 /* FAQ / Trocar Ideia */
 .ti-cla-btn,
 .ti-btn-enviar,
-.ti-radio + label,
- 
+.ti-radio+label,
+
 /* Social */
 .instagram-box,
 .tik-tok-box,
 .tik-tok-button,
 .social-section a,
- 
+
 /* Offcanvas */
 .offcanvas-start .nav-link,
- 
+
 /* Modal */
 .modal-footer button,
 .modal-header .btn-close,
- 
+
 /* Terminal */
 .terminal-box,
 .rec-dot,
 .rec-status,
- 
+
 /* Cards com hover (sobre / kit) */
 .site-sobre-outdoor .card,
 .ferramenta-tip,
@@ -252,7 +263,7 @@ input[type="tel"],
 input[type="url"],
 textarea,
 .input-hacker,
- 
+
 p,
 span,
 li,
@@ -362,7 +373,7 @@ nav a {
     display: inline-block;
     transition: all 0.1s steps(1);
     transform-style: preserve-3d;
-    filter: none !important; 
+    filter: none !important;
 }
 
 
@@ -371,7 +382,7 @@ nav a {
 /* Quando o mouse entra na área da logo, dispara a animação da IMAGEM */
 .logo:hover .logo-img img {
     animation: multiverso-glitch-img 0.6s steps(1) infinite;
-     cursor: pointer !important;
+    cursor: pointer !important;
 }
 
 /* Quando o mouse entra na área da logo, dispara a animação do TEXTO */
@@ -396,77 +407,82 @@ nav a {
 
 
 @keyframes multiverso-glitch-img {
+
     /* 1. UNIVERSO HQ  */
-    0%, 100% { 
-        content: url('/src/media/museum-glitch/HQ.png'); 
-        transform: rotate(-3deg) scale(1.22); 
+    0%,
+    100% {
+        content: url('/src/media/museum-glitch/HQ.png');
+        transform: rotate(-3deg) scale(1.22);
         background: #ffea00;
         border: 3px dotted #000000;
         padding: 10px;
-        filter:none;
+        filter: none;
     }
-    
+
     /* 2. UNIVERSO 2099 / CYBERPUNK */
-    14% { 
-        content: url('/src/media/museum-glitch/CyberPunk.png'); 
-        transform: skewX(-6deg) scale(1.4); 
-         background: rgba(209, 31, 200, 0.85);
+    14% {
+        content: url('/src/media/museum-glitch/CyberPunk.png');
+        transform: skewX(-6deg) scale(1.4);
+        background: rgba(209, 31, 200, 0.85);
         border-radius: 35px;
-        filter:none;
+        filter: none;
         border: 1px solid var(--color1);
 
     }
-    
+
     /* 3. UNIVERSO NOIR */
-    28% { 
-        content: url('/src/media/museum-glitch/Noir.png'); 
-        transform: scale(1.1) rotate(2deg); 
+    28% {
+        content: url('/src/media/museum-glitch/Noir.png');
+        transform: scale(1.1) rotate(2deg);
         /* Se o logo Noir ficar muito escuro, o invert(1) faz ele brilhar em branco */
-        filter: invert(1); 
-         background: #000000;
+        filter: invert(1);
+        background: #000000;
         border-radius: 0;
         padding: 0;
         border: none;
-        filter:none;
+        filter: none;
     }
-    
+
     /* 4. UNIVERSO ANOMALIA / ERRO (Special Elite) */
-    42% { 
-        content: url('/src/media/museum-glitch/Glitch.png'); 
-        transform: translate(4px, -3px); 
-        filter:none;
-    background-color: #0bff0b;
+    42% {
+        content: url('/src/media/museum-glitch/Glitch.png');
+        transform: translate(4px, -3px);
+        filter: none;
+        background-color: #0bff0b;
         border-left: 5px solid #ff0055;
-        border-right: 5px solid var(--color1);    }
-    
+        border-right: 5px solid var(--color1);
+    }
+
     /* 5. UNIVERSO SPIDER-PUNK (Rubik Glitch) */
-    56% { 
-        content: url('/src/media/museum-glitch/SpiderPunk.png'); 
-        transform: rotate(8deg) scale(1.12); 
-         background: #ff00c8;
+    56% {
+        content: url('/src/media/museum-glitch/SpiderPunk.png');
+        transform: rotate(8deg) scale(1.12);
+        background: #ff00c8;
         border: none;
     }
-    
+
     /* 6. UNIVERSO ANIME (Rock Salt) */
-    70% { 
-        content: url('/src/media/museum-glitch/Anime.png'); 
-        transform: skewY(4deg) scale(1.05); 
+    70% {
+        content: url('/src/media/museum-glitch/Anime.png');
+        transform: skewY(4deg) scale(1.05);
         background: var(--color3);
         box-shadow: 5px 5px 0px #000000;
     }
-    
+
     /* 7. UNIVERSO MEDIEVAL (MedievalSharp) */
-    84% { 
-        content: url('/src/media/museum-glitch/Medieval.png'); 
-        transform: scale(1.23); 
-         background: #1a1105;
+    84% {
+        content: url('/src/media/museum-glitch/Medieval.png');
+        transform: scale(1.23);
+        background: #1a1105;
         border: 2px dashed #e5c158;
     }
 }
 
 @keyframes multiverso-glitch {
+
     /* 1. UNIVERSO HQ (Blambot) */
-    0%, 100% {
+    0%,
+    100% {
         font-family: 'Blambot', sans-serif;
         color: #ffffff;
         text-shadow: -3px -2px 0 var(--color1), 3px 2px 0 var(--color3);
@@ -477,7 +493,7 @@ nav a {
         text-shadow: none;
         transform: rotate(-1deg) scale(1.03);
     }
-    
+
     /* 2. UNIVERSO 2099 / CYBERPUNK (Orbitron) */
     14% {
         font-family: 'Orbitron', sans-serif;
@@ -490,7 +506,7 @@ nav a {
         border: 1px solid var(--color1);
         transform: scale(1.05) skewX(-4deg);
     }
-    
+
     /* 3. UNIVERSO NOIR (Betty Noir) */
     28% {
         font-family: 'Betty Noir', serif;
@@ -503,7 +519,7 @@ nav a {
         filter: grayscale(100%) contrast(140%);
         transform: scale(1.01) rotate(1deg);
     }
-    
+
     /* 4. UNIVERSO ANOMALIA / ERRO (Special Elite) */
     42% {
         font-family: 'Special Elite', monospace;
@@ -516,7 +532,7 @@ nav a {
         border-right: 5px solid var(--color1);
         transform: translate(3px, -2px);
     }
-    
+
     /* 5. UNIVERSO SPIDER-PUNK (Rubik Glitch) */
     56% {
         font-family: 'Rubik Glitch', system-ui;
@@ -526,7 +542,7 @@ nav a {
         border: none;
         transform: rotate(-4deg) scale(1.08);
     }
-    
+
     /* 6. UNIVERSO ANIME (Rock Salt) */
     70% {
         font-family: 'Rock Salt', cursive;
@@ -536,7 +552,7 @@ nav a {
         box-shadow: 5px 5px 0px #000000;
         transform: skewX(-8deg) scale(1.04);
     }
-    
+
     /* 7. UNIVERSO MEDIEVAL (MedievalSharp) */
     84% {
         font-family: 'MedievalSharp', cursive;
@@ -1025,6 +1041,37 @@ footer img {
     color: #9276ee;
 }
 
+/* Efeito do mouse */
+
+.click-effect {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: expand-noise 0.7s ease-out;
+    filter: drop-shadow(0 0 10px var(--color5));
+}
+
+@keyframes expand-noise {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        border-width: 5px;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+
 
 /* Background Aranhaverso */
 
@@ -1043,8 +1090,10 @@ footer img {
 #bg-video {
     width: 100vw;
     height: 100vh;
-    object-fit: cover; /* Preenche a tela mantendo a proporção */
-    object-position: center; /* Centraliza o foco do vídeo */
+    object-fit: cover;
+    /* Preenche a tela mantendo a proporção */
+    object-position: center;
+    /* Centraliza o foco do vídeo */
     position: absolute;
     top: 0;
     left: 0;
@@ -1058,6 +1107,48 @@ footer img {
     width: 100%;
     height: 100%;
     background: rgba(5, 13, 2, 0.7);
-    /* Filtro verde escuro de Arkham */
     z-index: -1;
+}
+
+
+/* Efeito de tremer a tela */
+
+.glitch-shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+        filter: none;
+    }
+
+    20% {
+        transform: translate(-5px, 5px);
+        filter: hue-rotate(180deg) brightness(2) contrast(1.5);
+        /* Cores mudam e brilha muito */
+    }
+
+    40% {
+        transform: translate(5px, -5px);
+        filter: invert(0.2) sepia(1) hue-rotate(360deg);
+        /* Efeito de 'negativo' rápido */
+    }
+
+    60% {
+        transform: translate(-5px, -2px);
+        filter: hue-rotate(150deg) saturate(5);
+        /* Cores supersaturadas */
+    }
+
+    80% {
+        transform: translate(5px, 2px);
+        filter: brightness(0.5);
+        /* Escurece rápido */
+    }
+
+    100% {
+        transform: translate(0);
+        filter: none;
+    }
 }
