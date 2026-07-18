@@ -1047,7 +1047,7 @@ footer img {
     position: absolute;
     width: 20px;
     height: 20px;
-    border: 2px solid var(--color5);
+    border: 2px solid WHITE;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -1162,25 +1162,40 @@ footer img {
     align-items: center;
     width: 100%;
     padding:0.2%;
-    animation: BorderGlow 5s linear infinite;
+
     height: 70%;
     border-radius: 20px;
-    background: linear-gradient(45deg, #ff0000 0%,  #003cff 100%);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #003cff, #7a00ff, #ff00c8, #ff0000);
+    
+    /* Deixamos o fundo gigante (4 vezes o tamanho normal) para ele poder se mover */
+    background-size: 400% 400%;
+    
+    /* Chamamos a animação de movimento */
+    animation: GradientGlow 10s ease infinite;
 }
 
 .museum-outdoor {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 4fr 3fr;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 100%;
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    animation: BorderGlow 5s linear infinite;
+    background-size: 400% 400%;
+    
+    /* Chamamos a animação de movimento */
+    animation: GradientGlow 10s ease infinite;
     background: linear-gradient(45deg, #050407 70%, #1a0033 90%, #001a33 100%);
     height: 100%;
 
+}
+
+@keyframes GradientGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 @keyframes BorderGlow {
@@ -1203,6 +1218,16 @@ footer img {
     }
 }
 
+@keyframes TextGlow {
+    17%  { color: hsl(60, 100%, 50%); }  /* Amarelo */
+    0%   { color: hsl(0, 100%, 50%); }   /* Vermelho */
+    33%  { color: hsl(120, 100%, 50%); } /* Verde */
+    50%  { color: hsl(180, 100%, 50%); } /* Ciano */
+    67%  { color: hsl(240, 100%, 50%); } /* Azul */
+    83%  { color: hsl(300, 100%, 50%); } /* Magenta */
+    100% { color: hsl(360, 100%, 50%); } /* Vermelho novamente */
+}
+
 /* ---- Coluna Esquerda ---- */
 
 .museum-outdoor-left {
@@ -1219,9 +1244,19 @@ footer img {
     border-radius: 50%;
     background-color: rgba(190, 120, 120, 0.705); /* Placeholder de Fundo */
     display: flex;
+    animation: BorderGlow 5s linear infinite;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
     box-shadow: 0 0 30px rgba(255, 0, 170, 0.2);
+}
+
+.scanner-image-container:hover{
+    box-shadow: 0 0 50px rgba(255, 0, 170, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: none;
 }
 
 .scanner-image-container img {
@@ -1240,7 +1275,7 @@ footer img {
 .biometria-label {
     font-size: 0.75rem;
     letter-spacing: 1.5px;
-    color: var(--text-muted);
+    color: #8a8894;
 }
 
 .biometria-value {
@@ -1256,7 +1291,15 @@ footer img {
     gap: 15px;
 }
 
+.badge-scanner{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    gap: 10px;
+}
+
 .badge-scanner span {
+     animation: BorderGlow 5s linear infinite;
     background-color: rgba(255, 0, 170, 0.1);
     color: rgb(247, 110, 133);
     border: 1px solid rgba(255, 0, 170, 0.4);
@@ -1273,6 +1316,7 @@ footer img {
     font-weight: 900;
     background: linear-gradient(to right, #ffcc00, #ff00aa, #8a2be2);
     -webkit-background-clip: text;
+     animation: BorderGlow 5s linear infinite;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
 }
@@ -1281,6 +1325,7 @@ footer img {
     margin: 5px 0 15px 0;
     font-size: 1.5rem;
     color: white;
+    animation: BorderGlow 5s linear infinite;
     text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
     font-weight: 600;
 }
@@ -1296,33 +1341,60 @@ footer img {
 
 .text-green{
     color: #00ff99;
-    animation: none;
+    animation: none !important;
+    
 }
 
 .text-red{
-    color: #ff0055;
+    color: #ff002b;
 }
 /* Barra de Progresso */
 .progress-section {
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     gap: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.progress-bar-bg {
-    flex-grow: 1;
+.mmision-progress-bar-container {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    align-self: center;
     height: 8px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
+    
 }
 
-.progress-bar-fill {
-    width: 0%; /* Altere isso via JavaScript para animar */
+
+.mmision-progress-bar-fill {
+    display:flex;
+    align-self: center;
     height: 100%;
-    background: linear-gradient(to right, #8a2be2, #ff00aa);
+    width: 0%;
+
+
+    background: linear-gradient(90deg, #4b2cb3 0%, #7652f7 100%);
+
+
+    box-shadow: 0 0 10px rgba(118, 82, 247, 0.5);
+
     border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+
+
+.mmision-progress-bar:hover,
+.mmision-progress-bar-fill:hover {
+    box-shadow: 0 0 15px rgba(118, 82, 247, 0.8);
+    transform: scale(1.5);
+    cursor: pointer !important;
 }
 
 .progress-text {
@@ -1374,15 +1446,29 @@ footer img {
 }
 
 /* ================== CARDS DE ESTATÍSTICAS ================== */
+
+
 .stats-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    margin-top: 20px;
     width: 100%;
 }
 
 .stat-card {
-    background-color: var(--card-bg);
+     backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background-size: 400% 400%;
+    
+    /* Chamamos a animação de movimento */
+   background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), rgba(255, 115, 0, 0.1), rgba(255, 251, 0, 0.1), rgba(72, 255, 0, 0.1), rgba(0, 255, 213, 0.1), rgba(0, 60, 255, 0.13), rgba(123, 0, 255, 0.1), rgba(255, 0, 200, 0.1),rgba(255, 0, 0, 0.1));
+    
+    /* Deixamos o fundo gigante (4 vezes o tamanho normal) para ele poder se mover */
+    background-size: 400% 400%;
+    
+    /* Chamamos a animação de movimento */
+    animation: GradientGlow 10s ease infinite;
     border-radius: 16px;
     padding: 20px;
     display: flex;
@@ -1392,10 +1478,18 @@ footer img {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     min-height: 120px;
     position: relative;
+    transition: all 0.3s ease;
     overflow: hidden;
 }
 
-/* Adicionando um leve brilho no topo dos cards para imitar a imagem */
+.stat-card:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Leve brilhozin no topo dos cards */
 .stat-card::before {
     content: '';
     position: absolute;
@@ -1417,8 +1511,15 @@ footer img {
     justify-content: center;
 }
 
+.text-lapis{
+    color:rgb(0, 60, 255)
+}
+
+.text-green{
+    color:rgb(0, 255, 0)
+}
 .stat-max {
-    color: rgba(255,255,255,0.2);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
 }
 
@@ -1440,17 +1541,195 @@ footer img {
     text-align: center;
 }
 
-/* Responsividade Básica */
-@media (max-width: 1024px) {
-    .museum-outdoor {
-        grid-template-columns: 1fr; /* Empilha tudo em telas menores */
-        gap: 40px;
-    }
-    .museum-outdoor-left {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-    .stats-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+.rank-card .stat-value{
+    animation: TextGlow 10s linear infinite;
+}
+
+/* ================== Galéria do Museu - Alunos ================== */
+
+
+.divider-museum-halls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    gap: 10px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.divider-line-left{
+    height: 1px;
+    width: 25%;
+     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.divider-line-right{
+    height: 1px;
+    width: 25%;
+     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.divider-museum-badge{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border:#ffffff 1px solid;
+    border-radius: 20px;    
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    margin: 20px auto;
+}
+
+
+
+
+
+
+/* ================== Galeria do Museu ================== */
+
+.museum-gallery {
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px; 
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Classes para controlar tamanhos diferentes */
+
+.museum-gallery-card.wide {
+    grid-column: span 2; 
+}
+
+.museum-gallery-card.tall {
+    grid-row: span 2; 
+}
+
+/* ================== O DESIGN DO CARD ================== */
+.museum-gallery-card {
+    /* A "borda" na verdade é o background do container com padding */
+    background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+    padding: 4px; /* A espessura da sua borda */
+    border-radius: 16px;
+    position: relative;
+    /* Aquele brilhozinho sutil em volta da carta */
+    box-shadow: 0 0 15px rgba(142, 45, 226, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+}
+
+/* Se for anomalia, a borda muda pro tom de vermelho/rosa escuro */
+.museum-gallery-card.anomaly-border {
+    background: linear-gradient(135deg, #ff0055 0%, #2b0014 100%);
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+}
+
+.museum-gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 243, 255, 0.4);
+}
+
+/* O interior do card (onde fica a imagem de fato) */
+.museum-gallery-card-inner {
+    background-color: #0b0c14; /* Cor de fundo escura caso a imagem demore a carregar */
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Corta o que passar das bordas redondas */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================== A IMAGEM ================== */
+.museum-gallery-card-inner img {
+    width: 100%;
+    height: 100%;
+    /* ESSA É A REGRA MAIS IMPORTANTE: */
+    /* object-fit: cover faz a imagem preencher o espaço sem amassar ou distorcer! */
+    object-fit: cover; 
+}
+
+/* ================== AS BADGES (Verified / Anomaly) ================== */
+.museum-gallery-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.museum-gallery-badge.verified {
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.museum-gallery-badge.anomaly {
+    color: #ff3366;
+    background: rgba(255, 51, 102, 0.1);
+    border: 1px solid #ff3366;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+}
+
+/* ================== O RODAPÉ DA CARTA ================== */
+.museum-gallery-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(15, 16, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-dot.green { background-color: #00ff88; box-shadow: 0 0 8px #00ff88; }
+.status-dot.red { background-color: #ff3366; box-shadow: 0 0 8px #ff3366; }
+
+.username {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.xp-info {
+    font-weight: 800;
+    font-size: 0.8rem;
+}
+
+/* ================== RESPONSIVIDADE ================== */
+@media (max-width: 768px) {
+    /* No celular, quebra os cards pra ocupar 1 coluna só se a tela for muito pequena */
+    .museum-gallery-card.wide, 
+    .museum-gallery-card.tall {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 }
