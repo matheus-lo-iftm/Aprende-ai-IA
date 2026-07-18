@@ -1762,12 +1762,3 @@ footer img {
     
 }
 
-/* ================== RESPONSIVIDADE ================== */
-@media (max-width: 768px) {
-    /* No celular, quebra os cards pra ocupar 1 coluna só se a tela for muito pequena */
-    .museum-gallery-card.wide, 
-    .museum-gallery-card.tall {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-}
