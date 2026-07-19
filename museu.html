@@ -195,6 +195,170 @@
             <div class="divider-line-right"></div>
         </div>
 
+
+        <section class="archive-case-section">
+            <div class="archive-case-container">
+                <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+
+                <div class="archive-case-track" id="archiveCaseTrack">
+
+
+
+
+
+                    <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+
+                    <div class="archive-case-card locked" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <div class="lock-overlay">
+                            <span class="lock-icon"><img src="src/media/icons/padlock.png" alt=""></span>
+                        </div>
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="archive-case-card locked" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <div class="lock-overlay">
+                            <span class="lock-icon"><img src="src/media/icons/padlock.png" alt=""></span>
+                        </div>
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="archive-case-card locked" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <div class="lock-overlay">
+                            <span class="lock-icon"><img src="src/media/icons/padlock.png" alt=""></span>
+                        </div>
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="archive-case-card locked" data-bs-toggle="modal" data-bs-target="#Case1">
+
+                        <div class="lock-overlay">
+                            <span class="lock-icon"><img src="src/media/icons/padlock.png" alt=""></span>
+                        </div>
+
+                        <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
+
+                        <div class="archive-case-card-hover-scan">
+
+                            <img src="src/media/icons/lupa-museum.png" alt="Scanner">
+                            <p>ESCANEAR</p>
+
+                        </div>
+
+
+
+                    </div>
+
+                    
+                </div>
+                <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+        </section>
+
+        <script>
+            function scrollCarousel(direction) {
+                const track = document.getElementById('archiveCaseTrack');
+                const scrollAmount = 325; // Largura do card + gap
+                track.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+
+        </section>
+
+        <div class="modal fade" id="meuModal1" data-bs-theme="dark">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Quiz de Calibração</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <iframe src="https://forms.gle/XKQV7bZV2bSsFEtQ6"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" style="color: black;"
+                            data-bs-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="divider-museum-halls">
             <div class="divider-line-left"></div>
             <div class="divider-museum-badge">
@@ -204,83 +368,83 @@
         </div>
 
         <div class="museum-gallery">
-    
+
 
 
             <!-- CARD PADRÃO (Quadrado/Retrato pequeno) -->
-    <div class="museum-gallery-card wide border-blue">
-        <div class="museum-gallery-card-inner">
-            <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
-            <!-- A imagem entra aqui -->
-            <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="Avatar Normal">
-            
-            <div class="museum-gallery-footer">
-                <div class="user-info">
-                    <span class="status-dot yellow"></span>
-                    <span class="username text-yellow">@Tropa_Pixel_8º-Ano</span>
+            <div class="museum-gallery-card wide border-blue">
+                <div class="museum-gallery-card-inner">
+                    <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
+                    <!-- A imagem entra aqui -->
+                    <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="Avatar Normal">
+
+                    <div class="museum-gallery-footer">
+                        <div class="user-info">
+                            <span class="status-dot yellow"></span>
+                            <span class="username text-yellow">@Tropa_Pixel_8º-Ano</span>
+                        </div>
+                        <div class="xp-info">+150 XP</div>
+                    </div>
                 </div>
-                <div class="xp-info">+200 XP</div>
             </div>
-        </div>
-    </div>
 
 
-     <!-- CARD LARGO (Para paisagens, ex: a galáxia da última imagem) -->
-    <div class="museum-gallery-card tall border-green">
-        <div class="museum-gallery-card-inner">
-            <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
-            <img src="src/media/museum-glitch/9-6-26-cc-8.png" alt="Galáxia">
-            
-            <div class="museum-gallery-footer">
-                <div class="user-info">
-                    <span class="status-dot blue"></span>
-                    <span class="username text-blue">@Comando_Cyber_8º-Ano</span>
+            <!-- CARD LARGO (Para paisagens, ex: a galáxia da última imagem) -->
+            <div class="museum-gallery-card tall border-green">
+                <div class="museum-gallery-card-inner">
+                    <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
+                    <img src="src/media/museum-glitch/9-6-26-cc-8.png" alt="Galáxia">
+
+                    <div class="museum-gallery-footer">
+                        <div class="user-info">
+                            <span class="status-dot blue"></span>
+                            <span class="username text-blue">@Comando_Cyber_8º-Ano</span>
+                        </div>
+                        <div class="xp-info">+100 XP</div>
+                    </div>
                 </div>
-                <div class="xp-info">+850 XP</div>
             </div>
-        </div>
-    </div>
 
-    <!-- CARD PADRÃO (Quadrado/Retrato pequeno) -->
-    <div class="museum-gallery-card wide border-red">
-        <div class="museum-gallery-card-inner">
-            <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
-            
-            <img src="src/media/museum-glitch/9-6-26-mm-8.png" alt="Avatar Normal">
-            
-            <div class="museum-gallery-footer">
-                <div class="user-info">
-                    <span class="status-dot green"></span>
-                    <span class="username text-green">@Mestres_Matrix_8º-Ano</span>
+            <!-- CARD PADRÃO (Quadrado/Retrato pequeno) -->
+            <div class="museum-gallery-card wide border-red">
+                <div class="museum-gallery-card-inner">
+                    <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
+
+                    <img src="src/media/museum-glitch/9-6-26-mm-8.png" alt="Avatar Normal">
+
+                    <div class="museum-gallery-footer">
+                        <div class="user-info">
+                            <span class="status-dot green"></span>
+                            <span class="username text-green">@Mestres_Matrix_8º-Ano</span>
+                        </div>
+                        <div class="xp-info">+80 XP</div>
+                    </div>
                 </div>
-                <div class="xp-info">+480 XP</div>
             </div>
-        </div>
-    </div>
 
-    
 
-   
 
-    <!-- CARD ALTO (Para retratos longos, ex: a menina de olho fechado) -->
-    <div class="museum-gallery-card wide anomaly-border">
-        <div class="museum-gallery-card-inner">
-            <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
-            <img src="src/media/museum-glitch/9-6-26-bg-8.png" alt="Retrato Alto">
-            
-            <div class="museum-gallery-footer">
-                <div class="user-info">
-                    <span class="status-dot red"></span>
-                    <span class="username text-red">@Bonde_Glitch_8º-Ano</span>
+
+
+            <!-- CARD ALTO (Para retratos longos, ex: a menina de olho fechado) -->
+            <div class="museum-gallery-card wide anomaly-border">
+                <div class="museum-gallery-card-inner">
+                    <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
+                    <img src="src/media/museum-glitch/9-6-26-bg-8.png" alt="Retrato Alto">
+
+                    <div class="museum-gallery-footer">
+                        <div class="user-info">
+                            <span class="status-dot red"></span>
+                            <span class="username text-red">@Bonde_Glitch_8º-Ano</span>
+                        </div>
+                        <div class="xp-info">+50 XP</div>
+                    </div>
                 </div>
-                <div class="xp-info">+50 XP</div>
             </div>
+
+            <!-- Você vai adicionando mais cards aqui e misturando as classes 'wide' e 'tall' -->
+
         </div>
-    </div>
-
-    <!-- Você vai adicionando mais cards aqui e misturando as classes 'wide' e 'tall' -->
-
-</div>
 
 
 

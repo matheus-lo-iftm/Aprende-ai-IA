@@ -1762,3 +1762,209 @@ footer img {
     
 }
 
+
+
+
+
+
+/* =========================== Arquivos do Detetive IA =========================== */
+
+
+.archive-case-section {
+    padding: 40px 0;
+    background-color: #0a041a;
+    border-radius: 20px;
+    height: 50%;
+    mask-image: linear-gradient(to right,  transparent 0%,  black 15%,    black 85%,   transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+
+.archive-case-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+/* "Trilho" do Carrossel */
+.archive-case-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+    padding: 20px;
+    scrollbar-width: none;
+}
+
+.archive-case-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Estilo do Card */
+.archive-case-card {
+    min-width: 300px;
+    background: rgba(46, 10, 161, 0.801);
+    border: 1px solid rgba(118, 82, 247, 0.3);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+     width: 100%;
+    height: 100px;
+    flex-direction: column;
+    justify-content: space-between;
+    scroll-snap-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    gap: 15px;
+
+
+
+
+        
+    display: inline-block; 
+    cursor: pointer; /* Adiciona a mãozinha de clique em todo o card */
+    overflow: hidden; /* Garante que o hover não passe das bordas */
+}
+
+
+
+
+
+
+.archive-case-card:hover {
+    transform: scale(1.05);
+    border-color: #7652f7;
+    box-shadow: 0 0 30px rgba(118, 82, 247, 0.2);
+}
+
+
+/* Botões de Navegação */
+.nav-btn {
+    background: rgba(118, 82, 247, 0.0001);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer !important;
+    padding: 10px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(118, 82, 247, 0.5);
+    mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 15%,
+            black 85%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 15%,
+            black 85%,
+            transparent 100%);
+}
+
+/* Estado Bloqueado */
+.archive-case-card.locked {
+    filter: grayscale(0.8) opacity(0.5) blur(4px);
+    cursor: not-allowed;
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.lock-icon img{
+    width: 100%;
+    height: auto;
+}
+
+.lock-icon img {
+    filter: invert(100);
+}
+
+
+
+.lock-icon:hover img {
+    cursor: not-allowed;
+    filter: invert(100);
+}
+
+
+
+/* ================== A IMAGEM ================== */
+
+.museum-gallery-card-inner img {
+
+     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
+}
+
+/* Garante que a imagem principal ocupe o espaço correto */
+.archive-case-card-hover-scan img {
+    display: block;
+    max-width: 100%;
+     width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    height: auto;
+}
+
+/* A camada que aparece no hover (Ocupa 100% da imagem) */
+.archive-case-card-hover-scan {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    opacity: 0; 
+    transition: all 0.3s ease;
+}
+
+/* "ESCANEAR" */
+
+.archive-case-card-hover-scan p {
+    color: white;
+    margin: 0;
+    
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px; 
+}
+
+/* Tamanho controlado da lupa */
+.archive-case-card-hover-scan img {
+    width: 10%;
+    height: auto;
+}
+
+/* Hover que mostra a camada */
+.archive-case-card:hover .archive-case-card-hover-scan {
+    opacity: 1;
+}
