@@ -197,6 +197,7 @@
 
 
         <section class="archive-case-section">
+            <div class="archive-case-background"></div>
             <div class="archive-case-container">
                 <button class="nav-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
 
@@ -206,8 +207,8 @@
 
 
 
-                    <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Case1">
-
+                    <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso1">
+                        <div class="archive-case-scan-liner"></div>
                         <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
 
                         <div class="archive-case-card-hover-scan">
@@ -227,6 +228,7 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Case1">
 
+                        <div class="archive-case-scan-liner"></div>
                         <img src="src/media/museum-glitch/9-6-26-tp-8.png" alt="">
 
                         <div class="archive-case-card-hover-scan">
@@ -318,7 +320,7 @@
 
                     </div>
 
-                    
+
                 </div>
                 <button class="nav-btn next" onclick="scrollCarousel(1)">&#10095;</button>
         </section>
@@ -336,26 +338,110 @@
 
         </section>
 
-        <div class="modal fade" id="meuModal1" data-bs-theme="dark">
-            <div class="modal-dialog modal-fullscreen">
+
+
+
+        <div class="modal fade" id="Caso1" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
+
+            <!-- 2. Camada de alinhamento e tamanho (modal-xl) -->
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+
+                <!-- 3. A caixinha visual real da janela flutuante -->
                 <div class="modal-content">
-
-                    <div class="modal-header">
-                        <h5 class="modal-title">Quiz de Calibração</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-0">
-                        <iframe src="https://forms.gle/XKQV7bZV2bSsFEtQ6"></iframe>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" style="color: black;"
-                            data-bs-dismiss="modal">Fechar</button>
+                    <div class="modal-header d-flex justify-content-between">
+                        <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #001</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
 
+                    <div class="modal-body d-flex flex-wrap p-0">
+
+                        <!-- ESQUERDA: A FOTO SENDO INSPECIONADA -->
+                        <div class="col-md-6 p-4 d-flex align-items-center justify-content-center bg-dark">
+                            <img src="src/media/museum-glitch/9-6-26-tp-8.png"
+                                class="img-fluid rounded border border-secondary" alt="Evidência">
+                        </div>
+
+                        <!-- DIREITA: FORMULÁRIO DE INSPEÇÃO (COM SCROLL) -->
+                        <div class="col-md-6 p-4 form-inspecao" style="max-height: 70vh; overflow-y: auto;">
+
+                            <h4 class="mb-3 text-warning"
+                                style="font-family: 'Courier New', monospace; letter-spacing: -1px;">
+                                > RELATÓRIO DO AGENTE
+                            </h4>
+                            <p class="text-secondary" style="font-size: 0.9rem;">Analise a imagem ao lado. Preencha seus
+                                dados e
+                                registre o seu veredito oficial no sistema.</p>
+
+                            <form action="https://formsubmit.co/SEU_EMAIL_AQUI" method="POST">
+
+                                <input type="hidden" name="_subject" value="MUSEU: NOVA INSPEÇÃO DE IMAGEM">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <!-- DADOS DO AGENTE -->
+                                <div class="mb-3">
+                                    <label class="form-label text-white">NOME DO AGENTE:</label>
+                                    <input type="text" name="Nome"
+                                        class="form-control bg-transparent text-white border-secondary" required
+                                        placeholder="Digite seu nome">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label text-white">CLÃ RESPONSÁVEL:</label>
+                                    <select name="Cla" class="form-select bg-dark text-white border-secondary" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="Tropa Pixel">Tropa Pixel</option>
+                                        <option value="Comando Cyber">Comando Cyber</option>
+                                        <option value="Mestres Matrix">Mestres Matrix</option>
+                                        <option value="Bonde Glitch">Bonde Glitch</option>
+                                    </select>
+                                </div>
+
+                                <hr class="border-secondary my-4">
+
+<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+
+                                <!-- O VEREDITO -->
+                                <div class="container">
+                                    
+                                    <div class="radio-wrapper">
+                                        <input type="radio" id="real" name="veredito" class="input" />
+                                        <div class="btn">
+                                            <span aria-hidden="">REAL</span>
+                                            <span aria-hidden="" class="btn__glitch">REAL</span>
+                                    
+                                        </div>
+                                    </div>
+                                    <div class="radio-wrapper">
+                                        <input type="radio" id="fake" name="veredito" class="input" />
+                                        <div class="btn">
+                                            FAKE<span aria-hidden=""></span>
+                                            <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
+                                            
+                                        </div>
+                                    </div>
+                        
+                                </div>
+
+
+                                <!-- A JUSTIFICATIVA -->
+                                <div class="mb-4">
+                                    <label class="form-label text-warning">EVIDÊNCIAS ENCONTRADAS:</label>
+                                    <textarea name="Justificativa"
+                                        class="form-control bg-transparent text-white border-warning" rows="3" required
+                                        placeholder="Quais falhas (mãos, luz, textura) te fizeram chegar a esse veredito?"></textarea>
+                                </div>
+
+                                <!-- BOTÃO ESTILO CARIMBO -->
+                                <button type="submit" class="carimbo-btn">
+                                    [ CARIMBAR RELATÓRIO ]
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
 
 
 
@@ -371,7 +457,7 @@
 
 
 
-            <!-- CARD PADRÃO (Quadrado/Retrato pequeno) -->
+            <!-- CARD LARGO -->
             <div class="museum-gallery-card wide border-blue">
                 <div class="museum-gallery-card-inner">
                     <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
@@ -389,7 +475,7 @@
             </div>
 
 
-            <!-- CARD LARGO (Para paisagens, ex: a galáxia da última imagem) -->
+            <!-- CARD LARGO -->
             <div class="museum-gallery-card tall border-green">
                 <div class="museum-gallery-card-inner">
                     <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
@@ -405,7 +491,7 @@
                 </div>
             </div>
 
-            <!-- CARD PADRÃO (Quadrado/Retrato pequeno) -->
+            <!-- CARD LARGO -->
             <div class="museum-gallery-card wide border-red">
                 <div class="museum-gallery-card-inner">
                     <div class="museum-gallery-badge anomaly">⚠ ANOMALY</div>
@@ -442,7 +528,7 @@
                 </div>
             </div>
 
-            <!-- Você vai adicionando mais cards aqui e misturando as classes 'wide' e 'tall' -->
+
 
         </div>
 
@@ -716,15 +802,7 @@
 
 
 
-    <div style="position: absolute; width: 0; height: 0; overflow: hidden; z-index: -9999;">
-        <img src="src/media/cursor/HQ.png">
-        <img src="src/media/cursor/CyberPunk.png">
-        <img src="src/media/cursor/Noir.png">
-        <img src="src/media/cursor/Glitch.png">
-        <img src="src/media/cursor/SpiderPunk.png">
-        <img src="src/media/cursor/Anime.png">
-        <img src="src/media/cursor/Medieval.png">
-    </div>
+
 
 </body>
 
