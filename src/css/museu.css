@@ -108,7 +108,7 @@ body {
     /* Efeitos de Vidro e Bordas Neon */
     --glass-bg: rgba(5, 1, 13, 0.6);
     /* Fundo escuro translúcido */
-    --border-glass: rgba(0, 244, 255, 0.4);
+    --border-glass: #00f4ff66;
     /* Borda brilhando em Azul Cyber */
     --text-muted: #8a8894;
     /* Texto apagado cinza-azulado tecnológico */
