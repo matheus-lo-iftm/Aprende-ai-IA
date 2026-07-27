@@ -7,6 +7,10 @@
     font-family: 'Poppins';
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;

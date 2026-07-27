@@ -7,6 +7,10 @@
     font-family: 'Share Tech';
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 html {
     scroll-behavior: smooth;
     height: 100%;
