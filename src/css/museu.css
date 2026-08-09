@@ -1936,7 +1936,7 @@ footer img {
 
 /* Estilo do Card */
 .archive-case-card {
-   width: max-content; 
+   min-width: 20vw;
     height: 70vh; 
     background: rgba(10, 5, 25, 0.8);
     border: 2px solid rgba(0, 240, 255, 0.3); /* Borda Cyber/Ciano */
@@ -1968,10 +1968,10 @@ width: 100%;
     object-fit: cover;
 }
 
-#archive-video-case{
+.archive-video-case{
     padding: 1rem;}
 
-#archive-video-case video{
+.archive-video-case video{
     margin: 0;
     width: 75%;
     height: 75%;
@@ -2055,14 +2055,6 @@ width: 100%;
 
 /* ================== A IMAGEM ================== */
 
-.museum-gallery-card-inner img {
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
 
 /* Garante que a imagem principal ocupe o espaço correto */
 .archive-case-card-hover-scan img {
@@ -2110,7 +2102,8 @@ width: 100%;
 
 /* Hover que mostra a camada */
 .archive-case-card:hover .archive-case-card-hover-scan {
-    opacity: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 
