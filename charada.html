@@ -98,9 +98,7 @@
                     <!-- A CHARADA E O CÓDIGO -->
                     <p class="texto-terminal text-center mb-4">
                         <br>
-                        <strong>"Posso colocar palavras que você nunca disse em sua própria boca. Posso te colocar em
-                            lugares onde você nunca esteve. Para o mundo, eu pareço a verdade, mas nasci do código. O
-                            que eu sou?"</strong>
+                        <strong>"Nasci de um erro da máquina, um detalhe que não pertence a este mundo. Uma sombra torta, um dedo a mais, um texto derretido. Sou a falha na ilusão perfeita que apenas um olho treinado consegue capturar. O que eu sou?"</strong>
                         <br>
                         <br>
                     </p>
@@ -292,7 +290,7 @@
                     </div>
 
                     <p class="text-secondary text-center mb-4" style="font-size: 12px;">
-                        DICA DO SISTEMA: ?????????????????????????????????????
+                        DICA DO SISTEMA: Para expor a falha, você deve reunir os fragmentos deixados nos arquivos confidenciais (Slides) da Missão 04.
                     </p>
 
 
@@ -307,10 +305,10 @@
 
                         <!-- Dados do Aluno -->
                         <div class="row mb-3">
-                            <div class="d-flex flex-column col-md-6" mt-3>
+                            <div class="d-flex flex-column col-md-6">
                                 <span class="texto-terminal">> ALUNO(A)_</span>
                                 <input type="text" name="Nome do Aluno" class="input-hacker" placeholder="Seu nome"
-                                    style="background: #000; color: #00ff41; required">
+                                    style="background: #000; color: #00ff41;" required>
                             </div>
                             <div class="d-flex flex-column col-md-6 mt-3 mt-md-0">
                                 <span class="texto-terminal">> CLÃ_</span>
@@ -340,7 +338,7 @@
                         <button type="submit" onclick="tentarHackearIFEX(event)" class="btn-hackear"
                             style="background: #000; color: #00ff41; text-align: center !important;">[ DECODIFICAR
                             ]</button>
-                        <!-- </form> -->
+                    </form>
 
                 </div>
             </div>
@@ -348,7 +346,7 @@
 
 
         </div>
-<!-- 
+        <!-- 
         <div class="enigma-alphabet">
             <div class="enigma-symbol">
                 <img src="src/simbols/chip.png" alt="">
@@ -428,37 +426,54 @@
             // Impede o envio imediato do formulário para podermos validar antes
             event.preventDefault();
 
+            const form = document.getElementById('formEnigma');
+
+            // 2. Garante que o aluno preencheu o Nome e o Clã antes de decodificar
+            if (!form.checkValidity()) {
+                form.reportValidity(); // Mostra o aviso nativo do navegador
+                return; // Para a execução do código aqui
+            }
+
             const engrenagens = document.querySelectorAll('.engrenagem');
-            let tentativa = "";
+            let tentativaArray = [];
 
-            // Pega as imagens do visor da máquina
+              // Método Radar para poder pegar a imagem que tá no visor de cada engrenagem
             engrenagens.forEach(engrenagem => {
-                let indexSelecionado = Math.round(engrenagem.scrollTop / 50);
-                let simbolos = engrenagem.querySelectorAll('.simbolo');
+                // Pega a posição exata da caixa inteira na tela do monitor
+                let caixa = engrenagem.getBoundingClientRect();
+                let centroDaCaixa = caixa.top + (caixa.height / 2);
 
-                // Pega a DIV do meio
-                let divDoMeio = simbolos[indexSelecionado + 1];
+                let imagens = engrenagem.querySelectorAll('img');
+                let altEscolhido = "";
+                let menorDistancia = Infinity;
 
-                // Procura se tem uma imagem dentro dessa div
-                if (divDoMeio) {
-                    let imagem = divDoMeio.querySelector('img');
+                // Mede a distância de CADA imagem para o meio da tela
+                imagens.forEach(img => {
+                    let rectImg = img.getBoundingClientRect();
+                    let centroDaImg = rectImg.top + (rectImg.height / 2);
+                    
+                    let distancia = Math.abs(centroDaCaixa - centroDaImg);
 
-                    // Se tiver imagem, pega o texto do "alt". Se não tiver, ignora.
-                    if (imagem) {
-                        // Adiciona o nome do símbolo na tentativa, separado por um tracinho
-                        tentativa += imagem.alt + " - ";
+                    // A imagem que estiver com a menor distância é a que tá no visor!
+                    if (distancia < menorDistancia) {
+                        menorDistancia = distancia;
+                        altEscolhido = img.alt.toLowerCase().trim();
                     }
+                });
+
+                if (altEscolhido !== "") {
+                    tentativaArray.push(altEscolhido);
                 }
             });
 
-            // Tira o último tracinho que sobra no final e padroniza para minúsculo
-            tentativa = tentativa.replace(/ - $/, "").toLowerCase().trim();
+            // Junta as palavras com o " - " no meio
+            let tentativa = tentativaArray.join(" - ");
             console.log("O aluno tentou: " + tentativa); // Para debugar no F12 se precisar
 
             // ==========================================
             // A SENHA SECRETA (Padronizada em minúsculas)
-            // Palavra correspondente: A - L - U - C - I - N - A - R
-            let senhaSecreta = "y - code - qr - chip - $ - porc - y - hash";
+            // Palavra correspondente: A - N - O - M - A - L - I - A
+           let senhaSecreta = "& - question - porc - $ - & - code - chip - &";
             // ==========================================
 
             const msgSucesso = document.getElementById('msgSucessoIFEX');
@@ -466,20 +481,20 @@
 
             if (tentativa === senhaSecreta) {
                 // Se acertar: mostra sucesso e limpa erro
-                msgSucesso.style.display = 'block';
+                msgSucesso.style.display = 'flex'; // mudei para flex para manter o justify-content center
                 msgErro.style.display = 'none';
 
                 // Salva a resposta final decodificada no input invisível para ir no e-mail
-                document.getElementById('senhaOculta').value = "A-L-U-C-I-N-A-R (" + tentativa + ")";
+                document.getElementById('senhaOculta').value = "A-N-O-M-A-L-I-A (" + tentativa + ")";
 
-                // Aguarda 1.5 segundos para o aluno ver o aviso de sucesso antes de enviar
+                // Aguarda 1.5 segundos para o aluno ver o aviso de sucesso e envia via FormSubmit
                 setTimeout(() => {
-                    document.getElementById('formEnigma').submit();
+                    form.submit();
                 }, 1500);
 
             } else {
                 // Se errar: mostra erro e esconde sucesso
-                msgErro.style.display = 'block';
+                msgErro.style.display = 'flex';
                 msgSucesso.style.display = 'none';
 
                 // Esconde o aviso de erro depois de 3 segundos para ele tentar de novo
