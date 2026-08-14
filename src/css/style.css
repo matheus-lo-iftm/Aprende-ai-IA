@@ -3628,31 +3628,31 @@ input[id="seguranca"]:checked + label {
 
 .degrau-primeiro-9 {
     height: 120px; /* Mais alto */
-    border-top: 2px solid #00ff41; /* Brilho do campeão */
-    background: linear-gradient(to top, rgba(0, 255, 64, 0.1), transparent);
+    border-top: 2px solid #ff2a2a; /* Brilho do campeão */
+    background: linear-gradient(to top, rgb(255, 42, 42, 0.1), transparent);
 }
 
 .degrau-segundo-9 {
     height: 80px; /* Médio */
-    border-top: 2px solid #ff2a2a;
+    border-top: 2px solid #00f0ff;
 }
 
 .degrau-terceiro-9 {
     height: 65px; /* Mais baixo */
-    border-top: 2px solid #00f0ff;
+    border-top: 2px solid #ffdf2a;
 }
 
 .degrau-quarto-9 {
     height: 50px; 
-    border-top: 2px solid #ffdf2a; /* Brilho do campeão */
+    border-top: 2px solid #00ff41; /* Brilho do campeão */
     
 }
 
 /* Estilo do número dentro do degrau conforme a cor do clã */
-.degrau-primeiro-9 h5 { color: #00ff41; opacity: 1; }
-.degrau-segundo-9 h5 { color: #ff2a2a;}
-.degrau-terceiro-9 h5 { color: #00f0ff;}
-.degrau-quarto-9 h5 { color:#ffdf2a;}
+.degrau-primeiro-9 h5 { color: #ff2a2a; opacity: 1; }
+.degrau-segundo-9 h5 { color: #00f0ff;}
+.degrau-terceiro-9 h5 { color: #ffdf2a;}
+.degrau-quarto-9 h5 { color:#00ff41;}
 
 
 
@@ -3667,13 +3667,13 @@ input[id="seguranca"]:checked + label {
 
 .degrau-primeiro-8 {
     height: 120px; /* Mais alto */
-    border-top: 2px solid #ffdf2a; /* Brilho do campeão */
-    background: linear-gradient(to top, rgb(255, 223, 42, 0.1), transparent);
+    border-top: 2px solid #00ff41; /* Brilho do campeão */
+    background: linear-gradient(to top, rgb(0, 255, 65, 0.1), transparent);
 }
 
 .degrau-segundo-8 {
     height: 80px; /* Médio */
-    border-top: 2px solid #00ff41;
+    border-top: 2px solid #ffdf2a;
 }
 
 .degrau-terceiro-8 {
@@ -3683,13 +3683,13 @@ input[id="seguranca"]:checked + label {
 
 .degrau-quarto-8 {
     height: 50px; 
-    border-top: 2px solid #ff2a2a; /* Brilho do campeão */
+    border-top: 2px solid #ff2a2a; /
     
 }
 
 /* Estilo do número dentro do degrau conforme a cor do clã */
-.degrau-primeiro-8 h5 { color: #ffdf2a; opacity: 1; }
-.degrau-segundo-8 h5 { color: #00ff41;}
+.degrau-primeiro-8 h5 { color: #00ff41; opacity: 1; }
+.degrau-segundo-8 h5 { color: #ffdf2a;}
 .degrau-terceiro-8 h5 { color: #00f0ff;}
 .degrau-quarto-8 h5 { color:#ff2a2a;}
 
