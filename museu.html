@@ -174,7 +174,7 @@
                 <div class="stat-header">
                     <span class="icon text-yellow">🛡️</span>
                 </div>
-                <div class="stat-value text-white">0</div>
+                <div class="stat-value text-white"><span id="contador">0</span></div>
                 <div class="stat-label">DIAS SEM INCIDENTES:</div>
             </div>
 
@@ -186,6 +186,28 @@
                 <div class="stat-label">ACESSO LIBERADO:</div>
             </div>
         </div>
+
+        <script>
+            // Data inicial (Ano, Mês, Dia). Mês no JS começa em 0 
+            const dataInicial = new Date(2026, 7, 12); // 12 de Agosto de 2026
+
+            function atualizarContador() {
+                const dataHoje = new Date();
+
+                // Zera as horas para calcular apenas a diferença de dias inteiros
+                const d1 = new Date(dataInicial.getFullYear(), dataInicial.getMonth(), dataInicial.getDate());
+                const d2 = new Date(dataHoje.getFullYear(), dataHoje.getMonth(), dataHoje.getDate());
+
+                const diferencaTempo = d2 - d1;
+                const diasSemAcidentes = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24));
+
+                // Evita mostrar números negativos caso a data inicial seja no futuro por engano
+                document.getElementById("contador").innerText = diasSemAcidentes < 0 ? 0 : diasSemAcidentes;
+            }
+
+            // Executa assim que a página carrega
+            atualizarContador();
+        </script>
 
         <div class="divider-museum-halls">
             <div class="divider-line-left"></div>
@@ -226,7 +248,7 @@
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/bicodepato.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -244,11 +266,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso3">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/wingsuit.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -260,11 +282,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso4">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/willsmith.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -276,11 +298,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso5">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/cachorro-gigante.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -292,11 +314,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso6">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/sucuri.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -308,11 +330,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso7">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/trampolim.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -324,11 +346,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso8">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/efeito-helicoptero.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -340,11 +362,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso9">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/zach.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -356,11 +378,11 @@
 
                     <div class="archive-case-card" data-bs-toggle="modal" data-bs-target="#Caso10">
 
-                        
+
                         <div class="archive-case-scan-liner"></div>
                         <video src="src/media/museum-glitch/nuvem.mp4" alt="" controls></video>
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -370,16 +392,16 @@
 
                     </div>
 
-                    
+
                     <div class="archive-case-card locked" data-bs-toggle="modal" data-bs-target="#Caso10">
 
                         <div class="lock-overlay">
                             <span class="lock-icon"><img src="src/media/icons/padlock.png" alt=""></span>
                         </div>
-                        
+
                         <img src="src/media/museum-glitch/worldcup.jpg" alt="">
 
-                         <div class="archive-case-card-hover-scan">
+                        <div class="archive-case-card-hover-scan">
 
                             <img src="src/media/icons/lupa-museum.png" alt="Scanner">
                             <p>ESCANEAR</p>
@@ -389,7 +411,7 @@
 
                     </div>
 
-                    
+
 
 
                 </div>
@@ -414,10 +436,10 @@
 
         <div class="modal fade" id="Caso1" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #001</h5>
@@ -428,7 +450,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/tokyowalk.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -471,17 +494,17 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                        <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
@@ -489,10 +512,10 @@
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -516,10 +539,10 @@
         </div>
         <div class="modal fade" id="Caso2" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #002</h5>
@@ -530,7 +553,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/bicodepato.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -573,28 +597,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -618,10 +642,10 @@
         </div>
         <div class="modal fade" id="Caso3" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #003</h5>
@@ -632,7 +656,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/wingsuit.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -675,28 +700,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -720,10 +745,10 @@
         </div>
         <div class="modal fade" id="Caso4" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #004</h5>
@@ -734,7 +759,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/willsmith.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -777,28 +803,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -822,10 +848,10 @@
         </div>
         <div class="modal fade" id="Caso5" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #005</h5>
@@ -836,7 +862,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/cachorro-gigante.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -879,28 +906,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -925,10 +952,10 @@
 
         <div class="modal fade" id="Caso6" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #006</h5>
@@ -939,7 +966,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/sucuri.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -982,28 +1010,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -1028,10 +1056,10 @@
 
         <div class="modal fade" id="Caso7" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #007</h5>
@@ -1042,7 +1070,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/trampolim.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -1085,28 +1114,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -1131,10 +1160,10 @@
 
         <div class="modal fade" id="Caso8" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #008</h5>
@@ -1145,7 +1174,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/efeito-helicoptero.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -1188,28 +1218,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -1234,10 +1264,10 @@
 
         <div class="modal fade" id="Caso9" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #009</h5>
@@ -1248,7 +1278,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/zach.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -1291,28 +1322,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
@@ -1337,10 +1368,10 @@
 
         <div class="modal fade" id="Caso10" data-bs-theme="dark" tabindex="-1" aria-hidden="true">
 
-            
+
             <div class="modal-dialog modal-xl modal-dialog-centered">
 
-                
+
                 <div class="modal-content">
                     <div class="modal-header d-flex justify-content-between">
                         <h5 class="modal-title">INSPEÇÃO VISUAL - ARQUIVO #010</h5>
@@ -1351,7 +1382,8 @@
                     <div class="modal-body d-flex flex-wrap p-0">
 
                         <!-- FOTO INSPECIONADA -->
-                        <div class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case" >
+                        <div
+                            class="col-md-6 d-flex align-items-start justify-content-center bg-dark archive-video-case">
                             <video src="src/media/museum-glitch/nuvem.mp4"
                                 class="img-fluid rounded border border-secondary" alt="Evidência" controls muted>
                             </video>
@@ -1394,28 +1426,28 @@
 
                                 <hr class="border-secondary my-4">
 
-<label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
+                                <label class="form-label text-white">VEREDITO DA ANÁLISE:</label>
 
                                 <!-- O VEREDITO -->
                                 <div class="container">
-                                    
+
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="real" name="veredito" class="input" value="real"/>
+                                        <input type="radio" id="real" name="veredito" class="input" value="real" />
                                         <div class="btn">
                                             <span aria-hidden="">REAL</span>
                                             <span aria-hidden="" class="btn__glitch">REAL</span>
-                                    
+
                                         </div>
                                     </div>
                                     <div class="radio-wrapper">
-                                       <input type="radio" id="fake" name="veredito" class="input" value="fake"/>
+                                        <input type="radio" id="fake" name="veredito" class="input" value="fake" />
                                         <div class="btn">
                                             FAKE<span aria-hidden=""></span>
                                             <span aria-hidden="" class="btn__glitch">ANOMALIA</span>
-                                            
+
                                         </div>
                                     </div>
-                        
+
                                 </div>
 
 
