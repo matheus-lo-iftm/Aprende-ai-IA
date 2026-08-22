@@ -1673,10 +1673,14 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    overflow-y: auto;
     background: rgba(25, 5, 5, 0.8);
     border: 1px solid white;
     border-radius: 15px;
+    border-image: linear-gradient(45deg, #ff0000, #ffbd2e, #6045cd, #09ff16);
+    border-image-slice: 1;
     padding: 20px;
+    max-height: 150vh;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
     justify-content: center;
 }
@@ -1772,17 +1776,19 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 }
 
 
+/* =========================== Tipo Imagem =========================== */
+
 .psquico-theme {
 
     background: linear-gradient(135deg, #2a0d3b 0%, #5010a3 100%);
-    animation: borderGlow 5s infinite alternate;
+    animation: borderGlow-p 5s infinite alternate;
 }
 
 .psquico-theme .card-weak p{
     color: white;
 }
 
-@keyframes borderGlow {
+@keyframes borderGlow-p {
     0% {
         box-shadow: 0 0 15px rgb(60, 0, 128);
         border: 1px solid rgb(60, 0, 128);
@@ -1804,6 +1810,89 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 .psquico-theme .card-type, .psquico-theme .card-name{
     color: white;
 }
+
+
+
+/* =========================== Tipo Texto =========================== */
+
+
+
+.text-theme {
+
+    background: linear-gradient(135deg, #d1d1d1 0%,  #474747 100%);
+    animation: borderGlow-t 5s infinite alternate;
+}
+
+.text-theme .card-weak p{
+    color: rgb(49, 49, 49);
+}
+
+@keyframes borderGlow-t {
+    0% {
+        box-shadow: 0 0 15px rgb(255, 255, 255);
+        border: 1px solid rgb(197, 197, 197);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(194, 194, 194);
+        border: 1px solid rgb(175, 175, 175);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(155, 155, 155);
+        border: 1px solid rgb(110, 110, 110);
+    }
+}
+.text-theme:hover { box-shadow: 0 15px 35px rgba(153, 153, 153, 0.6); }
+
+
+.text-theme .card-type, .text-theme .card-name{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* =========================== Tipo Suporte/Dicas =========================== */
+
+
+
+.suport-theme {
+
+    background: linear-gradient(135deg, yellow 0%, #c59100  30%,#a07500  100%);
+    animation: borderGlow-s 5s infinite alternate;
+}
+
+.suport-theme .card-weak p{
+    color: rgb(0, 0, 0);
+}
+
+@keyframes borderGlow-s {
+    0% {
+        box-shadow: 0 0 15px rgb(255, 255, 255);
+        border: 1px solid rgb(197, 197, 197);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(194, 194, 194);
+        border: 1px solid rgb(175, 175, 175);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(155, 155, 155);
+        border: 1px solid rgb(110, 110, 110);
+    }
+}
+.suport-theme:hover { box-shadow: 0 15px 35px rgba(55, 16, 163, 0.6); }
+
+
+.suport-theme .card-type, .suport-theme .card-name{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
 
 
 /* --- EFEITO HOLOGRÁFICO --- */
