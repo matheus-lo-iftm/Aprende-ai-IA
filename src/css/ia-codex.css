@@ -1345,22 +1345,35 @@ margin-top: 100px}
     width: 100%;
 }
 
-.slot{
+.slot {
+    position: relative;
+
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     width: 25%;
-    height: auto;
-    flex-wrap: wrap;
+    min-height: 380px;
+
     padding: 20px;
-    padding-top: 7%;
-    padding-bottom: 7%;
+
+    box-sizing: border-box;
+
     background: rgba(255, 255, 255, 0.1);
+
     border: 3px dashed rgba(255, 255, 255, 0.2);
-    border-radius: 7%;
+
+    border-radius: 30px;
+
     color: rgba(255, 255, 255, 0.5);
+
     font-weight: bold;
+
     transition: all 0.3s ease;
-    box-shadow: 0 0 15px --;
+
+    overflow: hidden;
 }
 
 .slot p{
@@ -1394,6 +1407,121 @@ margin-top: 100px}
 .slot:hover img{
     filter:  brightness(0) invert(1);
 }
+
+/* =========================================================
+   SLOT EQUIPADO
+   ========================================================= */
+
+.slot-equipado {
+    justify-content: flex-start;
+
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+
+    box-shadow: none !important;
+
+
+
+    overflow: visible;
+}
+
+
+/* Não aplica o hover do slot vazio */
+
+.slot-equipado:hover {
+    transform: none;
+
+    border: none !important;
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    cursor: default;
+}
+
+
+
+
+/* =========================================================
+   CARTA DENTRO DO SLOT
+   ========================================================= */
+
+.carta-equipada {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100% !important;
+
+    max-width: 280px;
+
+    min-width: 0;
+
+    height: auto;
+
+    margin: 0 auto !important;
+
+    transform: scale(0.9);
+
+    cursor: pointer;
+
+    /*
+       Deixa a carta meio acinzentada
+    */
+    filter: grayscale(70%) brightness(85%);
+
+    transition:
+        filter 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+
+/* =========================================================
+   SELO EQUIPADO
+   ========================================================= */
+
+.selo-equipado {
+    color: #00ff41 !important;
+
+    font-family: monospace !important;
+
+
+    font-weight: bold;
+
+    text-shadow: 0 0 10px #00ff41;
+
+    margin: 5px 0 0 0 !important;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+
+}
+
+
+/* =========================================================
+   CARTA EQUIPADA AO PASSAR O MOUSE
+   ========================================================= */
+
+.carta-equipada:hover {
+    transform: scale(1);
+
+    filter: grayscale(0%) brightness(100%);
+
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1776,6 +1904,10 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 }
 
 
+.attack-deck a h4{
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* =========================== Tipo Imagem =========================== */
 
 .psquico-theme {
@@ -2008,6 +2140,8 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
     font-size: 0.7rem;
 }
 
+
+
 .card-weak p { margin: 0; }
 .card-weak span { color: #ff1a1a; font-weight: bold; }
 
@@ -2023,6 +2157,84 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
      filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(3020%) hue-rotate(95deg) brightness(101%) contrast(106%);
 
 }
+
+
+
+
+
+
+
+/* =========================================================
+   SLOT EQUIPADO
+   ========================================================= */
+
+
+
+
+/* Impede o hover original do slot equipado */
+.slot-equipado:hover {
+    transform: none;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+/* =========================================================
+   CARTA JÁ UTILIZADA NO INVENTÁRIO
+   ========================================================= */
+
+.carta-utilizada {
+    opacity: 0.3 !important;
+    pointer-events: none !important;
+}
+
+
+
+.slot-equipado .card-footer {
+     display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    box-sizing: border-box;
+    font-size: 1px;
+}
+
+
+.slot-equipado .card-type img{
+    margin:0;
+}
+
+
+.slot-equipado:hover img{
+    filter: none;
+}
+
+.slot-equipado .card-weak p { margin: 0; font-size: 0.7rem; }
+.slot-equipado .card-weak span { color: #ff1a1a; font-weight: bold; }
+
+.slot-equipado .card-touch {  display: none; align-items: center; gap: 5px; color: #00ff41; font-weight: bold; gap: 10px;}
+
+.slot-equipado .card-touch p{
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+
 
 /* Celular */
 @media (max-width: 768px) {
@@ -2247,4 +2459,62 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 
 .ia-codex-items-body:hover img {
     filter: brightness(0); /* Deixa o ícone preto */
+}
+
+
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .ano-ia-deck {
+        gap: 15px;
+    }
+
+    .slot {
+        flex: 1 1 45%;
+    }
+
+    .carta-equipada {
+        transform: scale(0.95);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .ano-ia-deck {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slot {
+        width: 100%;
+        max-width: 350px;
+
+        flex: none;
+
+        min-height: 300px;
+    }
+
+    .carta-equipada {
+        max-width: 280px;
+
+        transform: scale(0.9);
+    }
+
+    .card-footer {
+        gap: 8px;
+    }
+
+    .card-weak p {
+        font-size: 0.65rem;
+    }
+
+    .card-touch {
+        font-size: 0.7rem;
+    }
 }
