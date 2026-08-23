@@ -472,8 +472,8 @@
 
             // ==========================================
             // A SENHA SECRETA (Padronizada em minúsculas)
-            // Palavra correspondente: A - N - O - M - A - L - I - A
-           let senhaSecreta = "& - question - porc - $ - & - code - chip - &";
+            
+           let senhaSecreta = "porc - chip - hash - & - question - code - $ - qr";
             // ==========================================
 
             const msgSucesso = document.getElementById('msgSucessoIFEX');
@@ -485,7 +485,7 @@
                 msgErro.style.display = 'none';
 
                 // Salva a resposta final decodificada no input invisível para ir no e-mail
-                document.getElementById('senhaOculta').value = "A-N-O-M-A-L-I-A (" + tentativa + ")";
+                document.getElementById('senhaOculta').value = "Resposta certa (" + tentativa + ")";
 
                 // Aguarda 1.5 segundos para o aluno ver o aviso de sucesso e envia via FormSubmit
                 setTimeout(() => {
