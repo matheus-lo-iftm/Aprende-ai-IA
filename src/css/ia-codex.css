@@ -2024,6 +2024,121 @@ background: linear-gradient(92deg, rgba(255, 0, 0, 1) 0%, rgba(255, 204, 204, 1)
 
 
 
+/* =========================== Tipo Estudo =========================== */
+
+
+
+.grass-theme {
+
+    background: linear-gradient(135deg, rgb(21, 250, 0) 0%,  rgb(7, 85, 0) 100%);
+    animation: borderGlow-g 5s infinite alternate;
+}
+
+.grass-theme .card-weak p{
+    color: rgb(49, 49, 49);
+}
+
+@keyframes borderGlow-g {
+    0% {
+        box-shadow: 0 0 15px rgb(21, 250, 0);
+        border: 1px solid rgb(7, 85, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(17, 201, 0);
+        border: 1px solid rgb(5, 54, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(12, 150, 0);
+        border: 1px solid rgb(5, 54, 0);
+    }
+}
+.grass-theme:hover { box-shadow: 0 15px 35px rgba(153, 153, 153, 0.6); }
+
+
+.grass-theme .card-type, .grass-theme .card-name{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+/* =========================== Tipo Pesquisa =========================== */
+
+
+
+.water-theme {
+
+    background: linear-gradient(135deg, rgb(0, 233, 250) 0%,  rgb(0, 85, 74) 100%);
+    animation: borderGlow-w 5s infinite alternate;
+}
+
+.water-theme .card-weak p{
+    color: rgb(49, 49, 49);
+}
+
+@keyframes borderGlow-w {
+    0% {
+        box-shadow: 0 0 15px rgb(0, 250, 229);
+        border: 1px solid rgb(0, 85, 74);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(0, 151, 161);
+        border: 1px solid rgb(0, 85, 74);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(1, 92, 99);
+        border: 1px solid rgb(0, 48, 41);
+    }
+}
+.water-theme:hover { box-shadow: 0 15px 35px rgba(153, 153, 153, 0.6); }
+
+
+.water-theme .card-type, .water-theme .card-name{
+    color: rgb(255, 255, 255);
+}
+
+
+/* =========================== Tipo Treino =========================== */
+
+
+
+.fairy-theme {
+
+    background: linear-gradient(135deg, rgb(242, 0, 250) 0%,  rgb(85, 0, 85) 100%);
+    animation: borderGlow-treino 5s infinite alternate;
+}
+
+.fairy-theme .card-weak p{
+    color: rgb(49, 49, 49);
+}
+
+@keyframes borderGlow-treino {
+    0% {
+        box-shadow: 0 0 15px rgb(242, 0, 250);
+        border: 1px solid rgb(85, 0, 85);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgb(170, 0, 170);
+        border: 1px solid rgb(85, 0, 85);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgb(88, 1, 99);
+        border: 1px solid rgb(48, 0, 40);
+    }
+}
+.fairy-theme:hover { box-shadow: 0 15px 35px rgba(153, 153, 153, 0.6); }
+
+
+.fairy-theme .card-type, .fairy-theme .card-name{
+    color: rgb(255, 255, 255);
+}
 
 
 
