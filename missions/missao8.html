@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Missão 08 — Protocolo Mestre | Aprende aí, IA!</title>
+    <link href="../src/css/style.css" rel="stylesheet" />
+    <link href="../src/favicon/logo-brain.png" rel="icon" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=VT323&amp;display=swap" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet" />
+    <style>
+        /* Estilos exclusivos da Missão 08: preservam o CSS original do projeto */
+        .m08-slides-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            background: radial-gradient(ellipse at 50% 30%, #3c21a2 0%, #120a32 57%, #05050b 100%);
+            border: 1px solid #6a49ee;
+            color: white;
+            padding: 24px;
+        }
+
+        .m08-slides-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: .25;
+            background-image: linear-gradient(rgba(159, 130, 255, .13) 1px, transparent 1px), linear-gradient(90deg, rgba(159, 130, 255, .13) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none
+        }
+
+        .m08-slides-placeholder>* {
+            position: relative;
+            z-index: 1
+        }
+
+        .m08-slides-placeholder strong {
+            font: 800 clamp(1.2rem, 3.4vw, 2.5rem)/1.1 'Exo 2', sans-serif;
+            letter-spacing: .06em;
+            color: #fff
+        }
+
+        .m08-slides-placeholder span:not(.m08-slides-symbol) {
+            font-size: clamp(.85rem, 2vw, 1.1rem);
+            color: #9c83ff;
+            font-weight: bold
+        }
+
+        .m08-slides-placeholder small {
+            max-width: 520px;
+            color: #d1c8e9;
+            line-height: 1.4
+        }
+
+        .m08-slides-symbol {
+            font-size: clamp(2rem, 6vw, 4rem);
+            color: #9c83ff;
+            line-height: 1
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero-background"></div>
+    <div class="nav-bg">
+        <nav class="navbar">
+            <a class="logo" href="../index.html">
+                <div class="logo-link">
+                    <div class="logo-img">
+                        <img alt="Logo Aprende aí, IA!" src="../src/media/icons/logo.png" />
+                    </div>
+                </div>
+                <div class="logo-title">
+                    <h1>Aprende aí, IA!</h1>
+                </div>
+            </a>
+            <div class="navbar-links">
+                <a class="nav-link" href="../index.html#sobre">
+                    <img alt="ícone de informação" src="../src/media/icons/info.png" />
+                    <div class="nav-link-text">Sobre</div>
+                </a>
+                <a class="nav-link" href="../index.html#missoes">
+                    <img alt="ícone de foguete" src="../src/media/icons/mission.png" />
+                    <div class="nav-link-text">Missões</div>
+                </a>
+                <a class="nav-link" href="../tratado.html">
+                    <img alt="ícone de pergaminho" src="../src/media/icons/scroll.png" />
+                    <div class="nav-link-text">Tratado</div>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <button class="btn btn-primary" data-bs-target="#demo" data-bs-toggle="offcanvas" type="button">
+                    <div class="menu-icon">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </div>
+    <div class="site">
+        <div class="mmision-home">
+            <p>HOME / <span>MISSÃO 08</span></p>
+        </div>
+        <div class="mmision-header">
+            <div class="mmision-num">
+                <p>MISSION_08</p>
+            </div>
+            <div class="mmision-status"><img alt="Status da Missão 08" src="../src/media/gif/online.gif" />
+                <p>DESBLOQUEADO</p>
+            </div>
+        </div>
+        <div class="mmision-title-content">
+            <div>
+                <div class="site-sobre-sinopse">
+                    <h2><i>Protocolo</i> Mestre</h2>
+                    <div class="site-sobre-sinopse-p">
+                        <p>"Você já aprendeu a montar seu arsenal de IAs. Mas uma pergunta continua sem resposta: quem
+                            realmente está aprendendo, você ou a máquina? Nesta missão, cada clã vai enfrentar um
+                            diagnóstico, treinar com o IA-Codex e encarar o Boss do Conhecimento SEM ajuda da IA. Use a
+                            tecnologia como treinadora. Na batalha final, a inteligência precisa ser sua."</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="mmision-total-xp">
+                    <div>
+                        <p>TOTAL  XP</p>
+                    </div>
+                    <div>
+                        <h3 id="total-xp-purple">800</h3>
+                    </div>
+                </div>
+                <div class="mmision-total-progress">
+                    <div>
+                        <p>PROGRESSO</p>
+                    </div>
+                    <div>
+                        <h3 id="progress-yellow">0%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mmision-progress-bar-container">
+            <div class="mmision-progress-bar-fill" style="width: 0% !important; transition: width .35s ease;"></div>
+        </div>
+        <div class="mmision-outdoor">
+            <div class="mmision-outdoor-content">
+                <div class="mmision-outdoor-content-embed">
+                    <div class="mmision-outdoor-content-embed-header">
+                        <div class="terminal-buttons">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">APRENDE_AI :: MISSION_08 :: Protocolo_Mestre.pptx</div>
+                        <div class="rec-status">
+                            <div class="rec-dot"></div>
+                            <p>REC</p>
+                        </div>
+                    </div>
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 1.6em; overflow: hidden;
+                        border-radius: 8px; will-change: transform;">
+
+                        <iframe loading="lazy"
+                            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                            src="https://www.canva.com/design/DAHa7xpQGro/XGn73odhMgZc5Tv_Ew7ldw/view?embed"
+                            allowfullscreen="allowfullscreen" allow="fullscreen">
+                        </iframe>
+                    </div>
+                    <div class="mmision-outdoor-content-embed-footer">
+                        <div>
+                            <p>SLIDES <span style="color:var(--color4);">13</span></p>
+                        </div>
+                        <div>
+                            <p>NÍVEL <span style="color:white;">MESTRE</span></p>
+                        </div>
+                        <div>
+                            <p>XP <span style="color:#27c93f;">+800</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-dupla" style="display: flex; flex-direction:row; gap:5%">
+                    <!-- BOTÃO DO QUIZ GIGANTE -->
+                    <a aria-label="Abrir o IA-Codex para participar do Protocolo Mestre" class="btn-missao-quiz"
+                        href="../ia-codex.html" id="ia-codex-m3-button" type="button">
+                        <img alt="" src="../src/media/icons/ia-codex-logo.png" />
+                        <p>INICIAR TREINO</p>
+                    </a>
+                </div>
+            </div>
+            <div class="mmision-information">
+                <!-- Objetivos da Missão -->
+                <div class="mmision-box">
+                    <div class="mmision-box-header" id="mmision-objectives-header">
+                        <div><img alt="ícone de Objetivos - Alvo" src="../src/media/icons/objetivos.png" />
+                            <p>OBJETIVOS DA MISSÃO</p>
+                        </div>
+                        <div>
+                            <p>+4</p>
+                        </div>
+                    </div>
+                    <ul class="mission-list">
+                        <li><label class="missao-item"><input class="checkbox-real" type="checkbox" />
+                                <div class="circulo-check"></div><span class="texto-obj">Responder ao diagnóstico
+                                    inicial sem utilizar inteligência artificial.</span>
+                            </label></li>
+                        <li><label class="missao-item"><input class="checkbox-real" type="checkbox" />
+                                <div class="circulo-check"></div><span class="texto-obj">Equipar cartas do IA-Codex e
+                                    treinar com dicas, explicações e perguntas.</span>
+                            </label></li>
+                        <li><label class="missao-item"><input class="checkbox-real" type="checkbox" />
+                                <div class="circulo-check"></div><span class="texto-obj">Enfrentar o Boss do
+                                    Conhecimento sem IA, explicando o próprio raciocínio.</span>
+                            </label></li>
+                        <li><label class="missao-item"><input class="checkbox-real" type="checkbox" />
+                                <div class="circulo-check"></div><span class="texto-obj">Registrar no Tratado uma regra
+                                    de estudo consciente e responsável.</span>
+                            </label></li>
+                    </ul>
+                </div>
+                <!-- CAIXA 2: XP REWARDS -->
+                <div class="mmision-box">
+                    <div class="mmision-box-header" id="mmision-rewards-header">
+                        <div><img alt="" src="../src/media/icons/star.png" />
+                            <p>RECOMPENSAS DA MISSÃO</p>
+                        </div>
+                        <div>
+                            <p>+800 XP</p>
+                        </div>
+                    </div>
+                    <ul class="xp-list">
+                        <li><span class="xp-dot" style="background:#7c5be6;"></span><span class="xp-texto">Participação
+                                e cooperação com o clã</span><span class="xp-pontos">+100 XP</span></li>
+                        <li><span class="xp-dot" style="background:#00d4ff;"></span><span class="xp-texto">Diagnóstico
+                                inicial registrado</span><span class="xp-pontos">+150 XP</span></li>
+                        <li><span class="xp-dot" style="background:#27c93f;"></span><span class="xp-texto">Treino guiado
+                                com uso consciente da IA</span><span class="xp-pontos">+200 XP</span></li>
+                        <li><span class="xp-dot" style="background:#ffdf2a;"></span><span class="xp-texto">Boss do
+                                Conhecimento: soluções e justificativas</span><span class="xp-pontos">+250 XP</span>
+                        </li>
+                        <li><span class="xp-dot" style="background:#ff68df;"></span><span class="xp-texto">Regra final
+                                registrada no Tratado</span><span class="xp-pontos">+100 XP</span></li>
+                    </ul>
+                    <div class="xp-total mt-3 pt-3 d-flex justify-content-between"
+                        style="border-top: 1px solid var(--border-glass); font-family: monospace; color: var(--color4);">
+                        <span>TOTAL DESTA MISSÃO</span>
+                        <span style="font-weight: bold; font-size: 1.2rem; color: #ffdf2a;">+800 XP</span>
+                    </div>
+                </div>
+                <div class="mmsion-next-class-box">
+                    <a href="../index.html#missoes">
+                        <div class="mmsion-next-class-box-img"><img alt="" src="../src/media/icons/play.png" /></div>
+                        <div class="mmsion-next-class-box-text">
+                            <p>PRÓXIMA MISSÃO · EM PREPARAÇÃO</p>
+                            <h5>Mission 09 — ???</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bg">
+        <footer>
+            <div class="footer-top">
+                <div class="footer-iai">
+                    <div class="footer-name">
+                        <h2>Aprende aí, IA!</h2>
+                    </div>
+                    <div class="footer-description">
+                        <p>"O projeto <b><i>Aprende aí, IA!</i></b> nasceu para transformar jovens de usuários passivos
+                            em
+                            verdadeiros mestres da tecnologia, dominando a Inteligência Artificial, ensinando ética,
+                            pensamento crítico e o uso responsável
+                            das ferramentas do futuro. Um projeto de extensão IFTM."</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <div>
+                            <h4>Principal</h4>
+                        </div>
+                        <div class="footer-a-list">
+                            <a href="../index.html#sobre">Sobre</a>
+                            <a href="../index.html#missoes">Missões</a>
+                            <a href="../tratado.html">Tratado</a>
+                            <a href="../index.html#kit">Kit IA</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Interativas</h4>
+                        </div>
+                        <div class="footer-a-list">
+                            <a href="../charada.html">Decodificador</a>
+                            <a href="../museu.html">"Real ou IA?"</a>
+                            <a href="../ia-codex.html">IA-Codex</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h4>Outros</h4>
+                        </div>
+                        <div class="footer-a-list">
+                            <a href="../ranking.html">Ranking</a>
+                            <a href="../index.html#terminal">Terminal</a>
+                            <a href="../faq.html">Contato</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-text">
+                    <p>© 2026 Aprende aí, IA! Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/aprendi.ia/" target="_blank">
+                        <img alt="ícone do Instagram" src="../src/media/icons/instagram.png" />
+                    </a>
+                    <a href="https://www.tiktok.com/@aprendeai.ia" target="_blank">
+                        <img alt="ícone do Tik Tok" src="../src/media/icons/tik-tok.png" />
+                    </a>
+                    <a href="mailto:aprende.ai.ia@gmail.com" target="_blank">
+                        <img alt="ícone do Email" src="../src/media/icons/email.png" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+            <a class="logo" href="../index.html">
+                <div class="logo-link">
+                    <div class="logo-img">
+                        <img alt="Logo Aprende aí, IA!" src="../src/media/icons/logo.png" />
+                    </div>
+                </div>
+                <div class="logo-title">
+                    <h1>Aprende aí, IA!</h1>
+                </div>
+            </a>
+            <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="off-menu">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../index.html#sobre">
+                        <img alt="ícone de informação" src="../src/media/icons/info.png" />
+                        <div class="nav-link-text">Sobre</div>
+                    </a>
+                    <a class="nav-link" href="../index.html#missoes">
+                        <img alt="ícone de foguete" src="../src/media/icons/mission.png" />
+                        <div class="nav-link-text">Missões</div>
+                    </a>
+                    <a class="nav-link" href="../ranking.html">
+                        <img alt="ícone de pódio" src="../src/media/icons/ranking.png" />
+                        <div class="nav-link-text">Ranking</div>
+                    </a>
+                    <hr />
+                    <a class="nav-link" href="../index.html#kit">
+                        <img alt="ícone de kit de primeiros socorros" src="../src/media/icons/kit.png" />
+                        <div class="nav-link-text">Kit do Aluno</div>
+                    </a>
+                    <a class="nav-link" href="../museu.html">
+                        <img alt="ícone de Museu" src="../src/media/icons/museum.png" />
+                        <div class="nav-link-text">Museu IA</div>
+                    </a>
+                    <a class="nav-link" href="../ia-codex.html">
+                        <img alt="ícone de Pokebola" src="../src/media/icons/ia-codex.png" />
+                        <div class="nav-link-text">IA-Codex</div>
+                    </a>
+                    <hr />
+                    <a class="nav-link" href="../index.html#terminal">
+                        <img alt="ícone de terminal - Programador" src="../src/media/icons/terminal.png" />
+                        <div class="nav-link-text">Terminal Anônimo</div>
+                    </a>
+                    <a class="nav-link" href="../charada.html">
+                        <img alt="ícone de quebra-cabeça" src="../src/media/icons/riddle.png" />
+                        <div class="nav-link-text">Decodificador</div>
+                    </a>
+                    <a class="nav-link" href="../faq.html">
+                        <img alt="ícone de conversa - balões de diálogo" src="../src/media/icons/chat.png" />
+                        <div class="nav-link-text">Trocar ideia</div>
+                    </a>
+                    <hr />
+                    <a class="nav-link" href="../index.html#social">
+                        <img alt="ícone de mundo - Redes Sociais" src="../src/media/icons/social.png" />
+                        <div class="nav-link-text">Redes Sociais</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Na Missão 08, o progresso inicial é zero. As quatro caixas atualizam o indicador.
+        document.addEventListener('DOMContentLoaded', function () {
+            const objetivos = Array.from(document.querySelectorAll('.mission-list .checkbox-real'));
+            const texto = document.getElementById('progress-yellow');
+            const barra = document.querySelector('.mmision-progress-bar-fill');
+            if (!objetivos.length || !texto || !barra) return;
+            function atualizar() {
+                const feitos = objetivos.filter(c => c.checked).length;
+                const percentual = Math.round(100 * feitos / objetivos.length);
+                texto.textContent = percentual + '%';
+                barra.style.setProperty('width', percentual + '%', 'important');
+            }
+            objetivos.forEach(c => c.addEventListener('change', atualizar));
+            atualizar();
+        });
+    </script>
+</body>
+
+</html>

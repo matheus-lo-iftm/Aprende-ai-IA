@@ -1,55 +1,86 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonde Glitch - 9º Ano</title>
-    <link rel="stylesheet" href="../src/css/ia-codex.css">
-    <link rel="icon" href="../src/favicon/favicon-ia-codex.ico">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Arena IA | Bonde Glitch · 9º Ano</title>
+    <link href="../src/css/ia-codex.css" rel="stylesheet" />
+    <link href="../src/favicon/favicon-ia-codex.ico" rel="icon" />
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" rel="stylesheet" />
+    <style>
+        /* Acréscimos mínimos para exibir os novos ataques sem sobrepor o rodapé */
+        .card.m08-study-card {
+            min-height: 485px !important;
+            height: auto !important;
+            padding-bottom: 66px !important;
+        }
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        .card.m08-study-card .card-body {
+            flex: 1 1 auto;
+            min-height: 0;
+        }
 
+        .card.m08-study-card .attack-deck {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card.m08-study-card .attack {
+            min-height: 28px;
+            gap: 4px;
+        }
+
+        .card.m08-study-card .attack h4 {
+            font-size: .83rem;
+            overflow-wrap: anywhere;
+        }
+
+        .card.m08-study-card .attack p {
+            white-space: nowrap;
+            font-size: .75rem;
+        }
+
+        .quest-board-body pre {
+            white-space: pre-wrap !important;
+            overflow-wrap: anywhere;
+        }
+    </style>
 </head>
 
 <body>
-
-
-
-
     <div class="hero-background"></div>
-
     <div class="nav-bg">
         <nav class="navbar">
             <a class="logo" href="../index.html">
                 <div class="logo-link">
                     <div class="logo-img">
-                        <img src="../src/media/icons/ia-codex-logo.png" alt="Logo Aprende aí, IA!">
+                        <img alt="Logo Aprende aí, IA!" src="../src/media/icons/ia-codex-logo.png" />
                     </div>
                 </div>
-
                 <div class="logo-title">
                     <h1>Arena IA</h1>
                 </div>
             </a>
             <div class="navbar-links">
                 <a class="nav-link" href="../index.html#sobre">
-                    <img src="../src/media/icons/info.png" alt="ícone de informação">
+                    <img alt="ícone de informação" src="../src/media/icons/info.png" />
                     <div class="nav-link-text">Sobre</div>
                 </a>
                 <a class="nav-link" href="../index.html#missoes">
-                    <img src="../src/media/icons/mission.png" alt="ícone de foguete">
+                    <img alt="ícone de foguete" src="../src/media/icons/mission.png" />
                     <div class="nav-link-text">Missões</div>
                 </a>
                 <a class="nav-link" href="../tratado.html">
-                    <img src="../src/media/icons/scroll.png" alt="ícone de pergaminho">
+                    <img alt="ícone de pergaminho" src="../src/media/icons/scroll.png" />
                     <div class="nav-link-text">Tratado</div>
                 </a>
-
             </div>
             <div class="navbar-menu">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <button class="btn btn-primary" data-bs-target="#demo" data-bs-toggle="offcanvas" type="button">
                     <div class="menu-icon">
                         <div></div>
                         <div></div>
@@ -59,17 +90,13 @@
             </div>
         </nav>
     </div>
-
-
     <div class="site">
-
-
         <div class="em-desenvolvimento">
             <div class="em-dev-faixas">
                 <div class="faixa">
                     <div class="faixa-inner">
                         <div class="faixa-listra-span">
-                            <div class="listra"></div><span>Bem-vindo à Liga do 9º Ano Bonde Glitch!</span>
+                            <div class="listra"></div><span>Bem-vindo à Liga do 8º Ano Bonde Glitch!</span>
                         </div>
                         <div class="faixa-listra-span">
                             <div class="listra"></div><span>📢 SISTEMA ONLINE: A guerra de XP se aproxima da reta
@@ -114,578 +141,479 @@
                                 use a IA de Texto (Manchete) em sinergia com a IA de Imagem (Evidência).</span>
                         </div>
                         <div class="faixa-listra-span">
-                            <div class="listra"></div><span>👁️ SPOILER DO ENDGAME: O projeto caminha para o
-                                encerramento. A última Oficina exigirá criatividade sonora (Suno AI). Preparem os fones de
-                                ouvido...</span>
+                            <div class="listra"></div><span>⚡ MISSÃO 08 LIBERADA: Protocolo Mestre! Aprenda com as
+                                cartas, prove seu raciocínio no Boss e registre sua evolução.</span>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
         <div class="ano-ia-deck">
             <div class="slot" id="slot-0">
-                <img src="../src/media/icons/plus.png" alt="Slot 1">
+                <img alt="Slot 1" src="../src/media/icons/plus.png" />
                 <p>Slot 1</p>
                 <h1>Vazio</h1>
             </div>
             <div class="slot" id="slot-1">
-                <img src="../src/media/icons/plus.png" alt="Slot 2">
+                <img alt="Slot 2" src="../src/media/icons/plus.png" />
                 <p>Slot 2</p>
                 <h1>Vazio</h1>
             </div>
             <div class="slot" id="slot-2">
-                <img src="../src/media/icons/plus.png" alt="Slot 3">
+                <img alt="Slot 3" src="../src/media/icons/plus.png" />
                 <p>Slot 3</p>
                 <h1>Vazio</h1>
             </div>
         </div>
         <div class="ano-ia-outdoor-central">
-
             <div class="ano-ia-banco-cards-header">
                 <h1>Escolha seu Deck IA</h1>
             </div>
-
             <div class="arena-split-layout">
-
                 <div class="card-banco">
-
-
-
-                    <div class="card grass-theme" onclick="equiparCartaInteira(this, 'Notebook LM')">
-
-    <div class="holo-glare"></div>
-
-    <div class="card-header">
-        <div class="card-name">
-            <h2>Notebook LM</h2>
-        </div>
-        <div class="card-type">
-            <img src="../src/media/pokemon/Grass.png" alt="ícone elemental">
-            <span class="card-type-text">ESTUDO</span>
-        </div>
-    </div>
-
-    <div class="card-image-box">
-        <img src="../src/media/pokemon/notebook-lm.png" alt="Notebook LM">
-    </div>
-
-    <div class="card-body">
-        <div class="card-description">
-            <p>O mestre dos pergaminhos inteligentes. Transforma textos em flashcards e resumos mágicos!</p>
-        </div>
-        <div class="attack-deck">
-            <!-- Ataque Temático de Anime: Expansão de Domínio -->
-            <a href="https://notebook.google.com/notebook/creating" target="_blank" class="attack"
-                onclick="navigator.clipboard.writeText('Crie um guia de estudos completo com 3 flashcards contendo perguntas e respostas diretas sobre o texto da aula que acabei de enviar para você.'); event.stopPropagation();">
-
-                <h4>Santuba de Flashcards</h4>
-                <p>180 TK</p>
-            </a>
-        </div>
-    </div>
-    <div class="card-footer">
-        <div class="card-weak">
-            <p><span>FRAQUEZA</span> ALUCINAÇÃO</p>
-        </div>
-        <div class="card-touch">
-            <img src="../src/media/icons/plus.png" alt="">
-            <p>EQUIPAR</p>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="card water-theme" onclick="equiparCartaInteira(this, 'Perplexity AI')">
-
-    <div class="holo-glare"></div>
-
-    <div class="card-header">
-        <div class="card-name">
-            <h2>Perplexity AI</h2>
-        </div>
-        <div class="card-type">
-            <img src="../src/media/pokemon/Water.png" alt="ícone elemental">
-            <span class="card-type-text">PESQUISA</span>
-        </div>
-    </div>
-
-    <div class="card-image-box">
-        <img src="../src/media/pokemon/perplexity.png" alt="Perplexity AI">
-    </div>
-
-    <div class="card-body">
-        <div class="card-description">
-            <p>A mente suprema que fareja a verdade. Encontrar fontes reais e explicações escondidas na rede!</p>
-        </div>
-        <div class="attack-deck">
-            <!-- Ataque Temático de Anime: Byakugan da Rede -->
-            <a href="https://perplexity.ai" target="_blank" class="attack"
-                onclick="navigator.clipboard.writeText('Ative seus sensores de busca! Pesquise na internet a explicação real, detalhada e didática sobre [COLOQUE A MATÉRIA DA PROVA DO IF AQUI] e cite pelo menos 2 links ou sites confiáveis de onde tirou essa informação.'); event.stopPropagation();">
-
-                <h4>Byakugan da Rede</h4>
-                <p>150 TK</p>
-            </a>
-        </div>
-    </div>
-    <div class="card-footer">
-        <div class="card-weak">
-            <p><span>FRAQUEZA</span> FAKE NEWS</p>
-        </div>
-        <div class="card-touch">
-            <img src="../src/media/icons/plus.png" alt="">
-            <p>EQUIPAR</p>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="card fairy-theme" onclick="equiparCartaInteira(this, 'ChatGPT-Professor')">
-
-    <div class="holo-glare"></div>
-
-    <div class="card-header">
-        <div class="card-name">
-            <h2>ChatGPT - Professor</h2>
-        </div>
-        <div class="card-type">
-            <img src="../src/media/pokemon/Fairy.png" alt="ícone elemental">
-            <span class="card-type-text">TREINO</span>
-        </div>
-    </div>
-
-    <div class="card-image-box">
-        <img src="../src/media/pokemon/chat-gpt-professor.png" alt="ChatGPT">
-    </div>
-
-    <div class="card-body">
-        <div class="card-description">
-            <p>O guerreiro veloz dos textos. Transforma dados brutos em resumos e pergaminhos didáticos!</p>
-        </div>
-        <div class="attack-deck">
-            <!-- Ataque Temático de Anime: Meteoro de Pegasus -->
-            <a href="https://chatgpt.com" target="_blank" class="attack"
-                onclick="navigator.clipboard.writeText('Pegue as informações desta pesquisa: [COLE O TEXTO DO PERPLEXITY AQUI]. Aja como um professor especialista da prova do IF e transforme esse conteúdo em uma super aula escrita, muito completa e fácil de entender, cheia de exemplos práticos!'); event.stopPropagation();">
-
-                <h4>Meteoro de Pegasus</h4>
-                <p>170 TK</p>
-            </a>
-        </div>
-    </div>
-    <div class="card-footer">
-        <div class="card-weak">
-            <p><span>FRAQUEZA</span> MATEMÁTICA</p>
-        </div>
-        <div class="card-touch">
-            <img src="../src/media/icons/plus.png" alt="">
-            <p>EQUIPAR</p>
-        </div>
-    </div>
-</div>
-
-
-
-                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Gemini')">
-
-
+                    <div class="card grass-theme m08-study-card" onclick="equiparCartaInteira(this, 'Notebook LM')">
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
+                            <div class="card-name">
+                                <h2>Notebook LM</h2>
+                            </div>
+                            <div class="card-type">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Grass.png" />
+                                <span class="card-type-text">ESTUDO</span>
+                            </div>
+                        </div>
+                        <div class="card-image-box">
+                            <img alt="Notebook LM" src="../src/media/pokemon/notebook-lm.png" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-description">
+                                <p>O mestre dos pergaminhos inteligentes. Transforma textos em flashcards e resumos
+                                    mágicos!</p>
+                            </div>
+                            <div class="attack-deck">
+                                <!-- Ataque Temático de Anime: Expansão de Domínio -->
+                                <a class="attack" href="https://notebook.google.com/notebook/creating"
+                                    onclick="navigator.clipboard.writeText('Crie um guia de estudos completo com 3 flashcards contendo perguntas e respostas diretas sobre o texto da aula que acabei de enviar para você.'); event.stopPropagation();"
+                                    target="_blank">
+                                    <h4>Santuba de Flashcards</h4>
+                                    <p>180 TK</p>
+                                </a>
+                                <a class="attack" href="https://notebooklm.google.com/"
+                                    onclick='navigator.clipboard.writeText("Use APENAS o material que anexei para montar um treino de 3 perguntas sobre [TEMA DA AULA], de dificuldade progressiva. Mostre UMA pergunta por vez e aguarde minha tentativa. Não revele a resposta antes de eu tentar. Depois, dê feedback e indique a parte da fonte em que devo revisar. Se a fonte não trouxer o conteúdo, diga isso."); event.stopPropagation();'
+                                    rel="noopener noreferrer" target="_blank">
+                                    <h4>Checkpoint de Prova</h4>
+                                    <p>190 TK</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-weak">
+                                <p><span>FRAQUEZA</span> ALUCINAÇÃO</p>
+                            </div>
+                            <div class="card-touch">
+                                <img alt="" src="../src/media/icons/plus.png" />
+                                <p>EQUIPAR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card water-theme m08-study-card" onclick="equiparCartaInteira(this, 'Perplexity AI')">
+                        <div class="holo-glare"></div>
+                        <div class="card-header">
+                            <div class="card-name">
+                                <h2>Perplexity AI</h2>
+                            </div>
+                            <div class="card-type">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Water.png" />
+                                <span class="card-type-text">PESQUISA</span>
+                            </div>
+                        </div>
+                        <div class="card-image-box">
+                            <img alt="Perplexity AI" src="../src/media/pokemon/perplexity.png" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-description">
+                                <p>A mente suprema que fareja a verdade. Encontrar fontes reais e explicações escondidas
+                                    na rede!</p>
+                            </div>
+                            <div class="attack-deck">
+                                <!-- Ataque Temático de Anime: Byakugan da Rede -->
+                                <a class="attack" href="https://perplexity.ai"
+                                    onclick="navigator.clipboard.writeText('Ative seus sensores de busca! Pesquise na internet a explicação real, detalhada e didática sobre [COLOQUE A MATÉRIA DA PROVA DO IF AQUI] e cite pelo menos 2 links ou sites confiáveis de onde tirou essa informação.'); event.stopPropagation();"
+                                    target="_blank">
+                                    <h4>Byakugan da Rede</h4>
+                                    <p>150 TK</p>
+                                </a>
+                                <a class="attack" href="https://www.perplexity.ai/"
+                                    onclick='navigator.clipboard.writeText("Quero estudar [TEMA]. Busque duas fontes confiáveis e adequadas a estudantes do 8º ou 9º ano. Para cada fonte, apresente o título, o endereço e uma ideia central. Diferencie o que é informação verificada do que é interpretação. Se não encontrar evidência, explique a limitação."); event.stopPropagation();'
+                                    rel="noopener noreferrer" target="_blank">
+                                    <h4>Rastro Confiável</h4>
+                                    <p>160 TK</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-weak">
+                                <p><span>FRAQUEZA</span> FAKE NEWS</p>
+                            </div>
+                            <div class="card-touch">
+                                <img alt="" src="../src/media/icons/plus.png" />
+                                <p>EQUIPAR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card fairy-theme m08-study-card"
+                        onclick="equiparCartaInteira(this, 'ChatGPT-Professor')">
+                        <div class="holo-glare"></div>
+                        <div class="card-header">
+                            <div class="card-name">
+                                <h2>ChatGPT - Professor</h2>
+                            </div>
+                            <div class="card-type">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Fairy.png" />
+                                <span class="card-type-text">TREINO</span>
+                            </div>
+                        </div>
+                        <div class="card-image-box">
+                            <img alt="ChatGPT" src="../src/media/pokemon/chat-gpt-professor.png" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-description">
+                                <p>O guerreiro veloz dos textos. Transforma dados brutos em resumos e pergaminhos
+                                    didáticos!</p>
+                            </div>
+                            <div class="attack-deck">
+                                <!-- Ataque Temático de Anime: Meteoro de Pegasus -->
+                                <a class="attack" href="https://chatgpt.com"
+                                    onclick="navigator.clipboard.writeText('Pegue as informações desta pesquisa: [COLE O TEXTO DO PERPLEXITY AQUI]. Aja como um professor especialista da prova do IF e transforme esse conteúdo em uma super aula escrita, muito completa e fácil de entender, cheia de exemplos práticos!'); event.stopPropagation();"
+                                    target="_blank">
+                                    <h4>Meteoro de Pegasus</h4>
+                                    <p>170 TK</p>
+                                </a>
+                                <a class="attack" href="https://chatgpt.com/" onclick='navigator.clipboard.writeText("Atue como meu professor particular de estudos. Sou estudante do 8º ou 9º ano e estou aprendendo [COLOQUE O CONTEÚDO AQUI]. Sua missão é me ajudar a compreender esse conteúdo, mas sem resolver os exercícios por mim. Siga estas regras: 1. Comece perguntando o que eu já sei sobre o assunto. 2. Explique os conceitos com palavras simples e exemplos do meu cotidiano. 3. Faça apenas uma pergunta por vez e espere minha resposta. 4. Se eu errar, não revele a solução imediatamente. Dê uma pista e deixe que eu tente novamente. 5. Se eu continuar com dificuldade, explique o passo que não entendi e mostre um exemplo diferente. 6. Depois que eu acertar, apresente um exercício um pouco mais difícil. 7. No final, faça duas perguntas de revisão para verificar se eu aprendi. Use uma linguagem clara, amigável e motivadora. Meu objetivo não é copiar respostas, mas aprender a resolver problemas sozinho. Comece perguntando qual parte desse conteúdo eu considero mais difícil."); event.stopPropagation();'
+                                    rel="noopener noreferrer" target="_blank">
+                                    <h4>Método Socrático</h4>
+                                    <p>200 TK</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-weak">
+                                <p><span>FRAQUEZA</span> MATEMÁTICA</p>
+                            </div>
+                            <div class="card-touch">
+                                <img alt="" src="../src/media/icons/plus.png" />
+                                <p>EQUIPAR</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Gemini')">
+                        <div class="holo-glare"></div>
+                        <div class="card-header">
                             <div class="card-name">
                                 <h2>Gemini</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/psquico.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/psquico.png" />
                                 <span class="card-type-text">IMAGEM</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/gemini.png" alt="Gemini">
+                            <img alt="Gemini" src="../src/media/pokemon/gemini.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>A mente conectada do Google. Incrível para criar cenários épicos.</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://gemini.google.com/app" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Crie uma paisagem épica de ficção científica (sci-fi landscape). [COLOQUE SEU TEMA AQUI]. O ambiente possui arquitetura alienígena colossal, naves espaciais distantes no céu, vegetação bioluminescente e um planeta gigante no horizonte. Paleta de cores cósmica.'); event.stopPropagation();">
-
-
+                                <a class="attack" href="https://gemini.google.com/app"
+                                    onclick="navigator.clipboard.writeText('Crie uma paisagem épica de ficção científica (sci-fi landscape). [COLOQUE SEU TEMA AQUI]. O ambiente possui arquitetura alienígena colossal, naves espaciais distantes no céu, vegetação bioluminescente e um planeta gigante no horizonte. Paleta de cores cósmica.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Vibe Sci-Fi</h4>
                                     <p>160 TK</p>
-
                                 </a>
-                                <a href="https://gemini.google.com/app" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Uma ilustração 3D incrivelmente fofa e de alta qualidade no estilo de animação da Pixar e Disney. [COLOQUE O PERSONAGEM/TEMA AQUI]. O personagem tem olhos expressivos, iluminação suave e quente, fundo levemente desfocado (bokeh), cores vibrantes.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://gemini.google.com/app"
+                                    onclick="navigator.clipboard.writeText('Uma ilustração 3D incrivelmente fofa e de alta qualidade no estilo de animação da Pixar e Disney. [COLOQUE O PERSONAGEM/TEMA AQUI]. O personagem tem olhos expressivos, iluminação suave e quente, fundo levemente desfocado (bokeh), cores vibrantes.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Estilo 3D Pixar</h4>
                                     <p>160 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> ANATOMIA</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
                     <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Dreamina')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>Dreamina</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/psquico.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/psquico.png" />
                                 <span class="card-type-text">IMAGEM</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/dreamina.png" alt="Dreamina">
+                            <img alt="Dreamina" src="../src/media/pokemon/dreamina.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>Forjada pelos deuses do TikTok. Especialista em artes dinâmicas.</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://dreamina.capcut.com/ai-tool/home/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Uma cena desenhada no estilo de anime japonês clássico dos anos 90, semelhante ao Studio Ghibli. [COLOQUE SEU TEMA AQUI]. Céu incrivelmente detalhado com nuvens pintadas, iluminação nostálgica, traços de animação tradicional 2D, cores em tons pastéis.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://dreamina.capcut.com/ai-tool/home/"
+                                    onclick="navigator.clipboard.writeText('Uma cena desenhada no estilo de anime japonês clássico dos anos 90, semelhante ao Studio Ghibli. [COLOQUE SEU TEMA AQUI]. Céu incrivelmente detalhado com nuvens pintadas, iluminação nostálgica, traços de animação tradicional 2D, cores em tons pastéis.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Vibe Anime</h4>
                                     <p>750 TK</p>
                                 </a>
-                                <a href="https://dreamina.capcut.com/ai-tool/home/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Concept art de um jogo RPG de fantasia feito na Unreal Engine 5. [COLOQUE SEU TEMA AQUI]. A cena tem magia brilhante, partículas voando pelo ar, texturas de armaduras e roupas super detalhadas, iluminação volumétrica, arte oficial de jogo.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://dreamina.capcut.com/ai-tool/home/"
+                                    onclick="navigator.clipboard.writeText('Concept art de um jogo RPG de fantasia feito na Unreal Engine 5. [COLOQUE SEU TEMA AQUI]. A cena tem magia brilhante, partículas voando pelo ar, texturas de armaduras e roupas super detalhadas, iluminação volumétrica, arte oficial de jogo.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Renderização Unreal</h4>
                                     <p>600 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> TEXTO</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
                     <div class="card psquico-theme" onclick="equiparCartaInteira(this, 'Pippit AI')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>Pippit AI</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/psquico.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/psquico.png" />
                                 <span class="card-type-text">IMAGEM</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/pippit.png" alt="ChatGPT">
+                            <img alt="ChatGPT" src="../src/media/pokemon/pippit.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>Veloz e rebelde. Perfeita para esboços, pintura a óleo e artes</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://www.pippit.ai/home/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Uma ilustração vetorial em estilo flat design (minimalista). [COLOQUE SEU TEMA AQUI]. Uso de cores sólidas e vibrantes, formas geométricas simples, sem sombras complexas, fundo branco limpo. Estilo logotipo moderno e limpo.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://www.pippit.ai/home/"
+                                    onclick="navigator.clipboard.writeText('Uma ilustração vetorial em estilo flat design (minimalista). [COLOQUE SEU TEMA AQUI]. Uso de cores sólidas e vibrantes, formas geométricas simples, sem sombras complexas, fundo branco limpo. Estilo logotipo moderno e limpo.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Vetor Minimalista</h4>
                                     <p>2.0 CR</p>
                                 </a>
-                                <a href="https://www.pippit.ai/home/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Uma pintura a óleo clássica no estilo Renascentista. [COLOQUE SEU TEMA AQUI]. Pinceladas grossas e visíveis na tela, cores ricas e profundas, iluminação de museu (chiaroscuro estilo Rembrandt), moldura artística.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://www.pippit.ai/home/"
+                                    onclick="navigator.clipboard.writeText('Uma pintura a óleo clássica no estilo Renascentista. [COLOQUE SEU TEMA AQUI]. Pinceladas grossas e visíveis na tela, cores ricas e profundas, iluminação de museu (chiaroscuro estilo Rembrandt), moldura artística.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Pintura a Óleo</h4>
                                     <p>2.0 CR</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> TEXTO</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
                     <div class="card suport-theme" onclick="equiparCartaInteira(this, 'ChatGPT')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>ChatGPT</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/Lightning.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Lightning.png" />
                                 <span class="card-type-text">SUPORTE</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/chat-gpt.png" alt="ChatGPT">
+                            <img alt="ChatGPT" src="../src/media/pokemon/chat-gpt.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>Guardiã tecnológica dos dados. Cria temas criativos, dá dicas geniais</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://chatgpt.com/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Atue como um estrategista criativo. Eu vou te dar um tema e você precisa me dar 5 ideias completamente diferentes, inovadoras e fora da caixa sobre ele. O meu tema central é: [ESCREVA O TEMA AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://chatgpt.com/"
+                                    onclick="navigator.clipboard.writeText('Atue como um estrategista criativo. Eu vou te dar um tema e você precisa me dar 5 ideias completamente diferentes, inovadoras e fora da caixa sobre ele. O meu tema central é: [ESCREVA O TEMA AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Expansão de Ideias</h4>
                                     <p>50 TK</p>
                                 </a>
-                                <a href="https://chatgpt.com/" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Crie uma persona detalhada para um [ESCREVA A PROFISSÃO OU PERSONAGEM AQUI]. Descreva como ele fala e qual o seu objetivo. Depois, aja exatamente como essa persona e responda a minha próxima pergunta.'); event.stopPropagation();">
-
+                                <a class="attack" href="https://chatgpt.com/"
+                                    onclick="navigator.clipboard.writeText('Crie uma persona detalhada para um [ESCREVA A PROFISSÃO OU PERSONAGEM AQUI]. Descreva como ele fala e qual o seu objetivo. Depois, aja exatamente como essa persona e responda a minha próxima pergunta.'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Prompt Tensei</h4>
                                     <p>65 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> DATA</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="card suport-theme" onclick="equiparCartaInteira(this, 'Claude AI')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>Duck AI</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/Lightning.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Lightning.png" />
                                 <span class="card-type-text">SUPORTE</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/duck-ai.png" alt="ChatGPT">
+                            <img alt="ChatGPT" src="../src/media/pokemon/duck-ai.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>O analista veloz que caça falhas. Perfeito para resumir suas ideias</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://duck.ai" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Analise o seguinte conceito ou texto e resuma a ideia principal em apenas 2 frases curtas, impactantes e fáceis de entender. O conceito é: [COLE O TEXTO OU TEMA AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://duck.ai"
+                                    onclick="navigator.clipboard.writeText('Analise o seguinte conceito ou texto e resuma a ideia principal em apenas 2 frases curtas, impactantes e fáceis de entender. O conceito é: [COLE O TEXTO OU TEMA AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Resumo Ninja</h4>
                                     <p>30 TK</p>
                                 </a>
-                                <a href="https://duck.ai" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Atue como um avaliador rigoroso. Vou te apresentar uma ideia ou texto. Quero que você aponte 3 falhas ou pontos fracos nessa ideia, e me sugira como deixá-la melhor. A ideia é: [COLE SUA IDEIA AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://duck.ai"
+                                    onclick="navigator.clipboard.writeText('Atue como um avaliador rigoroso. Vou te apresentar uma ideia ou texto. Quero que você aponte 3 falhas ou pontos fracos nessa ideia, e me sugira como deixá-la melhor. A ideia é: [COLE SUA IDEIA AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Análise Crítica</h4>
                                     <p>42 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> DATA</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-
-
                     <div class="card text-theme" onclick="equiparCartaInteira(this, 'Google Ai Studio')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>Google Studio</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/Colorless.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Colorless.png" />
                                 <span class="card-type-text">TEXTO</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/google-ai-studio.png" alt="Google Ai Studio">
+                            <img alt="Google Ai Studio" src="../src/media/pokemon/google-ai-studio.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>O Ninja copiador dos códigos. Imita estilos e expande histórias</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://aistudio.google.com/prompts/new_chat" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Vou te dar um texto de referência para você aprender meu estilo de escrita. Em seguida, quero que você escreva um NOVO texto sobre [COLOQUE O TEMA NOVO AQUI], usando exatamente o mesmo vocabulário, ritmo e tom do texto original. Texto de referência: [COLE UM TEXTO SEU AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://aistudio.google.com/prompts/new_chat"
+                                    onclick="navigator.clipboard.writeText('Vou te dar um texto de referência para você aprender meu estilo de escrita. Em seguida, quero que você escreva um NOVO texto sobre [COLOQUE O TEMA NOVO AQUI], usando exatamente o mesmo vocabulário, ritmo e tom do texto original. Texto de referência: [COLE UM TEXTO SEU AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Replicação Kakashi</h4>
                                     <p>55 TK</p>
                                 </a>
-                                <a href="https://aistudio.google.com/prompts/new_chat" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Pegue esta ideia básica e transforme em um roteiro detalhado. Separe em introdução, meio e fim. Dê profundidade aos detalhes e descreva os cenários. A ideia base é: [COLOQUE A IDEIA AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://aistudio.google.com/prompts/new_chat"
+                                    onclick="navigator.clipboard.writeText('Pegue esta ideia básica e transforme em um roteiro detalhado. Separe em introdução, meio e fim. Dê profundidade aos detalhes e descreva os cenários. A ideia base é: [COLOQUE A IDEIA AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Jutsu do Roteiro</h4>
                                     <p>40 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> CONTEXTO</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                     <div class="card text-theme" onclick="equiparCartaInteira(this, 'Claude AI')">
-
-
                         <div class="holo-glare"></div>
-
-
                         <div class="card-header">
-
                             <div class="card-name">
                                 <h2>Claude AI</h2>
                             </div>
                             <div class="card-type">
-                                <img src="../src/media/pokemon/Colorless.png" alt="ícone elemental">
+                                <img alt="ícone elemental" src="../src/media/pokemon/Colorless.png" />
                                 <span class="card-type-text">TEXTO</span>
                             </div>
                         </div>
-
                         <div class="card-image-box">
-                            <img src="../src/media/pokemon/claude-ai.png" alt="ChatGPT">
+                            <img alt="ChatGPT" src="../src/media/pokemon/claude-ai.png" />
                         </div>
-
                         <div class="card-body">
                             <div class="card-description">
                                 <p>O Rei da fusão textual. Lapida seus rascunhos em artigos impecáveis</p>
                             </div>
                             <div class="attack-deck">
-                                <a href="https://claude.ai/new" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Atue como um redator profissional de alto nível. Pegue as informações abaixo e transforme-as em um artigo completo e sério, com Título chamativo, Introdução, Desenvolvimento em 3 parágrafos e Conclusão. Use um tom de voz formal e confiável. As informações são: [COLE SUAS IDEIAS AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://claude.ai/new"
+                                    onclick="navigator.clipboard.writeText('Atue como um redator profissional de alto nível. Pegue as informações abaixo e transforme-as em um artigo completo e sério, com Título chamativo, Introdução, Desenvolvimento em 3 parágrafos e Conclusão. Use um tom de voz formal e confiável. As informações são: [COLE SUAS IDEIAS AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Artigo Supremo</h4>
                                     <p>60 TK</p>
                                 </a>
-                                <a href="https://claude.ai/new" target="_blank" class="attack"
-                                    onclick="navigator.clipboard.writeText('Reescreva as informações abaixo organizando tudo em um formato de lista com Tópicos (Bullet points). Use emojis para separar os assuntos e destaque as palavras mais importantes em negrito. Informações: [COLE AQUI].'); event.stopPropagation();">
-
+                                <a class="attack" href="https://claude.ai/new"
+                                    onclick="navigator.clipboard.writeText('Reescreva as informações abaixo organizando tudo em um formato de lista com Tópicos (Bullet points). Use emojis para separar os assuntos e destaque as palavras mais importantes em negrito. Informações: [COLE AQUI].'); event.stopPropagation();"
+                                    target="_blank">
                                     <h4>Corte em Tópicos</h4>
                                     <p>45 TK</p>
                                 </a>
-
-
                             </div>
                         </div>
                         <div class="card-footer">
                             <div class="card-weak">
                                 <p><span>FRAQUEZA</span> CONTEXTO</p>
-
                             </div>
                             <div class="card-touch">
-                                <img src="../src/media/icons/plus.png" alt="">
+                                <img alt="" src="../src/media/icons/plus.png" />
                                 <p>EQUIPAR</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
                 <div class="ia-codex-inventory">
                     <div class="ia-codex-inventory-header">
                         <div class="ia-codex-inventory-title">
-                            <img src="../src/media/icons/pokedex-inventory.webp" alt="">
+                            <img alt="" src="../src/media/icons/pokedex-inventory.webp" />
                             <h2>Inventário Tech</h2>
                         </div>
                         <div class="ia-codex-inventory-stats">
@@ -703,172 +631,141 @@
                             </div>
                         </div>
                     </div>
-
-
                     <div class="ia-codex-inventory-body">
-
                         <div class="ia-codex-items" id="kit-ia">
                             <div class="ia-codex-items-header">
-                                <div class="ia-codex-items-img"><img src="../src/media/icons/kit.png" alt=""></div>
+                                <div class="ia-codex-items-img"><img alt="" src="../src/media/icons/kit.png" /></div>
                                 <div class="ia-codex-items-title">
                                     <h3>Kit de Sobrevivência IA</h3>
                                     <p>GUIA COMPLETO PARA INICIANTES NA ERA IA</p>
                                 </div>
                             </div>
-
                             <div class="ia-codex-items-body">
-
-
-                                <img src="../src/media/icons/downloads.png" alt="">
+                                <img alt="" src="../src/media/icons/downloads.png" />
                                 <p>BAIXAR</p>
-
                             </div>
                         </div>
                         <div class="ia-codex-items" id="deck-dos-prompts">
                             <div class="ia-codex-items-header">
-                                <div class="ia-codex-items-img"><img src="../src/media/icons/prompt.png" alt=""></div>
+                                <div class="ia-codex-items-img"><img alt="" src="../src/media/icons/prompt.png" /></div>
                                 <div class="ia-codex-items-title">
                                     <h3>Deck de Prompts</h3>
                                     <p>ARQUITETURA DE PROMPTS PROFISSIONAIS</p>
                                 </div>
                             </div>
-
                             <div class="ia-codex-items-body">
-
-
-                                <img src="../src/media/icons/downloads.png" alt="">
+                                <img alt="" src="../src/media/icons/downloads.png" />
                                 <p>BAIXAR</p>
-
                             </div>
                         </div>
                         <div class="ia-codex-items" id="ferramentas-detec">
                             <div class="ia-codex-items-header">
-                                <div class="ia-codex-items-img"><img src="../src/media/icons/microscope.png" alt="">
+                                <div class="ia-codex-items-img"><img alt="" src="../src/media/icons/microscope.png" />
                                 </div>
                                 <div class="ia-codex-items-title">
                                     <h3>Ferramentas de Detecção</h3>
                                     <p>INSTRUMENTOS PARA IDENTIFICAR FAKE NEWS</p>
                                 </div>
                             </div>
-
                             <div class="ia-codex-items-body">
-
-
-                                <img src="../src/media/icons/downloads.png" alt="">
+                                <img alt="" src="../src/media/icons/downloads.png" />
                                 <p>BAIXAR</p>
-
                             </div>
                         </div>
                         <div class="ia-codex-items" id="codex-etica">
                             <div class="ia-codex-items-header">
-                                <div class="ia-codex-items-img"><img src="../src/media/icons/shield-1.png" alt=""></div>
+                                <div class="ia-codex-items-img"><img alt="" src="../src/media/icons/shield-1.png" />
+                                </div>
                                 <div class="ia-codex-items-title">
                                     <h3>Codex de Ética</h3>
                                     <p>REGRAS DE OURO DO USO RESPONSÁVEL</p>
                                 </div>
                             </div>
-
                             <div class="ia-codex-items-body">
-
-
-                                <img src="../src/media/icons/downloads.png" alt="">
+                                <img alt="" src="../src/media/icons/downloads.png" />
                                 <p>BAIXAR</p>
-
                             </div>
                         </div>
                     </div>
                     <div class="ia-codex-inventory-footer">
                         <p></p>
-                        <div><img src="" alt="">
+                        <div><img alt="" src="" />
                             <h1></h1>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
         </div>
     </div>
     <div class="quest-dashboard">
         <div class="quest-board">
             <div class="quest-board-header">
                 <h1>Atividades Ativas</h1>
-                <img src="../src/media/gif/online.gif" alt="Online">
+                <img alt="Online" src="../src/media/gif/online.gif" />
             </div>
             <div class="quest-board-body">
-                 <pre><span style="color: #a2ff00;">> A_MISSÃO: OPERAÇÃO GABARITO IF</span>
-                    
-🧠 O Chefão final do ano se aproxima: A Prova do IF. Seu clã deve criar a "Máquina de Estudos Perfeita" combinando os poderes de 3 Cartas do IA-Codex.
-    
-<span style="color: #eeff00;">> O COMBO (PASSO A PASSO):</span> 
+                <pre><span style="color:#a2ff00">&gt; A_MISSÃO: PROTOCOLO MESTRE</span>
 
-1️⃣ Use o <span style="color: #00ccff;">Perplexity</span> para achar as Fontes Reais sobre a matéria.
+🧠 O seu clã já tem um arsenal de IA. Mas quem é o verdadeiro mestre: o aluno ou a máquina?
 
-2️⃣ Jogue a pesquisa no <span style="color: #ff3c00;">ChatGPT</span> para ele criar uma "Super Aula".
+<span style="color:#eeff00">&gt; FASE 01 — DIAGNÓSTICO · 7 MIN</span>
 
-3️⃣ Cole a aula no <span style="color: #a2ff00;">NotebookLM</span> e gere os Flashcards Mágicos.
-                        
-<span style="color: #ff3c00;">> RESTRIÇÃO (STRIKE DIRETO):</span> 
+1️⃣ Recebam 3 questões do professor. Tentem resolver SEM IA e anotem as respostas do clã.
 
-🛑 É PROIBIDO pedir para a IA "fazer o resumo sozinha" sem usar as fontes do Perplexity. 
-🛑 O envio final deve conter o Link da Pesquisa e o PRINT do NotebookLM gerado.
-                                    
-<span style="color: #00ccff;">> RECOMPENSA:</span> 
+<span style="color:#00ccff">&gt; FASE 02 — MODO TREINO · 15 MIN</span>
 
-🏆 O Clã que criar o melhor Guia de Estudos e enviar primeiro fatura +400 XP! O Conhecimento será salvo na Biblioteca da Escola.
-                                    
-<span style="color: #8400ff;">>_</span>
-                </pre>
+2️⃣ Equipem até 3 cartas do IA-Codex. Usem o Método Socrático, o Rastro Confiável ou o Checkpoint de Prova para entender as dúvidas. Peçam DICAS, expliquem os passos e corrijam seus erros.
+
+<span style="color:#ffdf2a">&gt; FASE 03 — BOSS DO CONHECIMENTO · 15 MIN</span>
+
+3️⃣ Fechem os chats. Resolvam 3 questões NOVAS, sem IA. O clã precisa justificar as respostas com suas palavras.
+
+<span style="color:#ff3c00">&gt; REGRAS DO BOSS</span>
+
+🛑 Proibido usar IA durante a batalha final.
+🛑 Não vale copiar resposta pronta nem enviar conversa pessoal.
+✅ Registrem quantas questões acertaram ANTES e DEPOIS do treino.
+
+<span style="color:#00ccff">&gt; COMO ENVIAR</span>
+
+📩 Escrevam no relatório: tema, acertos antes/depois, cartas usadas, uma explicação do que aprenderam. Anexar print é OPCIONAL.
+🏆 Até +800 XP ao longo da missão; a pontuação é validada pela equipe.
+
+<span style="color:#8400ff">&gt;_</span></pre>
             </div>
             <div class="quest-board-footer">
                 <div class="quest-board-footer-reward"
                     style="color: rgb(255, 208, 0);border: 1px solid rgba(255, 208, 0, 0.5);background: rgba(253, 215, 0, 0.1);">
-                    <img src="../src/media/icons/star.png" alt="ícone de XP">
-                    <h1>RECOMPENSA XP · +400</h1>
+                    <img alt="ícone de XP" src="../src/media/icons/star.png" />
+                    <h1>RECOMPENSA BOSS · +250 XP</h1>
                 </div>
                 <div class="quest-board-footer-level"
                     style="color: rgb(0, 255, 65);border: 1px solid rgb(0, 255, 65, 0.5);background: rgb(0, 255, 65, 0.1);">
-                    <img src="../src/media/gif/online.gif" alt="Online">
-                    <p>NÍVEL - 7</p>
+                    <img alt="Online" src="../src/media/gif/online.gif" />
+                    <p>NÍVEL - 8</p>
                 </div>
             </div>
         </div>
-
-
         <div class="quest-submission">
             <div class="quest-board-header" id="quest-board-header-1">
                 <h1 style="color: white;">Enviar Missão</h1>
-                <img src="../src/media/gif/online.gif" alt="Online" style="filter: brightness(0.2) invert(2);">
+                <img alt="Online" src="../src/media/gif/online.gif" style="filter: brightness(0.2) invert(2);" />
             </div>
-
-
-            <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" method="POST"
-                enctype="multipart/form-data">
-
+            <form action="https://formsubmit.co/matheus.lo@estudante.iftm.edu.br" enctype="multipart/form-data"
+                method="POST">
                 <!-- Redirecionamento e Configurações FormSubmit -->
-                <input type="hidden" name="_next" value="https://matheus-lo-iftm.github.io/Aprende-ai-IA/index.html">
-                <input type="hidden" name="_subject" value="NOVA MISSÃO ENTREGUE - ARENA IA">
-                <input type="hidden" name="_captcha" value="false">
-
+                <input name="_next" type="hidden" value="https://aprende-ai-ia.com.br/index.html" />
+                <input name="_subject" type="hidden" value="MISSÃO 08 — PROTOCOLO MESTRE — ARENA IA" />
+                <input name="_captcha" type="hidden" value="false" />
                 <!-- ESSE INPUT INVISÍVEL VAI GUARDAR AS CARTAS DO DECK! -->
-                <input type="hidden" id="deck-oculto" name="Deck Utilizado" value="Nenhuma carta selecionada">
-
+                <input id="deck-oculto" name="Deck Utilizado" type="hidden" value="Nenhuma carta selecionada" />
                 <div class="quest-submission-inputs">
                     <div class="quest-submission-inputs-item">
                         <div class="quest-submission-inputs-item-label">
                             <label for="leader-name">Nome do Líder</label>
                         </div>
-                        <input type="text" required id="leader-name" name="Nome do Lider"
-                            placeholder="Digite o nome do líder do clã">
+                        <input id="leader-name" name="Nome do Lider" placeholder="Digite o nome do líder do clã"
+                            required="" type="text" />
                     </div>
 
                     <div class="quest-submission-inputs-item">
@@ -881,53 +778,31 @@
                             style="background: rgba(255, 0, 0, 0.2); color: #ff0000; cursor: not-allowed;">
                     </div>
 
-                    <div class="quest-submission-inputs-item">
+                    
+<div class="quest-submission-inputs-item">
                         <div class="quest-submission-inputs-item-label">
-                            <label for="answer">Resultado Gerado</label>
+                            <label for="answer">Relatório do Treino</label>
                         </div>
-                        <textarea name="Resposta da IA" required id="answer"
-                            placeholder="Cole a resposta da IA aqui..."></textarea>
+                        <textarea id="answer" name="Relatório Protocolo Mestre" placeholder="Tema estudado:
+Acertos antes do treino (0 a 3):
+Cartas equipadas:
+Dica que mais ajudou:
+Acertos depois do treino (0 a 3):
+O que conseguimos explicar sem IA:" required=""></textarea>
                     </div>
-
                     <div class="quest-submission-inputs-item">
                         <div class="quest-submission-inputs-item-label">
-                            <label for="attachment">Imagem Gerada</label>
+                            <label for="attachment">Evidência (opcional)</label>
                         </div>
-
-                        <input type="file" id="attachment" name="attachment" accept="image/*">
+                        <input accept="image/*,.pdf" id="attachment" name="attachment" type="file" />
                     </div>
                 </div>
-
                 <div class="quest-submission-footer mt-4">
-                    <button type="submit" class="btn-missao-quiz">ENVIAR</button>
+                    <button class="btn-missao-quiz" type="submit">ENVIAR</button>
                 </div>
             </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
     <div class="footer-bg">
         <footer>
             <div class="footer-top">
@@ -935,9 +810,9 @@
                     <div class="footer-name">
                         <h2>Aprende aí, IA!</h2>
                     </div>
-
                     <div class="footer-description">
-                        <p>"O projeto <b><i>Aprende aí, IA!</i></b> nasceu para transformar jovens de usuários passivos
+                        <p>"O projeto <b><i>Aprende aí, IA!</i></b> nasceu para transformar jovens de usuários
+                            passivos
                             em
                             verdadeiros mestres da tecnologia, dominando a Inteligência Artificial, ensinando ética,
                             pensamento crítico e o uso responsável
@@ -954,7 +829,6 @@
                             <a href="../index.html#missoes">Missões</a>
                             <a href="../index.html#kit">Kit IA</a>
                             <a href="../tratado.html">Tratado</a>
-
                         </div>
                     </div>
                     <div>
@@ -968,7 +842,6 @@
                         </div>
                     </div>
                     <div>
-
                         <div>
                             <h4>Outros</h4>
                         </div>
@@ -979,136 +852,93 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
             <div class="footer-bottom">
-
-
                 <div class="footer-text">
                     <p>© 2026 Aprende aí, IA! Todos os direitos reservados.</p>
                 </div>
-
                 <div class="footer-social">
                     <a href="https://www.instagram.com/aprendi.ia/" target="_blank">
-                        <img src="../src/media/icons/instagram.png" alt="ícone do Instagram">
+                        <img alt="ícone do Instagram" src="../src/media/icons/instagram.png" />
                     </a>
                     <a href="https://www.tiktok.com/@aprendeai.ia" target="_blank">
-                        <img src="../src/media/icons/tik-tok.png" alt="ícone do Tik Tok">
+                        <img alt="ícone do Tik Tok" src="../src/media/icons/tik-tok.png" />
                     </a>
                     <a href="mailto:aprende.ai.ia@gmail.com" target="_blank">
-                        <img src="../src/media/icons/email.png" alt="ícone do Email">
+                        <img alt="ícone do Email" src="../src/media/icons/email.png" />
                     </a>
                 </div>
-
             </div>
-
-
         </footer>
     </div>
-
-
-
-
     <div class="offcanvas offcanvas-start" id="demo">
         <div class="offcanvas-header">
             <a class="logo" href="../index.html">
                 <div class="logo-link">
                     <div class="logo-img">
-                        <img src="../src/media/icons/ia-codex.png" alt="Logo Aprende aí, IA!">
+                        <img alt="Logo Aprende aí, IA!" src="../src/media/icons/ia-codex.png" />
                     </div>
                 </div>
-
                 <div class="logo-title">
                     <h1>Aprende aí, IA!</h1>
                 </div>
             </a>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            <button class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
         </div>
-
         <div class="offcanvas-body">
             <div class="off-menu">
                 <div class="navbar-nav">
-
                     <a class="nav-link" href="../index.html#sobre">
-                        <img src="../src/media/icons/info.png" alt="ícone de informação">
+                        <img alt="ícone de informação" src="../src/media/icons/info.png" />
                         <div class="nav-link-text">Sobre</div>
                     </a>
                     <a class="nav-link" href="../index.html#missoes">
-                        <img src="../src/media/icons/mission.png" alt="ícone de foguete">
+                        <img alt="ícone de foguete" src="../src/media/icons/mission.png" />
                         <div class="nav-link-text">Missões</div>
                     </a>
                     <a class="nav-link" href="../index.html#kit">
-                        <img src="../src/media/icons/kit.png" alt="ícone de kit de primeiros socorros">
+                        <img alt="ícone de kit de primeiros socorros" src="../src/media/icons/kit.png" />
                         <div class="nav-link-text">Kit do Aluno</div>
                     </a>
                     <a class="nav-link" href="../tratado.html">
-                        <img src="../src/media/icons/scroll.png" alt="ícone de pergaminho">
+                        <img alt="ícone de pergaminho" src="../src/media/icons/scroll.png" />
                         <div class="nav-link-text">Tratado</div>
                     </a>
-
-
-                    <hr>
-
-
+                    <hr />
                     <a class="nav-link" href="../museu.html">
-                        <img src="../src/media/icons/museum.png" alt="ícone de Museu">
+                        <img alt="ícone de Museu" src="../src/media/icons/museum.png" />
                         <div class="nav-link-text">Museu IA</div>
                     </a>
                     <a class="nav-link" href="../ia-codex.html">
-                        <img src="../src/media/icons/ia-codex.png" alt="ícone de Pokebola">
+                        <img alt="ícone de Pokebola" src="../src/media/icons/ia-codex.png" />
                         <div class="nav-link-text">IA-Codex</div>
                     </a>
                     <a class="nav-link" href="../charada.html">
-                        <img src="../src/media/icons/riddle.png" alt="ícone de quebra-cabeça">
+                        <img alt="ícone de quebra-cabeça" src="../src/media/icons/riddle.png" />
                         <div class="nav-link-text">Decodificador</div>
                     </a>
-
-                    <hr>
-
+                    <hr />
                     <a class="nav-link" href="../ranking.html">
-                        <img src="../src/media/icons/ranking.png" alt="ícone de pódio">
+                        <img alt="ícone de pódio" src="../src/media/icons/ranking.png" />
                         <div class="nav-link-text">Ranking</div>
                     </a>
                     <a class="nav-link" href="../index.html#terminal">
-                        <img src="../src/media/icons/terminal.png" alt="ícone de terminal - Programador">
+                        <img alt="ícone de terminal - Programador" src="../src/media/icons/terminal.png" />
                         <div class="nav-link-text">Terminal Anônimo</div>
                     </a>
                     <a class="nav-link" href="../faq.html">
-                        <img src="../src/media/icons/chat.png" alt="ícone de conversa - balões de diálogo">
+                        <img alt="ícone de conversa - balões de diálogo" src="../src/media/icons/chat.png" />
                         <div class="nav-link-text">Trocar ideia</div>
                     </a>
-
-                    <hr>
-
-
+                    <hr />
                     <a class="nav-link" href="../index.html#social">
-                        <img src="../src/media/icons/social.png" alt="ícone de mundo - Redes Sociais">
+                        <img alt="ícone de mundo - Redes Sociais" src="../src/media/icons/social.png" />
                         <div class="nav-link-text">Redes Sociais</div>
                     </a>
-
-
-
                 </div>
             </div>
         </div>
     </div>
-
-
     <script>
         // =========================================================
         // CONTROLE DO DECK
@@ -1270,13 +1100,8 @@
             atualizarSlots();
         }
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
-
-
+    <script crossorigin="anonymous" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
